@@ -2,7 +2,6 @@ numpy
 matplotlib
 pyorbital
 netCDF4
-string
 datetime
 copy
 re
