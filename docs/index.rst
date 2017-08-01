@@ -15,6 +15,14 @@ Contents:
    source/README
    source/sentinelSimulator
 
+sentinelSimulator.opticalCanopyRT module
+----------------------------------------
+
+.. automodule:: sentinelSimulator.opticalCanopyRT
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 Indices and tables
 ==================
 
