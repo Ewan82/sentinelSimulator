@@ -1,0 +1,11 @@
+numpy
+matplotlib
+pyorbital
+subprocess
+netCDF4
+tempfile
+sys
+os
+datetime
+copy
+re
