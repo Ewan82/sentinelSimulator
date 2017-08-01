@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7482d48-4180-44dc-bbfe-8243e20ae74b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/requirements.txt" afterPath="$PROJECT_DIR$/docs/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/environment.pickle" afterPath="$PROJECT_DIR$/docs/_build/doctrees/environment.pickle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/index.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/index.doctree" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/objects.inv" afterPath="$PROJECT_DIR$/docs/_build/html/objects.inv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.pdf" afterPath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_sources/index.txt" afterPath="$PROJECT_DIR$/docs/_build/html/_sources/index.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/index.html" afterPath="$PROJECT_DIR$/docs/_build/html/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/searchindex.js" afterPath="$PROJECT_DIR$/docs/_build/html/searchindex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.aux" afterPath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.idx" afterPath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.idx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.ilg" afterPath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.ilg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.ind" afterPath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.ind" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.log" afterPath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.out" afterPath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.tex" afterPath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.toc" afterPath="$PROJECT_DIR$/docs/_build/latex/sentinelSimulator.toc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/conf.py" afterPath="$PROJECT_DIR$/docs/conf.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.rst" afterPath="$PROJECT_DIR$/docs/index.rst" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,52 +34,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.rst" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/index.rst">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="15" lean-forward="false" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/_build/html/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="869">
-              <caret line="136" column="13" lean-forward="false" selection-start-line="136" selection-start-column="13" selection-end-line="136" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="conf.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="conf.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/conf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="615">
+              <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+              <folding>
+                <element signature="e#430#440#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,11 +81,11 @@
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/satelliteGeometry.py" />
         <option value="$PROJECT_DIR$/spectra.py" />
-        <option value="$PROJECT_DIR$/docs/index.rst" />
         <option value="$PROJECT_DIR$/docs/source/README.rst" />
-        <option value="$PROJECT_DIR$/docs/conf.py" />
         <option value="$PROJECT_DIR$/docs/_build/html/index.html" />
         <option value="$PROJECT_DIR$/docs/requirements.txt" />
+        <option value="$PROJECT_DIR$/docs/index.rst" />
+        <option value="$PROJECT_DIR$/docs/conf.py" />
       </list>
     </option>
   </component>
@@ -171,64 +150,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -444,9 +365,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1922" height="1033" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23854166" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23854166" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -610,14 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="15" lean-forward="false" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jules/py_julesNML.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -644,19 +557,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/conf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_build/html/_sources/index.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_build/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="869">
+          <caret line="131" column="13" lean-forward="false" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
+          <folding>
+            <marker date="1501583038875" expanded="false" signature="5313:5326" ph="..." />
+            <marker date="1501583038875" expanded="false" signature="5657:5671" ph="..." />
+            <marker date="1501583038875" expanded="false" signature="5984:6002" ph="..." />
+            <marker date="1501583038875" expanded="false" signature="6405:6412" ph="»" />
+            <marker date="1501583038875" expanded="false" signature="6475:6481" ph="©" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -668,11 +595,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_build/html/index.html">
+    <entry file="file://$PROJECT_DIR$/docs/index.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="869">
-          <caret line="136" column="13" lean-forward="false" selection-start-line="136" selection-start-column="13" selection-end-line="136" selection-end-column="13" />
+        <state relative-caret-position="330">
+          <caret line="22" column="15" lean-forward="true" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/conf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+          <folding>
+            <element signature="e#430#440#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

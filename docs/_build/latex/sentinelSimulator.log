@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2017.7.20)  31 JUL 2017 13:34
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2017.7.20)  1 AUG 2017 11:18
 entering extended mode
  %&-line parsing enabled.
 **sentinelSimulator.tex
@@ -713,7 +713,204 @@ Package: hypcap 2006/02/20 v1.5 Adjusting anchors of captions (HO)
 
 
 Writing index file sentinelSimulator.idx
-(./sentinelSimulator.aux)
+(./sentinelSimulator.aux
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelsimulator-package' multi
+ply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator::doc' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:subpackages' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:sentinelsimulator-jules-pa
+ckage' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules::doc' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:submodules' multiply defin
+ed.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:sentinelsimulator-jules-py
+-importnml-module' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:module-sentinelSimulator.j
+ules.py_importNML' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:sentinelSimulator.jules.py
+_importNML.importJulesNML' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:sentinelsimulator-jules-py
+-jules-module' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:module-sentinelSimulator.j
+ules.py_jules' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:sentinelSimulator.jules.py
+_jules.crop_run' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:sentinelSimulator.jules.py
+_jules.jules' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:sentinelSimulator.jules.py
+_jules.jules.runJules' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:sentinelSimulator.jules.py
+_jules.julesAllNML' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:sentinelSimulator.jules.py
+_jules.julesAllNML.writeNML' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:module-sentinelSimulator.j
+ules.py_julesNML' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:sentinelsimulator-jules-py
+-julesnml-module' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:sentinelSimulator.jules.py
+_julesNML.julesNML' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:sentinelSimulator.jules.py
+_julesNML.julesNML.update' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:sentinelSimulator.jules.py
+_julesNML.julesNML.write' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:module-contents' multiply 
+defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator.jules:module-sentinelSimulator.j
+ules' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:submodules' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelsimulator-opticalcanopyr
+t-module' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:module-sentinelSimulator.optical
+CanopyRT' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelSimulator.opticalCanopyR
+T.canopyRTOptical' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelsimulator-satellitegeome
+try-module' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:module-sentinelSimulator.satelli
+teGeometry' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelSimulator.satelliteGeome
+try.getSentinel2Geometry' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelSimulator.satelliteGeome
+try.sensorGeometry' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelSimulator.satelliteGeome
+try.sensorGeometry.printGeom' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:module-sentinelSimulator.spectra
+' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelsimulator-spectra-module
+' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelSimulator.spectra.Unknow
+nFileType' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelSimulator.spectra.convol
+ve' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelSimulator.spectra.sentin
+el2' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelSimulator.spectra.spectr
+a' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelSimulator.spectra.spectr
+a.interpolate' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelSimulator.spectra.spectr
+a.loadCSV' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelSimulator.spectra.spectr
+a.loadSVCSig' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelSimulator.spectra.spectr
+a.loadSpectra' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelSimulator.spectra.spectr
+a.trim' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:module-sentinelSimulator.stateVe
+ctor' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelsimulator-statevector-mo
+dule' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelSimulator.stateVector.re
+ad' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelSimulator.stateVector.re
+ad_jules' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:sentinelSimulator.stateVector.st
+ateVector' multiply defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:module-sentinelSimulator' multip
+ly defined.
+
+
+LaTeX Warning: Label `source/sentinelSimulator:module-contents' multiply define
+d.
+
+)
 \openout1 = `sentinelSimulator.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
@@ -858,100 +1055,135 @@ Overfull \hbox (47.94334pt too wide) in paragraph at lines 363--363
 \T1/ptm/m/it/10 File='./TLE/norad_resource_tle.txt'\T1/pcr/m/n/10 ) 
  []
 
-[3] [4] [5] [6]
+[3] [4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 697--697
+[]\T1/ptm/m/it/10 sow_date=110\T1/ptm/m/n/10 , \T1/ptm/m/it/10 b=6.631\T1/ptm/m
+/n/10 , \T1/ptm/m/it/10 smwilt=0.1866\T1/ptm/m/n/10 ,
+ []
+
+
+Overfull \hbox (93.88103pt too wide) in paragraph at lines 729--729
+[]\T1/ptm/m/it/10 jules_exe='/home/if910917/jules/models/jules4.8/build/bin/jul
+es.exe'\T1/pcr/m/n/10 ) 
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 852--852
+[]\T1/ptm/m/it/10 startDateUTC\T1/ptm/m/n/10 , \T1/ptm/m/it/10 length-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 852--852
+\T1/ptm/m/it/10 mission='Sentinel-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 852--852
+\T1/ptm/m/it/10 2a'\T1/ptm/m/n/10 , \T1/ptm/m/it/10 tle-
+ []
+
+
+Overfull \hbox (47.94334pt too wide) in paragraph at lines 852--852
+\T1/ptm/m/it/10 File='./TLE/norad_resource_tle.txt'\T1/pcr/m/n/10 ) 
+ []
+
+[7] [8] [9] [10]
 Chapter 2.
-[7
+[11
 
-] [8
+] [12
 
-] [9
+] [13
 
 
-] (./sentinelSimulator.ind [10
+] (./sentinelSimulator.ind [14
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
 []\T1/ptm/m/n/10 canopyRTOptical() (in mod-ule sen-tinel-Sim-u-la-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
 []\T1/ptm/m/n/10 getSentinel2Geometry() (in mod-ule sen-tinel-Sim-u-la-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
+Underfull \hbox (badness 10000) in paragraph at lines 17--19
 []\T1/ptm/m/n/10 importJulesNML() (in mod-ule sen-tinel-Sim-u-la-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 []\T1/ptm/m/n/10 julesNML (class in sen-tinel-Sim-u-la-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
 []\T1/ptm/m/n/10 loadSVCSig() (sen-tinel-Sim-u-la-tor.spectra.spectra
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
 []\T1/ptm/m/n/10 printGeom() (sen-tinel-Sim-u-la-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
 []\T1/ptm/m/n/10 runJules() (sen-tinel-Sim-u-la-tor.jules.py_jules.jules
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 []\T1/ptm/m/n/10 sensorGeometry (class in sen-tinel-Sim-u-la-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 67--69
 []\T1/ptm/m/n/10 update() (sen-tinel-Sim-u-la-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 67--69
 \T1/ptm/m/n/10 tor.jules.py_julesNML.julesNML method),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
 []\T1/ptm/m/n/10 writeNML() (sen-tinel-Sim-u-la-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
-\T1/ptm/m/n/10 tor.jules.py_jules.julesAllNML method),
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
+\T1/ptm/m/n/10 tor.jules.py_jules.julesAllNML method), [][]2[][],
  []
 
-[11
+[15
 
-]) (./sentinelSimulator.aux) ) 
+]) (./sentinelSimulator.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6458 strings out of 256216
- 85360 string characters out of 1917072
- 152892 words of memory out of 1500000
- 9480 multiletter control sequences out of 10000+200000
+ 6510 strings out of 256216
+ 86048 string characters out of 1917072
+ 154045 words of memory out of 1500000
+ 9488 multiletter control sequences out of 10000+200000
  66047 words of font info for 73 fonts, out of 1200000 for 2000
  646 hyphenation exceptions out of 8191
  34i,12n,45p,402b,504s stack positions out of 5000i,500n,6000p,200000b,15000s
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</u
-sr/share/texmf/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texmf/fonts/type1
-/urw/courier/ucrr8a.pfb></usr/share/texmf/fonts/type1/urw/courier/ucrro8a.pfb><
-/usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/ty
-pe1/urw/helvetic/uhvbo8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvr8a.
-pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/
-type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmri8a.pfb>
-
-Output written on sentinelSimulator.pdf (15 pages, 142664 bytes).
+{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/u
+rw/courier/ucrb8a.pfb></usr/share/texmf/fonts/type1/urw/courier/ucrr8a.pfb></us
+r/share/texmf/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texmf/fonts/type1
+/urw/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvbo8a.pfb
+></usr/share/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf/fonts/
+type1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb><
+/usr/share/texmf/fonts/type1/urw/times/utmri8a.pfb>
+Output written on sentinelSimulator.pdf (19 pages, 164203 bytes).
 PDF statistics:
- 245 PDF objects out of 1000 (max. 8388607)
- 66 named destinations out of 1000 (max. 131072)
- 69 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 351 PDF objects out of 1000 (max. 8388607)
+ 110 named destinations out of 1000 (max. 131072)
+ 77 words of extra memory for PDF output out of 10000 (max. 10000000)
 

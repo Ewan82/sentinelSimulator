@@ -14,7 +14,7 @@
 
 
 \title{sentinelSimulator Documentation}
-\date{July 31, 2017}
+\date{August 01, 2017}
 \release{0.0.1}
 \author{E. Pinnington}
 \newcommand{\sphinxlogo}{}
@@ -653,6 +653,495 @@ and microwave canopy RT models.
 
 
 \subsection{Module contents}
+\label{source/sentinelSimulator:module-sentinelSimulator}\label{source/sentinelSimulator:module-contents}\index{sentinelSimulator (module)}
+
+\section{.}
+\label{source/modules::doc}\label{source/modules:id1}
+
+\subsection{sentinelSimulator package}
+\label{source/sentinelSimulator:sentinelsimulator-package}\label{source/sentinelSimulator::doc}
+
+\subsubsection{Subpackages}
+\label{source/sentinelSimulator:subpackages}
+
+\paragraph{sentinelSimulator.jules package}
+\label{source/sentinelSimulator.jules:sentinelsimulator-jules-package}\label{source/sentinelSimulator.jules::doc}
+
+\subparagraph{Submodules}
+\label{source/sentinelSimulator.jules:submodules}
+
+\subparagraph{sentinelSimulator.jules.py\_importNML module}
+\label{source/sentinelSimulator.jules:sentinelsimulator-jules-py-importnml-module}\label{source/sentinelSimulator.jules:module-sentinelSimulator.jules.py_importNML}\index{sentinelSimulator.jules.py\_importNML (module)}\index{importJulesNML() (in module sentinelSimulator.jules.py\_importNML)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator.jules:sentinelSimulator.jules.py_importNML.importJulesNML}\pysiglinewithargsret{\code{sentinelSimulator.jules.py\_importNML.}\bfcode{importJulesNML}}{\emph{nml}}{}
+Parse a JULES nml file and write it in the style used for the
+julesNML class.
+\begin{quote}\begin{description}
+\item[{Parameters}] \leavevmode
+\textbf{nml} (\emph{str.}) -- JULES NML file name.
+
+\item[{Returns}] \leavevmode
+None
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+
+
+\subparagraph{sentinelSimulator.jules.py\_jules module}
+\label{source/sentinelSimulator.jules:sentinelsimulator-jules-py-jules-module}\label{source/sentinelSimulator.jules:module-sentinelSimulator.jules.py_jules}\index{sentinelSimulator.jules.py\_jules (module)}\index{crop\_run() (in module sentinelSimulator.jules.py\_jules)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator.jules:sentinelSimulator.jules.py_jules.crop_run}\pysiglinewithargsret{\code{sentinelSimulator.jules.py\_jules.}\bfcode{crop\_run}}{\emph{sow\_date=110}, \emph{b=6.631}, \emph{smwilt=0.1866}, \emph{neff=0.00057}}{}
+Function that runs JULES with crop model turned on and given user defined parameters at Wallerfing site. Output is
+saved in folder and file specified within function.
+\begin{quote}\begin{description}
+\item[{Parameters}] \leavevmode\begin{itemize}
+\item {} 
+\textbf{sow\_date} (\emph{int.}) -- Sow date, between 90 and 150.
+
+\item {} 
+\textbf{b} (\emph{float.}) -- Brooks-Corey exponent factor.
+
+\item {} 
+\textbf{smwilt} (\emph{float.}) -- Soil moisture wilting point.
+
+\item {} 
+\textbf{neff} (\emph{float.}) -- Nitrogen use efficiency of crop (Vcmax).
+
+\end{itemize}
+
+\item[{Returns}] \leavevmode
+`Done' to notify used JULES run has finished.
+
+\item[{Return type}] \leavevmode
+str
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+\index{jules (class in sentinelSimulator.jules.py\_jules)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator.jules:sentinelSimulator.jules.py_jules.jules}\pysiglinewithargsret{\strong{class }\code{sentinelSimulator.jules.py\_jules.}\bfcode{jules}}{\emph{jules\_exe='/home/if910917/jules/models/jules4.8/build/bin/jules.exe'}}{}
+Bases: {\hyperref[source/sentinelSimulator.jules:sentinelSimulator.jules.py_jules.julesAllNML]{\code{sentinelSimulator.jules.py\_jules.julesAllNML}}}
+
+Class to run JULES.
+\begin{quote}\begin{description}
+\item[{Parameters}] \leavevmode
+\textbf{jules\_exe} (\emph{str}) -- location of JULES executable.
+
+\end{description}\end{quote}
+
+\begin{notice}{note}{Note:}
+You must have JULES installed on local system with a version of 4.8 or higher.
+\end{notice}
+\index{runJules() (sentinelSimulator.jules.py\_jules.jules method)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator.jules:sentinelSimulator.jules.py_jules.jules.runJules}\pysiglinewithargsret{\bfcode{runJules}}{}{}
+Write all NML files to disk.
+Run JULES in a subprocess.
+Check output for fatal errors.
+\begin{quote}\begin{description}
+\item[{Returns}] \leavevmode
+stdout and stderr output from JULES model run.
+
+\item[{Return type}] \leavevmode
+str
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+
+\end{fulllineitems}
+
+\index{julesAllNML (class in sentinelSimulator.jules.py\_jules)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator.jules:sentinelSimulator.jules.py_jules.julesAllNML}\pysigline{\strong{class }\code{sentinelSimulator.jules.py\_jules.}\bfcode{julesAllNML}}
+This class is populated by the contents
+of a module which contains templates
+of all the required JULES namelist files
+\index{writeNML() (sentinelSimulator.jules.py\_jules.julesAllNML method)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator.jules:sentinelSimulator.jules.py_jules.julesAllNML.writeNML}\pysiglinewithargsret{\bfcode{writeNML}}{}{}
+\end{fulllineitems}
+
+
+\end{fulllineitems}
+
+
+
+\subparagraph{sentinelSimulator.jules.py\_julesNML module}
+\label{source/sentinelSimulator.jules:module-sentinelSimulator.jules.py_julesNML}\label{source/sentinelSimulator.jules:sentinelsimulator-jules-py-julesnml-module}\index{sentinelSimulator.jules.py\_julesNML (module)}
+This module holds JULES namelist files. 
+It has been automatically generated.
+\index{julesNML (class in sentinelSimulator.jules.py\_julesNML)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator.jules:sentinelSimulator.jules.py_julesNML.julesNML}\pysiglinewithargsret{\strong{class }\code{sentinelSimulator.jules.py\_julesNML.}\bfcode{julesNML}}{\emph{template}, \emph{filename}}{}
+This is the base class for storing
+and writing JULES namelist files
+\index{update() (sentinelSimulator.jules.py\_julesNML.julesNML method)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator.jules:sentinelSimulator.jules.py_julesNML.julesNML.update}\pysiglinewithargsret{\bfcode{update}}{\emph{template}}{}
+\end{fulllineitems}
+
+\index{write() (sentinelSimulator.jules.py\_julesNML.julesNML method)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator.jules:sentinelSimulator.jules.py_julesNML.julesNML.write}\pysiglinewithargsret{\bfcode{write}}{}{}
+\end{fulllineitems}
+
+
+\end{fulllineitems}
+
+
+
+\subparagraph{Module contents}
+\label{source/sentinelSimulator.jules:module-contents}\label{source/sentinelSimulator.jules:module-sentinelSimulator.jules}\index{sentinelSimulator.jules (module)}
+
+\subsubsection{Submodules}
+\label{source/sentinelSimulator:submodules}
+
+\subsubsection{sentinelSimulator.opticalCanopyRT module}
+\label{source/sentinelSimulator:sentinelsimulator-opticalcanopyrt-module}\label{source/sentinelSimulator:module-sentinelSimulator.opticalCanopyRT}\index{sentinelSimulator.opticalCanopyRT (module)}\index{canopyRTOptical() (in module sentinelSimulator.opticalCanopyRT)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator:sentinelSimulator.opticalCanopyRT.canopyRTOptical}\pysiglinewithargsret{\code{sentinelSimulator.opticalCanopyRT.}\bfcode{canopyRTOptical}}{\emph{state}, \emph{geom}, \emph{resln=1.0}}{}
+A python wrapper to the SemiDiscrete optical
+canopy RT model of Nadine Gobron. Runs the
+model for the the whole of its valid spectra
+range at a resolution set by resln.
+\begin{quote}\begin{description}
+\item[{Parameters}] \leavevmode\begin{itemize}
+\item {} 
+\textbf{state} (\emph{instance.}) -- Instance of the stateVector class.
+
+\item {} 
+\textbf{geom} (\emph{instance.}) -- Instance of the sensorGeomety class.
+
+\item {} 
+\textbf{resln} (\emph{float.}) -- the spectral resolution in nm {[}optional{]}.
+
+\end{itemize}
+
+\item[{Returns}] \leavevmode
+Instance of the spectra class.
+
+\item[{Return type}] \leavevmode
+instance.
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+
+
+\subsubsection{sentinelSimulator.satelliteGeometry module}
+\label{source/sentinelSimulator:sentinelsimulator-satellitegeometry-module}\label{source/sentinelSimulator:module-sentinelSimulator.satelliteGeometry}\index{sentinelSimulator.satelliteGeometry (module)}\index{getSentinel2Geometry() (in module sentinelSimulator.satelliteGeometry)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator:sentinelSimulator.satelliteGeometry.getSentinel2Geometry}\pysiglinewithargsret{\code{sentinelSimulator.satelliteGeometry.}\bfcode{getSentinel2Geometry}}{\emph{startDateUTC}, \emph{lengthDays}, \emph{lat}, \emph{lon}, \emph{alt=0.0}, \emph{mission='Sentinel-2a'}, \emph{tleFile='./TLE/norad\_resource\_tle.txt'}}{}
+Calculate approximate geometry for Sentinel overpasses.
+Approximate because it assumes maximum satellite elevation
+is the time at which target is imaged.
+\begin{quote}\begin{description}
+\item[{Parameters}] \leavevmode\begin{itemize}
+\item {} 
+\textbf{startDateUTC} (\emph{object}) -- a datetime object specifying when to start prediction.
+
+\item {} 
+\textbf{lengthDays} (\emph{int}) -- number of days over which to perform calculations.
+
+\item {} 
+\textbf{lat} (\emph{float}) -- latitude of target.
+
+\item {} 
+\textbf{lon} (\emph{float}) -- longitude of target.
+
+\item {} 
+\textbf{alt} (\emph{float}) -- altitude of target (in km).
+
+\item {} 
+\textbf{mission} (\emph{str}) -- mission name as in TLE file.
+
+\item {} 
+\textbf{tleFile} (\emph{str}) -- TLE file.
+
+\end{itemize}
+
+\item[{Returns}] \leavevmode
+a python list containing instances of the sensorGeometry class arranged in date order.
+
+\item[{Return type}] \leavevmode
+list
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+\index{sensorGeometry (class in sentinelSimulator.satelliteGeometry)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator:sentinelSimulator.satelliteGeometry.sensorGeometry}\pysigline{\strong{class }\code{sentinelSimulator.satelliteGeometry.}\bfcode{sensorGeometry}}
+Class to hold sun-sensor geometry information.
+\index{printGeom() (sentinelSimulator.satelliteGeometry.sensorGeometry method)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator:sentinelSimulator.satelliteGeometry.sensorGeometry.printGeom}\pysiglinewithargsret{\bfcode{printGeom}}{}{}
+Prints currently specified class attributes.
+
+\end{fulllineitems}
+
+
+\end{fulllineitems}
+
+
+
+\subsubsection{sentinelSimulator.spectra module}
+\label{source/sentinelSimulator:module-sentinelSimulator.spectra}\label{source/sentinelSimulator:sentinelsimulator-spectra-module}\index{sentinelSimulator.spectra (module)}\index{UnknownFileType}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator:sentinelSimulator.spectra.UnknownFileType}\pysigline{\strong{exception }\code{sentinelSimulator.spectra.}\bfcode{UnknownFileType}}
+Bases: \code{exceptions.Exception}
+
+Exception class for unknown filetypes
+
+\end{fulllineitems}
+
+\index{convolve() (in module sentinelSimulator.spectra)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator:sentinelSimulator.spectra.convolve}\pysiglinewithargsret{\code{sentinelSimulator.spectra.}\bfcode{convolve}}{\emph{s1orig}, \emph{s2orig}, \emph{resln=1.0}, \emph{s2norm=True}}{}
+Convolve one spectra with another, for example
+to apply a band pass, or a spectral response function.
+\begin{quote}\begin{description}
+\item[{Parameters}] \leavevmode\begin{itemize}
+\item {} 
+\textbf{s1orig} (\emph{object}) -- A spectra object.
+
+\item {} 
+\textbf{s2orig} (\emph{float}) -- A spectra object.
+
+\item {} 
+\textbf{resln} (\emph{float}) -- The spectral resolution to use.
+
+\item {} 
+\textbf{s2norm} (\emph{bool}) -- If True normalise the second spectra (e.g. to apply a spectra response function).
+
+\end{itemize}
+
+\item[{Returns}] \leavevmode
+Convolved spectra.
+
+\item[{Return type}] \leavevmode
+object
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+\index{sentinel2() (in module sentinelSimulator.spectra)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator:sentinelSimulator.spectra.sentinel2}\pysiglinewithargsret{\code{sentinelSimulator.spectra.}\bfcode{sentinel2}}{\emph{s}, \emph{mission='a'}}{}
+\end{fulllineitems}
+
+\index{spectra (class in sentinelSimulator.spectra)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator:sentinelSimulator.spectra.spectra}\pysiglinewithargsret{\strong{class }\code{sentinelSimulator.spectra.}\bfcode{spectra}}{\emph{fname=None}, \emph{ftype='SVC'}, \emph{wavlCol=0}, \emph{reflCol=1}, \emph{hdrLines=1}}{}
+Bases: \code{object}
+
+Spectra class for sentinel simulator.
+\index{interpolate() (sentinelSimulator.spectra.spectra method)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator:sentinelSimulator.spectra.spectra.interpolate}\pysiglinewithargsret{\bfcode{interpolate}}{\emph{resltn=0.1}}{}
+Interpolate spectra to the given resolution.
+Overwites exisiting data.
+\begin{quote}\begin{description}
+\item[{Parameters}] \leavevmode
+\textbf{resltn} (\emph{float}) -- resolution of the interpolation.
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+\index{loadCSV() (sentinelSimulator.spectra.spectra method)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator:sentinelSimulator.spectra.spectra.loadCSV}\pysiglinewithargsret{\bfcode{loadCSV}}{\emph{f}, \emph{wavlCol=0}, \emph{reflCol=1}, \emph{hdrLines=1}}{}
+Read in data from a standard CSV file object.
+\begin{quote}\begin{description}
+\item[{Parameters}] \leavevmode\begin{itemize}
+\item {} 
+\textbf{f} (\emph{file}) -- File object.
+
+\item {} 
+\textbf{wavlCol} (\emph{int}) -- Column containing wavelengths.
+
+\item {} 
+\textbf{reflCol} (\emph{int}) -- Column containing reflectance data.
+
+\item {} 
+\textbf{hdrLines} (\emph{int}) -- Number of lines to skip at start of file.
+
+\end{itemize}
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+\index{loadSVCSig() (sentinelSimulator.spectra.spectra method)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator:sentinelSimulator.spectra.spectra.loadSVCSig}\pysiglinewithargsret{\bfcode{loadSVCSig}}{\emph{f}}{}
+Read in data from an SVC .sig ascii file.
+\begin{quote}\begin{description}
+\item[{Parameters}] \leavevmode
+\textbf{f} (\emph{file}) -- File object.
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+\index{loadSpectra() (sentinelSimulator.spectra.spectra method)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator:sentinelSimulator.spectra.spectra.loadSpectra}\pysiglinewithargsret{\bfcode{loadSpectra}}{\emph{fname}, \emph{wavlCol=0}, \emph{reflCol=1}, \emph{hdrLines=1}}{}
+Load in the spectra from a given file using a
+method appropriate to the type of file.
+
+\begin{notice}{note}{Note:}
+Current supported formats are:
+
+SVC - SCV .sig ascii file
+
+CSV - standard ascii comma seperated values
+\end{notice}
+\begin{quote}\begin{description}
+\item[{Parameters}] \leavevmode\begin{itemize}
+\item {} 
+\textbf{fname} (\emph{str}) -- Valid filename containing spectra.
+
+\item {} 
+\textbf{wavlCol} (\emph{int}) -- Column containing wavelengths.
+
+\item {} 
+\textbf{reflCol} (\emph{int}) -- Column containing reflectance data.
+
+\item {} 
+\textbf{hdrLines} (\emph{int}) -- Number of lines to skip at start of file.
+
+\end{itemize}
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+\index{trim() (sentinelSimulator.spectra.spectra method)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator:sentinelSimulator.spectra.spectra.trim}\pysiglinewithargsret{\bfcode{trim}}{\emph{wlmin}, \emph{wlmax}}{}
+Trim the spectra so it is between two specified wavelengths. Destroys the original data.
+\begin{quote}\begin{description}
+\item[{Parameters}] \leavevmode\begin{itemize}
+\item {} 
+\textbf{wlmin} (\emph{float}) -- The lowest wavelength of the new spectra.
+
+\item {} 
+\textbf{wlmax} (\emph{float}) -- The highest wavelength of the new spectra.
+
+\end{itemize}
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+
+\end{fulllineitems}
+
+
+
+\subsubsection{sentinelSimulator.stateVector module}
+\label{source/sentinelSimulator:module-sentinelSimulator.stateVector}\label{source/sentinelSimulator:sentinelsimulator-statevector-module}\index{sentinelSimulator.stateVector (module)}\index{read() (in module sentinelSimulator.stateVector)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator:sentinelSimulator.stateVector.read}\pysiglinewithargsret{\code{sentinelSimulator.stateVector.}\bfcode{read}}{\emph{file\_format='jules'}, \emph{file\_str=None}, \emph{year=None}}{}
+Reads output data to a dictionary of state vectors indexed by time.
+
+\begin{notice}{note}{Note:}
+This function requires sub-functions capable of reading specified file format.
+\end{notice}
+\begin{quote}\begin{description}
+\item[{Parameters}] \leavevmode\begin{itemize}
+\item {} 
+\textbf{file\_format} -- format of output to read.
+
+\item {} 
+\textbf{file\_str} (\emph{str}) -- location of file.
+
+\item {} 
+\textbf{year} (\emph{int}) -- year of data to extract, if equal to None whole time series extracted
+
+\end{itemize}
+
+\item[{Returns}] \leavevmode
+state dictionary.
+
+\item[{Return type}] \leavevmode
+dict
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+\index{read\_jules() (in module sentinelSimulator.stateVector)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator:sentinelSimulator.stateVector.read_jules}\pysiglinewithargsret{\code{sentinelSimulator.stateVector.}\bfcode{read\_jules}}{\emph{nc\_file=None}, \emph{year=None}}{}
+Reads jules output from netCDF file and writes it to a dictionary indexed by date.
+\begin{quote}\begin{description}
+\item[{Parameters}] \leavevmode\begin{itemize}
+\item {} 
+\textbf{nc\_file} (\emph{str}) -- location of nc\_file.
+
+\item {} 
+\textbf{year} (\emph{int}) -- year of data to extract, if equal to None whole time series extracted.
+
+\end{itemize}
+
+\item[{Returns}] \leavevmode
+state dictionary.
+
+\item[{Return type}] \leavevmode
+dict
+
+\end{description}\end{quote}
+
+\end{fulllineitems}
+
+\index{stateVector (class in sentinelSimulator.stateVector)}
+
+\begin{fulllineitems}
+\phantomsection\label{source/sentinelSimulator:sentinelSimulator.stateVector.stateVector}\pysigline{\strong{class }\code{sentinelSimulator.stateVector.}\bfcode{stateVector}}
+Class to hold state vector data for optical
+and microwave canopy RT models.
+
+\end{fulllineitems}
+
+
+
+\subsubsection{Module contents}
 \label{source/sentinelSimulator:module-sentinelSimulator}\label{source/sentinelSimulator:module-contents}\index{sentinelSimulator (module)}
 
 \chapter{Indices and tables}
