@@ -21,14 +21,17 @@ import os
 #sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('../..'))
 #sys.path.insert(0, os.path.abspath('../'))
-#sys.path.insert(0, '/home/if910917/python_packages/pyorbital-1.1.1/')
 
-import mock
+from mock import Mock as MagicMock
 
-MOCK_MODULES = ['numpy', 'scipy', 'matplotlib', 'matplotlib.pyplot', 'scipy.interpolate', 'pyorbital',
-                'pyorbital.astronomy', 'pyorbital.Orbital', 'subprocess']
-for mod_name in MOCK_MODULES:
-    sys.modules[mod_name] = mock.Mock()
+class Mock(MagicMock):
+    @classmethod
+    def __getattr__(cls, name):
+            return MagicMock()
+
+MOCK_MODULES = ['numpy', 'matplotlib', 'matplotlib.pyplot', 'pyorbital', 'pyorbital.astronomy', 'pyorbital.orbital',
+                'subprocess', 'netCDF4']
+sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # -- General configuration ------------------------------------------------
 

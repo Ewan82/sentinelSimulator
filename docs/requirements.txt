@@ -1,5 +1,5 @@
-numpy
-matplotlib
-pyorbital
+#numpy
+#matplotlib
+#pyorbital
 netCDF4
 datetime
