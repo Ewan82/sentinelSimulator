@@ -2,7 +2,6 @@ numpy
 matplotlib
 pyorbital
 netCDF4
-sys
 os
 string
 datetime
