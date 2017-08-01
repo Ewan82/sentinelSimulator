@@ -20,7 +20,7 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('../..'))
-sys.path.insert(0, '/home/if910917/python_packages/pyorbital-1.1.1/')
+#sys.path.insert(0, '/home/if910917/python_packages/pyorbital-1.1.1/')
 
 #import mock
 
