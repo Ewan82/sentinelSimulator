@@ -1,0 +1,24 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Contents:}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}sentinelSimulator}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Features}{1}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Source Code}{1}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Support}{1}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}License}{1}{subsection.1.1.4}
+\contentsline {section}{\numberline {1.2}sentinelSimulator package}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Subpackages}{2}{subsection.1.2.1}
+\contentsline {subsubsection}{sentinelSimulator.jules package}{2}{subsubsection*.3}
+\contentsline {paragraph}{Submodules}{2}{paragraph*.4}
+\contentsline {paragraph}{sentinelSimulator.jules.py\_importNML module}{2}{paragraph*.5}
+\contentsline {paragraph}{sentinelSimulator.jules.py\_jules module}{2}{paragraph*.7}
+\contentsline {paragraph}{sentinelSimulator.jules.py\_julesNML module}{3}{paragraph*.13}
+\contentsline {paragraph}{Module contents}{3}{paragraph*.17}
+\contentsline {subsection}{\numberline {1.2.2}Submodules}{3}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}sentinelSimulator.opticalCanopyRT module}{3}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.4}sentinelSimulator.satelliteGeometry module}{3}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {1.2.5}sentinelSimulator.spectra module}{4}{subsection.1.2.5}
+\contentsline {subsection}{\numberline {1.2.6}sentinelSimulator.stateVector module}{5}{subsection.1.2.6}
+\contentsline {subsection}{\numberline {1.2.7}Module contents}{6}{subsection.1.2.7}
+\contentsline {chapter}{\numberline {2}Indices and tables}{7}{chapter.2}
+\contentsline {chapter}{Python Module Index}{9}{section*.34}
+\contentsline {chapter}{Index}{11}{section*.35}
