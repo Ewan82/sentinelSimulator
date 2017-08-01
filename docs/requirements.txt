@@ -2,9 +2,9 @@ numpy
 matplotlib
 pyorbital
 netCDF4
-tempfile
 sys
 os
+string
 datetime
 copy
 re
