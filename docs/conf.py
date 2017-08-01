@@ -25,8 +25,7 @@ sys.path.insert(0, '/home/if910917/python_packages/pyorbital-1.1.1/')
 import mock
 
 MOCK_MODULES = ['numpy', 'scipy', 'matplotlib', 'matplotlib.pyplot', 'scipy.interpolate', 'pyorbital',
-                'pyorbital.astronomy', 'pyorbital.Orbital', 'subprocess', 'tempfile', 'sys', 'os', 'string', 'copy',
-                're']
+                'pyorbital.astronomy', 'pyorbital.Orbital', 'subprocess']
 for mod_name in MOCK_MODULES:
     sys.modules[mod_name] = mock.Mock()
 
