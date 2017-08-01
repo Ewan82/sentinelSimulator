@@ -14,6 +14,7 @@ Contents:
 
    source/README
    source/sentinelSimulator
+   source/modules
 
 Indices and tables
 ==================
