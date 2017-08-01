@@ -3,5 +3,4 @@ matplotlib
 pyorbital
 netCDF4
 datetime
-copy
 re
