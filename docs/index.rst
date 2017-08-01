@@ -13,7 +13,6 @@ Contents:
    :maxdepth: 2
 
    source/README
-   source/sentinelSimulator
    source/modules
 
 Indices and tables

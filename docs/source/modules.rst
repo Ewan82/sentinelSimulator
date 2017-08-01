@@ -1,7 +1,7 @@
-.
-=
+sentinel_simulator
+==================
 
 .. toctree::
    :maxdepth: 4
 
-   sentinelSimulator
+   sentinel_simulator
