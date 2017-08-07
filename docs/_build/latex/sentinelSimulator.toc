@@ -1,0 +1,25 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Contents:}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}sentinelSimulator}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Features}{1}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Source Code}{1}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Support}{1}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}License}{1}{subsection.1.1.4}
+\contentsline {section}{\numberline {1.2}sentinel\_simulator}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}sentinel\_simulator package}{2}{subsection.1.2.1}
+\contentsline {subsubsection}{Subpackages}{2}{subsubsection*.3}
+\contentsline {paragraph}{sentinel\_simulator.jules package}{2}{paragraph*.4}
+\contentsline {subparagraph}{Submodules}{2}{subparagraph*.5}
+\contentsline {subparagraph}{sentinel\_simulator.jules.py\_importNML module}{2}{subparagraph*.6}
+\contentsline {subparagraph}{sentinel\_simulator.jules.py\_jules module}{2}{subparagraph*.8}
+\contentsline {subparagraph}{sentinel\_simulator.jules.py\_julesNML module}{3}{subparagraph*.14}
+\contentsline {subparagraph}{Module contents}{3}{subparagraph*.18}
+\contentsline {subsubsection}{Submodules}{3}{subsubsection*.19}
+\contentsline {subsubsection}{sentinel\_simulator.opticalCanopyRT module}{3}{subsubsection*.20}
+\contentsline {subsubsection}{sentinel\_simulator.satelliteGeometry module}{3}{subsubsection*.22}
+\contentsline {subsubsection}{sentinel\_simulator.spectra module}{4}{subsubsection*.26}
+\contentsline {subsubsection}{sentinel\_simulator.stateVector module}{5}{subsubsection*.36}
+\contentsline {subsubsection}{Module contents}{5}{subsubsection*.40}
+\contentsline {chapter}{\numberline {2}Indices and tables}{7}{chapter.2}
+\contentsline {chapter}{Python Module Index}{9}{section*.41}
+\contentsline {chapter}{Index}{11}{section*.42}
