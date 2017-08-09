@@ -71,7 +71,7 @@ if __name__ == "__main__":
     """This example opens a test output file from the JULES
     model, reads in LAI data, runs these through the optical RT
     model at given geometry and convoles the resulting spectra
-    with Sentinel 2 specytra response functions.
+    with Sentinel 2 spectra response functions.
     """
 
     from matplotlib import pyplot as plt
