@@ -3,21 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="b7482d48-4180-44dc-bbfe-8243e20ae74b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/environment.pickle" afterPath="$PROJECT_DIR$/docs/_build/doctrees/environment.pickle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/index.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/index.doctree" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/source/README.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/source/README.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/source/sentinel_simulator.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/source/sentinel_simulator.doctree" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/objects.inv" afterPath="$PROJECT_DIR$/docs/_build/html/objects.inv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rst" afterPath="$PROJECT_DIR$/README.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/genindex.html" afterPath="$PROJECT_DIR$/docs/_build/html/genindex.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_sources/index.txt" afterPath="$PROJECT_DIR$/docs/_build/html/_sources/index.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/index.html" afterPath="$PROJECT_DIR$/docs/_build/html/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/searchindex.js" afterPath="$PROJECT_DIR$/docs/_build/html/searchindex.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/source/README.html" afterPath="$PROJECT_DIR$/docs/_build/html/source/README.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/source/sentinel_simulator.html" afterPath="$PROJECT_DIR$/docs/_build/html/source/sentinel_simulator.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/opticalCanopyRT.py" afterPath="$PROJECT_DIR$/sentinel_simulator/opticalCanopyRT.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/satelliteGeometry.py" afterPath="$PROJECT_DIR$/sentinel_simulator/satelliteGeometry.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/simulator.py" afterPath="$PROJECT_DIR$/sentinel_simulator/simulator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/spectra.py" afterPath="$PROJECT_DIR$/sentinel_simulator/spectra.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/stateVector.py" afterPath="$PROJECT_DIR$/sentinel_simulator/stateVector.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.rst" afterPath="$PROJECT_DIR$/docs/index.rst" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,11 +27,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="simulator.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.rst" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/index.rst">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="simulator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sentinel_simulator/simulator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1095">
-              <caret line="73" column="23" lean-forward="false" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+            <state relative-caret-position="255">
+              <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
               <folding>
                 <element signature="e#1#19#0" expanded="true" />
               </folding>
@@ -44,21 +49,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/_build/html/index.html">
+      <file leaf-file-name="README.rst" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="65" column="5" lean-forward="false" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.rst" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.rst">
+      <file leaf-file-name="example.rst" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/source/example.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+            <state relative-caret-position="45">
+              <caret line="3" column="61" lean-forward="false" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conf.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/conf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="144" column="1" lean-forward="false" selection-start-line="144" selection-start-column="1" selection-end-line="144" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -91,6 +106,7 @@
       <find>ign</find>
       <find>pnc</find>
       <find>datet</find>
+      <find>stat</find>
       <find>100px</find>
     </findStrings>
     <replaceStrings>
@@ -116,9 +132,7 @@
         <option value="$PROJECT_DIR$/spectra.py" />
         <option value="$PROJECT_DIR$/docs/source/README.rst" />
         <option value="$PROJECT_DIR$/docs/requirements.txt" />
-        <option value="$PROJECT_DIR$/docs/conf.py" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/docs/index.rst" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/py_plot_jules.py" />
         <option value="$PROJECT_DIR$/sentinel_simulator/jules/py_plot_jules.py" />
@@ -127,7 +141,10 @@
         <option value="$PROJECT_DIR$/sentinel_simulator/stateVector.py" />
         <option value="$PROJECT_DIR$/sentinel_simulator/opticalCanopyRT.py" />
         <option value="$PROJECT_DIR$/sentinel_simulator/simulator.py" />
+        <option value="$PROJECT_DIR$/docs/conf.py" />
         <option value="$PROJECT_DIR$/README.rst" />
+        <option value="$PROJECT_DIR$/docs/example.rst" />
+        <option value="$PROJECT_DIR$/docs/index.rst" />
         <option value="$PROJECT_DIR$/docs/_build/html/index.html" />
       </list>
     </option>
@@ -237,6 +254,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sentinelSimulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sentinelSimulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="_build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -274,6 +309,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/source" />
       <recent name="$PROJECT_DIR$/sentinel_simulator/jules" />
       <recent name="$PROJECT_DIR$/sentinel_simulator" />
       <recent name="$PROJECT_DIR$/jules/output" />
@@ -507,7 +543,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/source/sentinelSimulator.rst" />
     <entry file="file://$PROJECT_DIR$/docs/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -590,14 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/conf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2986">
-          <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sentinel_simulator/jules/py_jules.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
@@ -668,14 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-166">
           <caret line="33" column="71" lean-forward="false" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -785,20 +804,34 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sentinel_simulator/simulator.py">
+    <entry file="file://$PROJECT_DIR$/docs/conf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" column="23" lean-forward="false" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
-          <folding>
-            <element signature="e#1#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="319">
+          <caret line="144" column="1" lean-forward="false" selection-start-line="144" selection-start-column="1" selection-end-line="144" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/example.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="61" lean-forward="false" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -806,8 +839,24 @@
     <entry file="file://$PROJECT_DIR$/docs/_build/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
-          <caret line="65" column="5" lean-forward="false" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
-          <folding />
+          <caret line="66" column="5" lean-forward="false" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+          <folding>
+            <marker date="1502453805960" expanded="false" signature="4439:4452" ph="..." />
+            <marker date="1502453805960" expanded="false" signature="4783:4797" ph="..." />
+            <marker date="1502453805960" expanded="false" signature="5110:5128" ph="..." />
+            <marker date="1502453805960" expanded="false" signature="5531:5538" ph="»" />
+            <marker date="1502453805960" expanded="false" signature="5601:5607" ph="©" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sentinel_simulator/simulator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding>
+            <element signature="e#1#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

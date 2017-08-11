@@ -13,6 +13,7 @@ Contents:
    :maxdepth: 2
 
    source/README
+   source/example
    source/modules
 
 Indices and tables
