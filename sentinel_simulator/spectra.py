@@ -195,9 +195,9 @@ def sentinel2(s, mission="a"):
     sen2 = spectra()
 
     if mission == "a":
-        fname = "srfData/S2a_SRF.csv"
+        fname = "../srfData/S2a_SRF.csv"
     else:
-        fname = "srfData/S2b_SRF.csv"
+        fname = "../srfData/S2b_SRF.csv"
 
     for n in xrange(1, 14):
         srf = spectra(fname=fname, ftype="CSV", reflCol=n)
@@ -219,7 +219,7 @@ if __name__ == "__main__":
 
     if doTest1:
         # test simulation of S2 bands
-        svc = spectra(fname="testData/HRPDA.053017.0065_moc.sig")
+        svc = spectra(fname="../testData/HRPDA.053017.0065_moc.sig")
         sen2a = sentinel2(svc)
         sen2b = sentinel2(svc, mission="b")
 

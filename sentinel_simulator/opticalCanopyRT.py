@@ -22,13 +22,13 @@ def canopyRTOptical(state, geom, resln=1.0):
     range at a resolution set by resln.
 
     :param state: Instance of the stateVector class.
-    :type state: instance.
+    :type state: instance
     :param geom: Instance of the sensorGeomety class.
-    :type geom: instance.
+    :type geom: instance
     :param resln: the spectral resolution in nm [optional].
-    :type resln: float.
+    :type resln: float
     :return: Instance of the spectra class.
-    :rtype: instance.
+    :rtype: instance
     """
 
     spect = sp.spectra()
@@ -41,7 +41,7 @@ def canopyRTOptical(state, geom, resln=1.0):
     print >> tmpFile, "1 %d" % len(spect.wavl),
     for w in spect.wavl:
         print >> tmpFile, " %f" % w,
-    print >> tmpFile, "\n0 0 %s 0" % str(geom.sza)
+    print >> tmpFile, "\n%s %s %s %s" %(geom.vza,geom.vaa,geom.sza,geom.saa)
     tmpFile.close()
 
     # set up nadim command line
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     from matplotlib import pyplot as plt
 
     # read example LAI data:
-    allLai = netCDF4.Dataset('testData/crop_germ_gl4.day.nc').variables['lai'][-365:, 5, 0, 0]
+    allLai = netCDF4.Dataset('../testData/crop_germ_gl4.day.nc').variables['lai'][-365:, 5, 0, 0]
 
     # main classes:
     state = sV.stateVector()

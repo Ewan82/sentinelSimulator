@@ -8,7 +8,7 @@ class sensorGeometry:
     """Class to hold sun-sensor geometry information.
     """
     def __init__(self):
-        self.datetime = None
+        self.date_utc = None
         # view zenith angle
         self.vza = None
         # view azimuth angle
@@ -21,11 +21,11 @@ class sensorGeometry:
     def printGeom(self):
         """Prints currently specified class attributes.
         """
-        print self.datetime, self.vza, self.vaa, self.sza, self.saa
+        print self.date_utc, self.vza, self.vaa, self.sza, self.saa
 
 
 def getSentinel2Geometry(startDateUTC, lengthDays, lat, lon, alt=0.0, mission="Sentinel-2a",
-                         tleFile="./TLE/norad_resource_tle.txt"):
+                         tleFile="../TLE/norad_resource_tle.txt"):
     """Calculate approximate geometry for Sentinel overpasses.
     Approximate because it assumes maximum satellite elevation
     is the time at which target is imaged.
@@ -61,7 +61,7 @@ def getSentinel2Geometry(startDateUTC, lengthDays, lat, lon, alt=0.0, mission="S
 
         if sza < 90 and vza < 10.3:
             thisGeom = sensorGeometry()
-            thisGeom.datetime = p[2]
+            thisGeom.date_utc = p[2]
             thisGeom.vza = vza
             thisGeom.vaa = vaa
             thisGeom.sza = sza

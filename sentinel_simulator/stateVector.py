@@ -10,12 +10,37 @@ class stateVector:
     """
     def __init__(self):
 
+        self.date_utc = None
         self.lai = None
-        self.canHeight = None
+        self.can_height = None
         self.leafChl = None
         self.leafWater = None
-        self.soilMoisture = None
+        self.soil_moisture = None
         self.soilAlbedo = None
+
+
+def get_jules_state(date_utc, nc_file='jules/output/wallerfing_79_12.3_hourly.nc'):
+    """Function that returns a stateVector instance for a given time.
+    :param date_utc: datetime object of when to extract JULES output.
+    :type date_utc: object
+    :param nc_file: JULES output file from which to extract data.
+    :type nc_file: str
+    :return: Instance of stateVector class.
+    :rtype: instance
+    """
+    nc_dat = nc.Dataset(nc_file, 'r')
+    t_idx = nc.date2index(date_utc, nc_dat.variables['time'], select='nearest')
+    state_inst = stateVector()
+    state_inst.date_utc = nc.num2date(nc_dat.variables['time'][t_idx], nc_dat.variables['time'].units)
+    state_inst.lai = nc_dat.variables['croplai'][t_idx, 0, 0, 0]  # (m2 m-2)
+    state_inst.can_height = nc_dat.variables['cropcanht'][t_idx, 0, 0, 0]  # (m)
+    state_inst.soil_moisture = nc_dat.variables['smcl'][t_idx, 0, 0, 0]  # (kg m-2)
+    nc_dat.close()
+    return state_inst
+
+
+def nearest(items, pivot):
+    return min(items, key=lambda x: abs(x - pivot))
 
 
 def read(file_format='jules', file_str=None, year=None):

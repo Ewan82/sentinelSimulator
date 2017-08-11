@@ -57,9 +57,9 @@
 <p>This Python package simulates Sentinel 2 data based on output from the JULES land surface model. Here we provide
 documentation on this package. Below we illustrate a basic explanation of the package in use.</p>
 <p>Example of using sentinelSimulator package:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">simulator</span>
-<span class="c1"># Get your stuff done</span>
-<span class="n">simulator</span><span class="o">.</span><span class="n">do_example</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">simulator</span> <span class="kn">as</span> <span class="nn">sim</span>
+<span class="c1"># Create class instance containing sentinel simulator data</span>
+<span class="n">sim</span><span class="o">.</span><span class="n">Simulator</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2012</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">days</span><span class="o">=</span><span class="mi">365</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="features">
@@ -68,6 +68,27 @@ documentation on this package. Below we illustrate a basic explanation of the pa
 <li>Simulates sentinel 2 data from JULES output</li>
 <li>Add additional explanation</li>
 </ul>
+</div>
+<div class="section" id="example-output">
+<h2>Example Output<a class="headerlink" href="#example-output" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/vza.png"><img alt="../_images/vza.png" src="../_images/vza.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/sza.png"><img alt="../_images/sza.png" src="../_images/sza.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/lai.png"><img alt="../_images/lai.png" src="../_images/lai.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/can_ht.png"><img alt="../_images/can_ht.png" src="../_images/can_ht.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/soil_m.png"><img alt="../_images/soil_m.png" src="../_images/soil_m.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/B1.png"><img alt="../_images/B1.png" src="../_images/B1.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/B2.png"><img alt="../_images/B2.png" src="../_images/B2.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/B3.png"><img alt="../_images/B3.png" src="../_images/B3.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/B4.png"><img alt="../_images/B4.png" src="../_images/B4.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/B5.png"><img alt="../_images/B5.png" src="../_images/B5.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/B6.png"><img alt="../_images/B6.png" src="../_images/B6.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/B7.png"><img alt="../_images/B7.png" src="../_images/B7.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/B8.png"><img alt="../_images/B8.png" src="../_images/B8.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/B8A.png"><img alt="../_images/B8A.png" src="../_images/B8A.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/B9.png"><img alt="../_images/B9.png" src="../_images/B9.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/B10.png"><img alt="../_images/B10.png" src="../_images/B10.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/B11.png"><img alt="../_images/B11.png" src="../_images/B11.png" style="width: 600px; height: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/B12.png"><img alt="../_images/B12.png" src="../_images/B12.png" style="width: 600px; height: 200px;" /></a>
 </div>
 <div class="section" id="source-code">
 <h2>Source Code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h2>
@@ -94,6 +115,7 @@ Contact: <a class="reference external" href="mailto:ewan&#46;pinnington&#37;&#52
   <ul>
 <li><a class="reference internal" href="#">sentinelSimulator</a><ul>
 <li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#example-output">Example Output</a></li>
 <li><a class="reference internal" href="#source-code">Source Code</a></li>
 <li><a class="reference internal" href="#support">Support</a></li>
 <li><a class="reference internal" href="#license">License</a></li>

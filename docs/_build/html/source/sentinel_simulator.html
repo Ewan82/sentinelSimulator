@@ -88,16 +88,16 @@ range at a resolution set by resln.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>state</strong> (<em>instance.</em>) &#8211; Instance of the stateVector class.</li>
-<li><strong>geom</strong> (<em>instance.</em>) &#8211; Instance of the sensorGeomety class.</li>
-<li><strong>resln</strong> (<em>float.</em>) &#8211; the spectral resolution in nm [optional].</li>
+<li><strong>state</strong> (<em>instance</em>) &#8211; Instance of the stateVector class.</li>
+<li><strong>geom</strong> (<em>instance</em>) &#8211; Instance of the sensorGeomety class.</li>
+<li><strong>resln</strong> (<em>float</em>) &#8211; the spectral resolution in nm [optional].</li>
 </ul>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Instance of the spectra class.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">instance.</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">instance</p>
 </td>
 </tr>
 </tbody>
@@ -109,7 +109,7 @@ range at a resolution set by resln.</p>
 <span id="sentinel-simulator-satellitegeometry-module"></span><h2>sentinel_simulator.satelliteGeometry module<a class="headerlink" href="#module-sentinel_simulator.satelliteGeometry" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="sentinel_simulator.satelliteGeometry.getSentinel2Geometry">
-<tt class="descclassname">sentinel_simulator.satelliteGeometry.</tt><tt class="descname">getSentinel2Geometry</tt><big>(</big><em>startDateUTC</em>, <em>lengthDays</em>, <em>lat</em>, <em>lon</em>, <em>alt=0.0</em>, <em>mission='Sentinel-2a'</em>, <em>tleFile='./TLE/norad_resource_tle.txt'</em><big>)</big><a class="headerlink" href="#sentinel_simulator.satelliteGeometry.getSentinel2Geometry" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">sentinel_simulator.satelliteGeometry.</tt><tt class="descname">getSentinel2Geometry</tt><big>(</big><em>startDateUTC</em>, <em>lengthDays</em>, <em>lat</em>, <em>lon</em>, <em>alt=0.0</em>, <em>mission='Sentinel-2a'</em>, <em>tleFile='../TLE/norad_resource_tle.txt'</em><big>)</big><a class="headerlink" href="#sentinel_simulator.satelliteGeometry.getSentinel2Geometry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate approximate geometry for Sentinel overpasses.
 Approximate because it assumes maximum satellite elevation
 is the time at which target is imaged.</p>
@@ -296,6 +296,23 @@ method appropriate to the type of file.</p>
 </div>
 <div class="section" id="module-sentinel_simulator.stateVector">
 <span id="sentinel-simulator-statevector-module"></span><h2>sentinel_simulator.stateVector module<a class="headerlink" href="#module-sentinel_simulator.stateVector" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="sentinel_simulator.stateVector.get_jules_state">
+<tt class="descclassname">sentinel_simulator.stateVector.</tt><tt class="descname">get_jules_state</tt><big>(</big><em>date_utc</em>, <em>nc_file='jules/output/wallerfing_79_12.3_hourly.nc'</em><big>)</big><a class="headerlink" href="#sentinel_simulator.stateVector.get_jules_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that returns a stateVector instance for a given time.
+:param date_utc: datetime object of when to extract JULES output.
+:type date_utc: object
+:param nc_file: JULES output file from which to extract data.
+:type nc_file: str
+:return: Instance of stateVector class.
+:rtype: instance</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sentinel_simulator.stateVector.nearest">
+<tt class="descclassname">sentinel_simulator.stateVector.</tt><tt class="descname">nearest</tt><big>(</big><em>items</em>, <em>pivot</em><big>)</big><a class="headerlink" href="#sentinel_simulator.stateVector.nearest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="function">
 <dt id="sentinel_simulator.stateVector.read">
 <tt class="descclassname">sentinel_simulator.stateVector.</tt><tt class="descname">read</tt><big>(</big><em>file_format='jules'</em>, <em>file_str=None</em>, <em>year=None</em><big>)</big><a class="headerlink" href="#sentinel_simulator.stateVector.read" title="Permalink to this definition">¶</a></dt>
