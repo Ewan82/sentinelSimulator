@@ -4,3 +4,4 @@ pyorbital
 netCDF4
 datetime
 sentinel_simulator
+jules
