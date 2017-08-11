@@ -1,5 +1,5 @@
 Example Output
---------------
+==============
 
 Here we show some example output from the Sentinel simulator.
 
