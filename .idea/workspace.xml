@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b7482d48-4180-44dc-bbfe-8243e20ae74b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/requirements.txt" afterPath="$PROJECT_DIR$/docs/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,8 +43,36 @@
         <entry file="file://$PROJECT_DIR$/docs/_build/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="382">
-              <caret line="66" column="5" lean-forward="false" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-              <folding />
+              <caret line="64" column="5" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+              <folding>
+                <marker date="1502458362311" expanded="true" signature="2911:3089" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="3162:3563" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="3644:4863" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="3687:4850" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="3744:3924" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="3812:3819" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="3842:3918" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="4064:4163" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="4093:4159" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="4223:4298" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="4252:4293" ph="..." />
+                <marker date="1502458362311" expanded="false" signature="4335:4348" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="4349:4770" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="4433:4645" ph="..." />
+                <marker date="1502458362311" expanded="false" signature="4679:4693" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="4694:4763" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="4934:5462" ph="..." />
+                <marker date="1502458362311" expanded="false" signature="5006:5024" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="5025:5110" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="5082:5105" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="5137:5236" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="5204:5229" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="5263:5359" ph="..." />
+                <marker date="1502458362311" expanded="true" signature="5330:5352" ph="..." />
+                <marker date="1502458362311" expanded="false" signature="5427:5434" ph="»" />
+                <marker date="1502458362311" expanded="true" signature="5487:5615" ph="..." />
+                <marker date="1502458362311" expanded="false" signature="5497:5503" ph="©" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/docs/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,7 +110,7 @@
       <file leaf-file-name="conf.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/conf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="2100">
               <caret line="144" column="27" lean-forward="false" selection-start-line="144" selection-start-column="27" selection-end-line="144" selection-end-column="27" />
               <folding />
             </state>
@@ -735,14 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/conf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="144" column="27" lean-forward="false" selection-start-line="144" selection-start-column="27" selection-end-line="144" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -762,8 +781,36 @@
     <entry file="file://$PROJECT_DIR$/docs/_build/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
-          <caret line="66" column="5" lean-forward="false" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-          <folding />
+          <caret line="64" column="5" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+          <folding>
+            <marker date="1502458362311" expanded="true" signature="2911:3089" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="3162:3563" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="3644:4863" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="3687:4850" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="3744:3924" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="3812:3819" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="3842:3918" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="4064:4163" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="4093:4159" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="4223:4298" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="4252:4293" ph="..." />
+            <marker date="1502458362311" expanded="false" signature="4335:4348" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="4349:4770" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="4433:4645" ph="..." />
+            <marker date="1502458362311" expanded="false" signature="4679:4693" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="4694:4763" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="4934:5462" ph="..." />
+            <marker date="1502458362311" expanded="false" signature="5006:5024" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="5025:5110" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="5082:5105" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="5137:5236" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="5204:5229" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="5263:5359" ph="..." />
+            <marker date="1502458362311" expanded="true" signature="5330:5352" ph="..." />
+            <marker date="1502458362311" expanded="false" signature="5427:5434" ph="»" />
+            <marker date="1502458362311" expanded="true" signature="5487:5615" ph="..." />
+            <marker date="1502458362311" expanded="false" signature="5497:5503" ph="©" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -823,10 +870,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/conf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2100">
+          <caret line="144" column="27" lean-forward="false" selection-start-line="144" selection-start-column="27" selection-end-line="144" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
