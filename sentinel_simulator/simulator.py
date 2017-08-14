@@ -81,9 +81,9 @@ if __name__ == "__main__":
     """
     sim_c = Simulator()
 
-    fig = plot_class_var(sim_c.date_lst, sim_c.vza_lst, y_lab='View zenith angle (degrees)')
+    fig = plot_class_var(sim_c.date_lst, sim_c.vza_lst, y_lab='View zenith angle (degrees)', line_type='o')
     fig.savefig('../docs/source/simulator/vza.png')
-    fig = plot_class_var(sim_c.date_lst, sim_c.sza_lst, y_lab='Solar zenith angle (degrees)')
+    fig = plot_class_var(sim_c.date_lst, sim_c.sza_lst, y_lab='Solar zenith angle (degrees)', line_type='o')
     fig.savefig('../docs/source/simulator/sza.png')
     fig = plot_class_var(sim_c.date_lst, sim_c.lai_lst, y_lab='Leaf area index')
     fig.savefig('../docs/source/simulator/lai.png')
@@ -92,5 +92,6 @@ if __name__ == "__main__":
     fig = plot_class_var(sim_c.date_lst, sim_c.soilm_lst, y_lab=r'Soil moisture (m$^{3}~$m$^{-3}$)')
     fig.savefig('../docs/source/simulator/soil_m.png')
     for x in range(13):
-        fig = plot_class_var(sim_c.date_lst, sim_c.all_BRF_arr[:,x], y_lab=sim_c.band_labels[x]+' reflectance')
+        fig = plot_class_var(sim_c.date_lst, sim_c.all_BRF_arr[:,x], y_lab=sim_c.band_labels[x]+' reflectance',
+                             line_type='o')
         fig.savefig('../docs/source/simulator/'+sim_c.band_labels[x]+'.png')

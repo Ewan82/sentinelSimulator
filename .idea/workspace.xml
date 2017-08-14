@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7482d48-4180-44dc-bbfe-8243e20ae74b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/environment.pickle" afterPath="$PROJECT_DIR$/docs/_build/doctrees/environment.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/index.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/index.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/source/example.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/source/example.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B1.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B10.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B10.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B11.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B11.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B12.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B12.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B2.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B3.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B4.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B5.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B6.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B7.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B7.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B8.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B8A.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B8A.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B9.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B9.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/sza.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/sza.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/vza.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/vza.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/sim_profile_out.text" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/B1.png" afterPath="$PROJECT_DIR$/docs/source/simulator/B1.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/B10.png" afterPath="$PROJECT_DIR$/docs/source/simulator/B10.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/B11.png" afterPath="$PROJECT_DIR$/docs/source/simulator/B11.png" />
@@ -36,15 +19,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/sza.png" afterPath="$PROJECT_DIR$/docs/source/simulator/sza.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/vza.png" afterPath="$PROJECT_DIR$/docs/source/simulator/vza.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/.buildinfo" afterPath="$PROJECT_DIR$/docs/_build/html/.buildinfo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_sources/index.txt" afterPath="$PROJECT_DIR$/docs/_build/html/_sources/index.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/index.html" afterPath="$PROJECT_DIR$/docs/_build/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/searchindex.js" afterPath="$PROJECT_DIR$/docs/_build/html/searchindex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/source/example.html" afterPath="$PROJECT_DIR$/docs/_build/html/source/example.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/conf.py" afterPath="$PROJECT_DIR$/docs/conf.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.rst" afterPath="$PROJECT_DIR$/docs/index.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/requirements.txt" afterPath="$PROJECT_DIR$/docs/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/sim_profile_out.text" afterPath="$PROJECT_DIR$/sentinel_simulator/sim_profile_out.text" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/simulator.py" afterPath="$PROJECT_DIR$/sentinel_simulator/simulator.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,23 +34,37 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.rst" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/index.rst">
+      <file leaf-file-name="simulator.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sentinel_simulator/simulator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="629">
+              <caret line="83" column="32" lean-forward="false" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+              <folding>
+                <element signature="e#1#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="simulator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sentinel_simulator/simulator.py">
+      <file leaf-file-name="satelliteGeometry.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sentinel_simulator/satelliteGeometry.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="991">
-              <caret line="95" column="45" lean-forward="false" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
+            <state relative-caret-position="1095">
+              <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="75" selection-end-column="7" />
               <folding>
-                <element signature="e#1#19#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opticalCanopyRT.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sentinel_simulator/opticalCanopyRT.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-196">
+              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding>
+                <element signature="e#19#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,31 +73,11 @@
       <file leaf-file-name="spectra.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sentinel_simulator/spectra.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
+            <state relative-caret-position="1139">
               <caret line="185" column="40" lean-forward="false" selection-start-line="185" selection-start-column="40" selection-end-line="185" selection-end-column="40" />
               <folding>
                 <element signature="e#23#32#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="conf.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/conf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2460">
-              <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -182,16 +150,16 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/docs/conf.py" />
         <option value="$PROJECT_DIR$/docs/index.rst" />
-        <option value="$PROJECT_DIR$/sentinel_simulator/simulator.py" />
         <option value="$PROJECT_DIR$/docs/requirements.txt" />
+        <option value="$PROJECT_DIR$/sentinel_simulator/simulator.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
     <option name="y" value="24" />
-    <option name="width" value="1922" />
-    <option name="height" value="1033" />
+    <option name="width" value="1442" />
+    <option name="height" value="853" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -262,6 +230,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sentinelSimulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sentinelSimulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sentinelSimulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sentinelSimulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simulator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -479,10 +487,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1922" height="1033" extended-state="6" />
+    <frame x="-1" y="24" width="1442" height="853" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31770834" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4236111" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -593,20 +601,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sentinel_simulator/satelliteGeometry.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="75" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sentinel_simulator/opticalCanopyRT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="43" column="75" lean-forward="false" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/simulator/B1.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -657,16 +651,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/simulator/sza.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/simulator/vza.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -702,25 +686,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_build/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
           <caret line="64" column="5" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sentinel_simulator/sim_profile_out.text">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -761,16 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sentinel_simulator/simulator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="991">
-          <caret line="95" column="45" lean-forward="false" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
-          <folding>
-            <element signature="e#1#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/example.rst">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -779,9 +738,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sentinel_simulator/spectra.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
+        <state relative-caret-position="1139">
           <caret line="185" column="40" lean-forward="false" selection-start-line="185" selection-start-column="40" selection-end-line="185" selection-end-column="40" />
           <folding>
             <element signature="e#23#32#0" expanded="true" />
@@ -789,11 +756,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/docs/index.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sentinel_simulator/sim_profile_out.text">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sentinel_simulator/satelliteGeometry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="75" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sentinel_simulator/opticalCanopyRT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-196">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="e#19#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/simulator/vza.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/simulator/sza.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sentinel_simulator/simulator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="83" column="32" lean-forward="false" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+          <folding>
+            <element signature="e#1#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
