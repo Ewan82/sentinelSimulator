@@ -18,6 +18,7 @@ from sense import canopy as sense_canopy
 
 class Simulator(object):
     """Class to simulate Sentinel 2 observations over Wallerfing for a given year.
+
     """
     def __init__(self, year=2012, month=1, days=365):
         """Calculate class attributes for given year, month and number of days.
@@ -53,13 +54,15 @@ class S1_simulator(Simulator):
     """Given Simulator class this subclass will simulate Sentinel 1 data.
 
     .. note:: This function requires the Community SAR ScattEring model (SenSE) to be installed on the system. This
-    code is available from:
-    - https://github.com/PMarzahn/sense
+     code is available from:
+
+     - https://github.com/PMarzahn/sense
 
     """
     def __init__(self, **kwargs):
         """
         Initialize with same arguemnts as superClass 'Simulator'.
+
         """
         super(S1_simulator, self).__init__(**kwargs)
         # Setup SAR RT spectra list (Sentinel 1)
@@ -90,10 +93,12 @@ class S1_simulator(Simulator):
 
 class S2_simulator(Simulator):
     """Given Simulator class this subclass will simulate Sentinel 2 data.
+
     """
     def __init__(self, **kwargs):
         """
         Initialize with same arguemnts as superClass 'Simulator'.
+
         """
         super(S2_simulator, self).__init__(**kwargs)
         # Setup canopy optical RT spectra list (Sentinel 2)

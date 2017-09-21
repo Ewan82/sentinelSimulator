@@ -43,6 +43,14 @@ sentinel_simulator.stateVector module
     :undoc-members:
     :show-inheritance:
 
+sentinel_simulator.simulator module
+-------------------------------------
+
+.. automodule:: sentinel_simulator.simulator
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 
 Module contents
 ---------------
