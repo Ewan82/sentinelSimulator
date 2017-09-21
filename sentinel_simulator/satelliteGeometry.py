@@ -21,7 +21,7 @@ class sensorGeometry:
     def printGeom(self):
         """Prints currently specified class attributes.
         """
-        print self.date_utc, self.vza, self.vaa, self.sza, self.saa
+        print(self.date_utc, self.vza, self.vaa, self.sza, self.saa)
 
 
 def getSentinel2Geometry(startDateUTC, lengthDays, lat, lon, alt=0.0, mission="Sentinel-2a",

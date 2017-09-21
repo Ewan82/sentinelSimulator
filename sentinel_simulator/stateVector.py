@@ -76,7 +76,7 @@ def read_jules(nc_file=None, year=None):
     """
     if nc_file is None:
         nc_file = 'jules/output/wallerfing_jules_1989_2012.nc'
-        print nc_file
+        print("%s") % nc_file
     nc_dat = nc.Dataset(nc_file, 'r')
     state_dict = {}
     time = nc_dat.variables['time']

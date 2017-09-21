@@ -5,14 +5,18 @@ import datetime as dt
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import seaborn as sns
+sns.set_style('whitegrid')
 
 import opticalCanopyRT as op_can_rt
 import satelliteGeometry as satgeo
 import stateVector as sv
 import spectra as sp
+# Import sense code
+from sense import model as sense_mod
+from sense import soil as sense_soil
+from sense import canopy as sense_canopy
 
-
-class Simulator:
+class Simulator(object):
     """Class to simulate Sentinel 2 observations over Wallerfing for a given year.
     """
     def __init__(self, year=2012, month=1, days=365):
@@ -44,7 +48,55 @@ class Simulator:
         self.canht_lst = [state.can_height for state in self.state_lst]
         self.soilm_lst = [state.soil_moisture / 100. for state in self.state_lst]
 
-        #  Setup canopy optical RT spectra list
+
+class S1_simulator(Simulator):
+    """Given Simulator class this subclass will simulate Sentinel 1 data.
+
+    .. note:: This function requires the Community SAR ScattEring model (SenSE) to be installed on the system. This
+    code is available from:
+    - https://github.com/PMarzahn/sense
+
+    """
+    def __init__(self, **kwargs):
+        """
+        Initialize with same arguemnts as superClass 'Simulator'.
+        """
+        super(S1_simulator, self).__init__(**kwargs)
+        # Setup SAR RT spectra list (Sentinel 1)
+        self.freq = 5.
+        self.theta = np.deg2rad(50)
+        self.stype = 'turbid_rayleigh'
+        # stype='turbid_isotropic'
+        self.models = {'surface': 'Oh92', 'canopy': self.stype}
+        self.s = 0.02
+        d = 0.22
+        ke = 1.
+        # canopy = sense_canopy.OneLayer(ke_h=ke, ke_v=ke, d=0.1*self.state_lst[x].can_height, ks_h=omega * ke, ks_v=omega * ke)
+        omega = 0.12
+
+        self.SAR_list = [sense_mod.SingleScatRT(
+            surface=sense_soil.Soil(mv=self.state_lst[x].soil_moisture, f=self.freq, s=self.s, clay=0.23, sand=0.27),
+            canopy=sense_canopy.OneLayer(ke_h=0.1*self.state_lst[x].lai, ke_v=0.1*self.state_lst[x].lai,
+                                         d=0.1*self.state_lst[x].can_height,
+                                         ks_h=omega * 0.1*self.state_lst[x].lai,
+                                         ks_v=omega * 0.1*self.state_lst[x].lai),
+            models=self.models,
+            theta=self.theta,
+            freq=self.freq) for x in xrange(len(self.state_lst))]
+        for s in self.SAR_list:
+            s.sigma0()
+        self.backscatter_keys = ['vv', 'hh', 'hv']
+
+
+class S2_simulator(Simulator):
+    """Given Simulator class this subclass will simulate Sentinel 2 data.
+    """
+    def __init__(self, **kwargs):
+        """
+        Initialize with same arguemnts as superClass 'Simulator'.
+        """
+        super(S2_simulator, self).__init__(**kwargs)
+        # Setup canopy optical RT spectra list (Sentinel 2)
         self.spect_lst = [op_can_rt.canopyRTOptical(self.state_lst[x], self.geom_lst[x]) for x in
                           xrange(len(self.state_lst))]
         self.all_spect_lst = [sp.sentinel2(spect) for spect in self.spect_lst]
@@ -61,7 +113,7 @@ def plot_class_var(date_lst, var, y_lab=None, line_type='-'):
     :return: Figure.
     :rtype: object
     """
-    sns.set_context('poster', font_scale=1.2, rc={'lines.linewidth': 1, 'lines.markersize': 10})
+    sns.set_context('poster', font_scale=1.2, rc={'lines.linewidth': 2, 'lines.markersize': 6})
     fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(15, 5))
     #ax.xaxis_date()
     sns.set_style('whitegrid')
@@ -79,19 +131,31 @@ def plot_class_var(date_lst, var, y_lab=None, line_type='-'):
 if __name__ == "__main__":
     """Run simulator and plot output.
     """
-    sim_c = Simulator()
+    sns.set_context('poster', font_scale=1.2, rc={'lines.linewidth': 2, 'lines.markersize': 6})
+    sns.set_style('whitegrid')
+    sim_c1 = S1_simulator()
+    #sim_c2 = S2_simulator()
 
-    fig = plot_class_var(sim_c.date_lst, sim_c.vza_lst, y_lab='View zenith angle (degrees)', line_type='o')
+    fig = plot_class_var(sim_c1.date_lst, sim_c1.vza_lst, y_lab='View zenith angle (degrees)', line_type='o')
     fig.savefig('../docs/source/simulator/vza.png')
-    fig = plot_class_var(sim_c.date_lst, sim_c.sza_lst, y_lab='Solar zenith angle (degrees)', line_type='o')
+    fig = plot_class_var(sim_c1.date_lst, sim_c1.sza_lst, y_lab='Solar zenith angle (degrees)', line_type='o')
     fig.savefig('../docs/source/simulator/sza.png')
-    fig = plot_class_var(sim_c.date_lst, sim_c.lai_lst, y_lab='Leaf area index')
+    fig = plot_class_var(sim_c1.date_lst, sim_c1.lai_lst, y_lab='Leaf area index')
     fig.savefig('../docs/source/simulator/lai.png')
-    fig = plot_class_var(sim_c.date_lst, sim_c.canht_lst, y_lab='Canopy height (m)')
+    fig = plot_class_var(sim_c1.date_lst, sim_c1.canht_lst, y_lab='Canopy height (m)')
     fig.savefig('../docs/source/simulator/can_ht.png')
-    fig = plot_class_var(sim_c.date_lst, sim_c.soilm_lst, y_lab=r'Soil moisture (m$^{3}~$m$^{-3}$)')
+    fig = plot_class_var(sim_c1.date_lst, sim_c1.soilm_lst, y_lab=r'Soil moisture (m$^{3}~$m$^{-3}$)')
     fig.savefig('../docs/source/simulator/soil_m.png')
-    for x in range(13):
-        fig = plot_class_var(sim_c.date_lst, sim_c.all_BRF_arr[:,x], y_lab=sim_c.band_labels[x]+' reflectance',
+    for x in xrange(3):  # Currently using vv polarisation (vv, hh, hv) is this correct?
+        fig = plot_class_var(sim_c1.date_lst,
+                             [sim_c1.SAR_list[s1c].__dict__['stot'][sim_c1.backscatter_keys[x]]
+                              for s1c in xrange(len(sim_c1.SAR_list))],
+                             y_lab='Backscatter ' + sim_c1.backscatter_keys[x] + ' polarisation (db)',
                              line_type='o')
-        fig.savefig('../docs/source/simulator/'+sim_c.band_labels[x]+'.png')
+        # Must also think about canopy height and extinction coefficient!!!
+        # Also Philip has plotted 10*np.log10(class result) why is this?
+        fig.savefig('../docs/source/simulator/' + sim_c1.backscatter_keys[x] + '.png')
+    #for x in range(13):
+    #    fig = plot_class_var(sim_c2.date_lst, sim_c2.all_BRF_arr[:,x], y_lab=sim_c2.band_labels[x]+' reflectance',
+    #                         line_type='o')
+    #    fig.savefig('../docs/source/simulator/'+sim_c2.band_labels[x]+'.png')
