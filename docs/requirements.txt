@@ -1,9 +1,6 @@
 numpy
 matplotlib
-matplotlib.pyplot
-matplotlib.dates
 subprocess
-sense
 pyorbital
 netCDF4
 datetime
