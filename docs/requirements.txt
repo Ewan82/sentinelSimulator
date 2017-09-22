@@ -1,1 +1,5 @@
 Flask-Sphinx-Themes
+sphinx ==1.6.2
+sphinx-autobuild
+sphinx_bootstrap_theme ==0.5.3
+numpydoc
