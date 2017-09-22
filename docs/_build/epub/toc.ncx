@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+  <head>
+    <meta name="dtb:uid" content="unknown"/>
+    <meta name="dtb:depth" content="3"/>
+    <meta name="dtb:totalPageCount" content="0"/>
+    <meta name="dtb:maxPageNumber" content="0"/>
+  </head>
+  <docTitle>
+    <text>sentinelSimulator 0.0.1 documentation</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint1" playOrder="1">
+      <navLabel>
+        <text>Welcome to sentinelSimulator&#39;s documentation!</text>
+      </navLabel>
+      <content src="index.html" />
+    </navPoint>
+    <navPoint id="navPoint2" playOrder="2">
+      <navLabel>
+        <text>sentinelSimulator</text>
+      </navLabel>
+      <content src="source/README.html" />
+      <navPoint id="navPoint3" playOrder="2">
+        <navLabel>
+          <text>sentinelSimulator</text>
+        </navLabel>
+        <content src="source/README.html" />
+      </navPoint>
+      <navPoint id="navPoint4" playOrder="3">
+        <navLabel>
+          <text>Features</text>
+        </navLabel>
+        <content src="source/README.html#features" />
+      </navPoint>
+      <navPoint id="navPoint5" playOrder="4">
+        <navLabel>
+          <text>Source Code</text>
+        </navLabel>
+        <content src="source/README.html#source-code" />
+      </navPoint>
+      <navPoint id="navPoint6" playOrder="5">
+        <navLabel>
+          <text>Support</text>
+        </navLabel>
+        <content src="source/README.html#support" />
+      </navPoint>
+      <navPoint id="navPoint7" playOrder="6">
+        <navLabel>
+          <text>License</text>
+        </navLabel>
+        <content src="source/README.html#license" />
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint8" playOrder="7">
+      <navLabel>
+        <text>Example Output</text>
+      </navLabel>
+      <content src="source/example.html" />
+      <navPoint id="navPoint9" playOrder="7">
+        <navLabel>
+          <text>Example Output</text>
+        </navLabel>
+        <content src="source/example.html" />
+      </navPoint>
+      <navPoint id="navPoint10" playOrder="8">
+        <navLabel>
+          <text>Biophysical variables and solar zenith angle</text>
+        </navLabel>
+        <content src="source/example.html#biophysical-variables-and-solar-zenith-angle" />
+      </navPoint>
+      <navPoint id="navPoint11" playOrder="9">
+        <navLabel>
+          <text>Sentinel 1 output</text>
+        </navLabel>
+        <content src="source/example.html#sentinel-1-output" />
+      </navPoint>
+      <navPoint id="navPoint12" playOrder="10">
+        <navLabel>
+          <text>Sentinel 2 output</text>
+        </navLabel>
+        <content src="source/example.html#sentinel-2-output" />
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint13" playOrder="11">
+      <navLabel>
+        <text>sentinel_simulator</text>
+      </navLabel>
+      <content src="source/modules.html" />
+      <navPoint id="navPoint14" playOrder="11">
+        <navLabel>
+          <text>sentinel_simulator</text>
+        </navLabel>
+        <content src="source/modules.html" />
+      </navPoint>
+      <navPoint id="navPoint15" playOrder="12">
+        <navLabel>
+          <text>sentinel_simulator package</text>
+        </navLabel>
+        <content src="source/sentinel_simulator.html" />
+        <navPoint id="navPoint16" playOrder="12">
+          <navLabel>
+            <text>sentinel_simulator package</text>
+          </navLabel>
+          <content src="source/sentinel_simulator.html" />
+        </navPoint>
+        <navPoint id="navPoint17" playOrder="13">
+          <navLabel>
+            <text>Subpackages</text>
+          </navLabel>
+          <content src="source/sentinel_simulator.html#subpackages" />
+        </navPoint>
+        <navPoint id="navPoint18" playOrder="14">
+          <navLabel>
+            <text>Submodules</text>
+          </navLabel>
+          <content src="source/sentinel_simulator.html#submodules" />
+        </navPoint>
+        <navPoint id="navPoint19" playOrder="15">
+          <navLabel>
+            <text>sentinel_simulator.opticalCanopyRT module</text>
+          </navLabel>
+          <content src="source/sentinel_simulator.html#module-sentinel_simulator.opticalCanopyRT" />
+        </navPoint>
+        <navPoint id="navPoint20" playOrder="16">
+          <navLabel>
+            <text>sentinel_simulator.satelliteGeometry module</text>
+          </navLabel>
+          <content src="source/sentinel_simulator.html#module-sentinel_simulator.satelliteGeometry" />
+        </navPoint>
+        <navPoint id="navPoint21" playOrder="17">
+          <navLabel>
+            <text>sentinel_simulator.spectra module</text>
+          </navLabel>
+          <content src="source/sentinel_simulator.html#module-sentinel_simulator.spectra" />
+        </navPoint>
+        <navPoint id="navPoint22" playOrder="18">
+          <navLabel>
+            <text>sentinel_simulator.stateVector module</text>
+          </navLabel>
+          <content src="source/sentinel_simulator.html#module-sentinel_simulator.stateVector" />
+        </navPoint>
+        <navPoint id="navPoint23" playOrder="19">
+          <navLabel>
+            <text>sentinel_simulator.simulator module</text>
+          </navLabel>
+          <content src="source/sentinel_simulator.html#module-sentinel_simulator.simulator" />
+        </navPoint>
+        <navPoint id="navPoint24" playOrder="20">
+          <navLabel>
+            <text>Module contents</text>
+          </navLabel>
+          <content src="source/sentinel_simulator.html#module-sentinel_simulator" />
+        </navPoint>
+      </navPoint>
+    </navPoint>
+  </navMap>
+</ncx>

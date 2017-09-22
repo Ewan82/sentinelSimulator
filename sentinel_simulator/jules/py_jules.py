@@ -2,17 +2,9 @@
 # !/usr/bin/env python
 
 # core python modules:
-import sys
 import subprocess
-import datetime as dt
-from time import strftime
-import shutil
-
 # 3rd party modules:
-import netCDF4 as nc
 import numpy as np
-import matplotlib.pyplot as plt
-
 # local modules:
 from py_julesNML import *
 

@@ -1,34 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>sentinel_simulator package &mdash; sentinelSimulator 0.0.1 documentation</title>
+    <title>sentinel_simulator package</title>
     
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.0.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="sentinelSimulator 0.0.1 documentation" href="../index.html" />
-    <link rel="up" title="sentinel_simulator" href="modules.html" />
-    <link rel="next" title="sentinel_simulator.jules package" href="sentinel_simulator.jules.html" />
-    <link rel="prev" title="sentinel_simulator" href="modules.html" /> 
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> 
   </head>
   <body>
+
     <div class="related">
       <h3>Navigation</h3>
       <ul>
@@ -47,17 +31,16 @@
         <li><a href="../index.html">sentinelSimulator 0.0.1 documentation</a> &raquo;</li>
           <li><a href="modules.html" accesskey="U">sentinel_simulator</a> &raquo;</li> 
       </ul>
-    </div>  
+    </div>
 
     <div class="document">
       <div class="documentwrapper">
-        <div class="bodywrapper">
           <div class="body">
             
   <div class="section" id="sentinel-simulator-package">
-<h1>sentinel_simulator package<a class="headerlink" href="#sentinel-simulator-package" title="Permalink to this headline">¶</a></h1>
+<h1>sentinel_simulator package</h1>
 <div class="section" id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<h2>Subpackages</h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="sentinel_simulator.jules.html">sentinel_simulator.jules package</a><ul>
@@ -72,13 +55,13 @@
 </div>
 </div>
 <div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<h2>Submodules</h2>
 </div>
 <div class="section" id="module-sentinel_simulator.opticalCanopyRT">
-<span id="sentinel-simulator-opticalcanopyrt-module"></span><h2>sentinel_simulator.opticalCanopyRT module<a class="headerlink" href="#module-sentinel_simulator.opticalCanopyRT" title="Permalink to this headline">¶</a></h2>
+<span id="sentinel-simulator-opticalcanopyrt-module"></span><h2>sentinel_simulator.opticalCanopyRT module</h2>
 <dl class="function">
 <dt id="sentinel_simulator.opticalCanopyRT.canopyRTOptical">
-<tt class="descclassname">sentinel_simulator.opticalCanopyRT.</tt><tt class="descname">canopyRTOptical</tt><big>(</big><em>state</em>, <em>geom</em>, <em>resln=1.0</em><big>)</big><a class="headerlink" href="#sentinel_simulator.opticalCanopyRT.canopyRTOptical" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">sentinel_simulator.opticalCanopyRT.</tt><tt class="descname">canopyRTOptical</tt><big>(</big><em>state</em>, <em>geom</em>, <em>resln=1.0</em><big>)</big></dt>
 <dd><p>A python wrapper to the SemiDiscrete optical
 canopy RT model of Nadine Gobron. Runs the
 model for the the whole of its valid spectra
@@ -106,10 +89,10 @@ range at a resolution set by resln.</p>
 
 </div>
 <div class="section" id="module-sentinel_simulator.satelliteGeometry">
-<span id="sentinel-simulator-satellitegeometry-module"></span><h2>sentinel_simulator.satelliteGeometry module<a class="headerlink" href="#module-sentinel_simulator.satelliteGeometry" title="Permalink to this headline">¶</a></h2>
+<span id="sentinel-simulator-satellitegeometry-module"></span><h2>sentinel_simulator.satelliteGeometry module</h2>
 <dl class="function">
 <dt id="sentinel_simulator.satelliteGeometry.getSentinel2Geometry">
-<tt class="descclassname">sentinel_simulator.satelliteGeometry.</tt><tt class="descname">getSentinel2Geometry</tt><big>(</big><em>startDateUTC</em>, <em>lengthDays</em>, <em>lat</em>, <em>lon</em>, <em>alt=0.0</em>, <em>mission='Sentinel-2a'</em>, <em>tleFile='../TLE/norad_resource_tle.txt'</em><big>)</big><a class="headerlink" href="#sentinel_simulator.satelliteGeometry.getSentinel2Geometry" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">sentinel_simulator.satelliteGeometry.</tt><tt class="descname">getSentinel2Geometry</tt><big>(</big><em>startDateUTC</em>, <em>lengthDays</em>, <em>lat</em>, <em>lon</em>, <em>alt=0.0</em>, <em>mission='Sentinel-2a'</em>, <em>tleFile='../TLE/norad_resource_tle.txt'</em><big>)</big></dt>
 <dd><p>Calculate approximate geometry for Sentinel overpasses.
 Approximate because it assumes maximum satellite elevation
 is the time at which target is imaged.</p>
@@ -140,11 +123,11 @@ is the time at which target is imaged.</p>
 
 <dl class="class">
 <dt id="sentinel_simulator.satelliteGeometry.sensorGeometry">
-<em class="property">class </em><tt class="descclassname">sentinel_simulator.satelliteGeometry.</tt><tt class="descname">sensorGeometry</tt><a class="headerlink" href="#sentinel_simulator.satelliteGeometry.sensorGeometry" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">sentinel_simulator.satelliteGeometry.</tt><tt class="descname">sensorGeometry</tt></dt>
 <dd><p>Class to hold sun-sensor geometry information.</p>
 <dl class="method">
 <dt id="sentinel_simulator.satelliteGeometry.sensorGeometry.printGeom">
-<tt class="descname">printGeom</tt><big>(</big><big>)</big><a class="headerlink" href="#sentinel_simulator.satelliteGeometry.sensorGeometry.printGeom" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">printGeom</tt><big>(</big><big>)</big></dt>
 <dd><p>Prints currently specified class attributes.</p>
 </dd></dl>
 
@@ -152,17 +135,17 @@ is the time at which target is imaged.</p>
 
 </div>
 <div class="section" id="module-sentinel_simulator.spectra">
-<span id="sentinel-simulator-spectra-module"></span><h2>sentinel_simulator.spectra module<a class="headerlink" href="#module-sentinel_simulator.spectra" title="Permalink to this headline">¶</a></h2>
+<span id="sentinel-simulator-spectra-module"></span><h2>sentinel_simulator.spectra module</h2>
 <dl class="exception">
 <dt id="sentinel_simulator.spectra.UnknownFileType">
-<em class="property">exception </em><tt class="descclassname">sentinel_simulator.spectra.</tt><tt class="descname">UnknownFileType</tt><a class="headerlink" href="#sentinel_simulator.spectra.UnknownFileType" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><tt class="descclassname">sentinel_simulator.spectra.</tt><tt class="descname">UnknownFileType</tt></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></tt></p>
 <p>Exception class for unknown filetypes</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="sentinel_simulator.spectra.convolve">
-<tt class="descclassname">sentinel_simulator.spectra.</tt><tt class="descname">convolve</tt><big>(</big><em>s1orig</em>, <em>s2orig</em>, <em>resln=1.0</em>, <em>s2norm=True</em><big>)</big><a class="headerlink" href="#sentinel_simulator.spectra.convolve" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">sentinel_simulator.spectra.</tt><tt class="descname">convolve</tt><big>(</big><em>s1orig</em>, <em>s2orig</em>, <em>resln=1.0</em>, <em>s2norm=True</em><big>)</big></dt>
 <dd><p>Convolve one spectra with another, for example
 to apply a band pass, or a spectral response function.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -189,17 +172,17 @@ to apply a band pass, or a spectral response function.</p>
 
 <dl class="function">
 <dt id="sentinel_simulator.spectra.sentinel2">
-<tt class="descclassname">sentinel_simulator.spectra.</tt><tt class="descname">sentinel2</tt><big>(</big><em>s</em>, <em>mission='a'</em><big>)</big><a class="headerlink" href="#sentinel_simulator.spectra.sentinel2" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">sentinel_simulator.spectra.</tt><tt class="descname">sentinel2</tt><big>(</big><em>s</em>, <em>mission='a'</em><big>)</big></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="sentinel_simulator.spectra.spectra">
-<em class="property">class </em><tt class="descclassname">sentinel_simulator.spectra.</tt><tt class="descname">spectra</tt><big>(</big><em>fname=None</em>, <em>ftype='SVC'</em>, <em>wavlCol=0</em>, <em>reflCol=1</em>, <em>hdrLines=1</em><big>)</big><a class="headerlink" href="#sentinel_simulator.spectra.spectra" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">sentinel_simulator.spectra.</tt><tt class="descname">spectra</tt><big>(</big><em>fname=None</em>, <em>ftype='SVC'</em>, <em>wavlCol=0</em>, <em>reflCol=1</em>, <em>hdrLines=1</em><big>)</big></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
 <p>Spectra class for sentinel simulator.</p>
 <dl class="method">
 <dt id="sentinel_simulator.spectra.spectra.interpolate">
-<tt class="descname">interpolate</tt><big>(</big><em>resltn=0.1</em><big>)</big><a class="headerlink" href="#sentinel_simulator.spectra.spectra.interpolate" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">interpolate</tt><big>(</big><em>resltn=0.1</em><big>)</big></dt>
 <dd><p>Interpolate spectra to the given resolution.
 Overwites exisiting data.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -214,7 +197,7 @@ Overwites exisiting data.</p>
 
 <dl class="method">
 <dt id="sentinel_simulator.spectra.spectra.loadCSV">
-<tt class="descname">loadCSV</tt><big>(</big><em>f</em>, <em>wavlCol=0</em>, <em>reflCol=1</em>, <em>hdrLines=1</em><big>)</big><a class="headerlink" href="#sentinel_simulator.spectra.spectra.loadCSV" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">loadCSV</tt><big>(</big><em>f</em>, <em>wavlCol=0</em>, <em>reflCol=1</em>, <em>hdrLines=1</em><big>)</big></dt>
 <dd><p>Read in data from a standard CSV file object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -234,7 +217,7 @@ Overwites exisiting data.</p>
 
 <dl class="method">
 <dt id="sentinel_simulator.spectra.spectra.loadSVCSig">
-<tt class="descname">loadSVCSig</tt><big>(</big><em>f</em><big>)</big><a class="headerlink" href="#sentinel_simulator.spectra.spectra.loadSVCSig" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">loadSVCSig</tt><big>(</big><em>f</em><big>)</big></dt>
 <dd><p>Read in data from an SVC .sig ascii file.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -248,7 +231,7 @@ Overwites exisiting data.</p>
 
 <dl class="method">
 <dt id="sentinel_simulator.spectra.spectra.loadSpectra">
-<tt class="descname">loadSpectra</tt><big>(</big><em>fname</em>, <em>wavlCol=0</em>, <em>reflCol=1</em>, <em>hdrLines=1</em><big>)</big><a class="headerlink" href="#sentinel_simulator.spectra.spectra.loadSpectra" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">loadSpectra</tt><big>(</big><em>fname</em>, <em>wavlCol=0</em>, <em>reflCol=1</em>, <em>hdrLines=1</em><big>)</big></dt>
 <dd><p>Load in the spectra from a given file using a
 method appropriate to the type of file.</p>
 <div class="admonition note">
@@ -275,7 +258,7 @@ method appropriate to the type of file.</p>
 
 <dl class="method">
 <dt id="sentinel_simulator.spectra.spectra.trim">
-<tt class="descname">trim</tt><big>(</big><em>wlmin</em>, <em>wlmax</em><big>)</big><a class="headerlink" href="#sentinel_simulator.spectra.spectra.trim" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">trim</tt><big>(</big><em>wlmin</em>, <em>wlmax</em><big>)</big></dt>
 <dd><p>Trim the spectra so it is between two specified wavelengths. Destroys the original data.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -295,10 +278,10 @@ method appropriate to the type of file.</p>
 
 </div>
 <div class="section" id="module-sentinel_simulator.stateVector">
-<span id="sentinel-simulator-statevector-module"></span><h2>sentinel_simulator.stateVector module<a class="headerlink" href="#module-sentinel_simulator.stateVector" title="Permalink to this headline">¶</a></h2>
+<span id="sentinel-simulator-statevector-module"></span><h2>sentinel_simulator.stateVector module</h2>
 <dl class="function">
 <dt id="sentinel_simulator.stateVector.get_jules_state">
-<tt class="descclassname">sentinel_simulator.stateVector.</tt><tt class="descname">get_jules_state</tt><big>(</big><em>date_utc</em>, <em>nc_file='jules/output/wallerfing_79_12.3_hourly.nc'</em><big>)</big><a class="headerlink" href="#sentinel_simulator.stateVector.get_jules_state" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">sentinel_simulator.stateVector.</tt><tt class="descname">get_jules_state</tt><big>(</big><em>date_utc</em>, <em>nc_file='jules/output/wallerfing_79_12.3_hourly.nc'</em><big>)</big></dt>
 <dd><p>Function that returns a stateVector instance for a given time.
 :param date_utc: datetime object of when to extract JULES output.
 :type date_utc: object
@@ -310,12 +293,12 @@ method appropriate to the type of file.</p>
 
 <dl class="function">
 <dt id="sentinel_simulator.stateVector.nearest">
-<tt class="descclassname">sentinel_simulator.stateVector.</tt><tt class="descname">nearest</tt><big>(</big><em>items</em>, <em>pivot</em><big>)</big><a class="headerlink" href="#sentinel_simulator.stateVector.nearest" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">sentinel_simulator.stateVector.</tt><tt class="descname">nearest</tt><big>(</big><em>items</em>, <em>pivot</em><big>)</big></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="sentinel_simulator.stateVector.read">
-<tt class="descclassname">sentinel_simulator.stateVector.</tt><tt class="descname">read</tt><big>(</big><em>file_format='jules'</em>, <em>file_str=None</em>, <em>year=None</em><big>)</big><a class="headerlink" href="#sentinel_simulator.stateVector.read" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">sentinel_simulator.stateVector.</tt><tt class="descname">read</tt><big>(</big><em>file_format='jules'</em>, <em>file_str=None</em>, <em>year=None</em><big>)</big></dt>
 <dd><p>Reads output data to a dictionary of state vectors indexed by time.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -344,7 +327,7 @@ method appropriate to the type of file.</p>
 
 <dl class="function">
 <dt id="sentinel_simulator.stateVector.read_jules">
-<tt class="descclassname">sentinel_simulator.stateVector.</tt><tt class="descname">read_jules</tt><big>(</big><em>nc_file=None</em>, <em>year=None</em><big>)</big><a class="headerlink" href="#sentinel_simulator.stateVector.read_jules" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">sentinel_simulator.stateVector.</tt><tt class="descname">read_jules</tt><big>(</big><em>nc_file=None</em>, <em>year=None</em><big>)</big></dt>
 <dd><p>Reads jules output from netCDF file and writes it to a dictionary indexed by date.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -368,17 +351,17 @@ method appropriate to the type of file.</p>
 
 <dl class="class">
 <dt id="sentinel_simulator.stateVector.stateVector">
-<em class="property">class </em><tt class="descclassname">sentinel_simulator.stateVector.</tt><tt class="descname">stateVector</tt><a class="headerlink" href="#sentinel_simulator.stateVector.stateVector" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">sentinel_simulator.stateVector.</tt><tt class="descname">stateVector</tt></dt>
 <dd><p>Class to hold state vector data for optical
 and microwave canopy RT models.</p>
 </dd></dl>
 
 </div>
 <div class="section" id="module-sentinel_simulator.simulator">
-<span id="sentinel-simulator-simulator-module"></span><h2>sentinel_simulator.simulator module<a class="headerlink" href="#module-sentinel_simulator.simulator" title="Permalink to this headline">¶</a></h2>
+<span id="sentinel-simulator-simulator-module"></span><h2>sentinel_simulator.simulator module</h2>
 <dl class="class">
 <dt id="sentinel_simulator.simulator.S1_simulator">
-<em class="property">class </em><tt class="descclassname">sentinel_simulator.simulator.</tt><tt class="descname">S1_simulator</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#sentinel_simulator.simulator.S1_simulator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">sentinel_simulator.simulator.</tt><tt class="descname">S1_simulator</tt><big>(</big><em>**kwargs</em><big>)</big></dt>
 <dd><p>Bases: <a class="reference internal" href="#sentinel_simulator.simulator.Simulator" title="sentinel_simulator.simulator.Simulator"><tt class="xref py py-class docutils literal"><span class="pre">sentinel_simulator.simulator.Simulator</span></tt></a></p>
 <p>Given Simulator class this subclass will simulate Sentinel 1 data.</p>
 <div class="admonition note">
@@ -393,116 +376,42 @@ code is available from:</p>
 
 <dl class="class">
 <dt id="sentinel_simulator.simulator.S2_simulator">
-<em class="property">class </em><tt class="descclassname">sentinel_simulator.simulator.</tt><tt class="descname">S2_simulator</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#sentinel_simulator.simulator.S2_simulator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">sentinel_simulator.simulator.</tt><tt class="descname">S2_simulator</tt><big>(</big><em>**kwargs</em><big>)</big></dt>
 <dd><p>Bases: <a class="reference internal" href="#sentinel_simulator.simulator.Simulator" title="sentinel_simulator.simulator.Simulator"><tt class="xref py py-class docutils literal"><span class="pre">sentinel_simulator.simulator.Simulator</span></tt></a></p>
 <p>Given Simulator class this subclass will simulate Sentinel 2 data.</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="sentinel_simulator.simulator.Simulator">
-<em class="property">class </em><tt class="descclassname">sentinel_simulator.simulator.</tt><tt class="descname">Simulator</tt><big>(</big><em>year=2012</em>, <em>month=1</em>, <em>days=365</em><big>)</big><a class="headerlink" href="#sentinel_simulator.simulator.Simulator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">sentinel_simulator.simulator.</tt><tt class="descname">Simulator</tt><big>(</big><em>year=2012</em>, <em>month=1</em>, <em>days=365</em><big>)</big></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
 <p>Class to simulate Sentinel 2 observations over Wallerfing for a given year.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="sentinel_simulator.simulator.plot_class_var">
-<tt class="descclassname">sentinel_simulator.simulator.</tt><tt class="descname">plot_class_var</tt><big>(</big><em>date_lst</em>, <em>var</em>, <em>y_lab=None</em>, <em>line_type='-'</em><big>)</big><a class="headerlink" href="#sentinel_simulator.simulator.plot_class_var" title="Permalink to this definition">¶</a></dt>
-<dd><p>Plot specified variable.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>var</strong> (<em>list</em>) &#8211; Class attribute variable as list.</li>
-<li><strong>y_lab</strong> (<em>str</em>) &#8211; Label for Y-axis.</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Figure.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">object</p>
-</td>
-</tr>
-</tbody>
-</table>
+<tt class="descclassname">sentinel_simulator.simulator.</tt><tt class="descname">plot_class_var</tt><big>(</big><em>date_lst</em>, <em>var</em>, <em>y_lab=None</em>, <em>line_type='-'</em><big>)</big></dt>
+<dd><p>Plot specified variable.
+:param var: Class attribute variable as list.
+:type var: list
+:param y_lab: Label for Y-axis.
+:type y_lab: str
+:return: Figure.
+:rtype: object</p>
 </dd></dl>
 
 </div>
 <div class="section" id="module-sentinel_simulator">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-sentinel_simulator" title="Permalink to this headline">¶</a></h2>
+<span id="module-contents"></span><h2>Module contents</h2>
 </div>
 </div>
 
 
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">sentinel_simulator package</a><ul>
-<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-sentinel_simulator.opticalCanopyRT">sentinel_simulator.opticalCanopyRT module</a></li>
-<li><a class="reference internal" href="#module-sentinel_simulator.satelliteGeometry">sentinel_simulator.satelliteGeometry module</a></li>
-<li><a class="reference internal" href="#module-sentinel_simulator.spectra">sentinel_simulator.spectra module</a></li>
-<li><a class="reference internal" href="#module-sentinel_simulator.stateVector">sentinel_simulator.stateVector module</a></li>
-<li><a class="reference internal" href="#module-sentinel_simulator.simulator">sentinel_simulator.simulator module</a></li>
-<li><a class="reference internal" href="#module-sentinel_simulator">Module contents</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="modules.html"
-                        title="previous chapter">sentinel_simulator</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="sentinel_simulator.jules.html"
-                        title="next chapter">sentinel_simulator.jules package</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/source/sentinel_simulator.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="sentinel_simulator.jules.html" title="sentinel_simulator.jules package"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="modules.html" title="sentinel_simulator"
-             >previous</a> |</li>
-        <li><a href="../index.html">sentinelSimulator 0.0.1 documentation</a> &raquo;</li>
-          <li><a href="modules.html" >sentinel_simulator</a> &raquo;</li> 
-      </ul>
-    </div>
+
     <div class="footer">
         &copy; Copyright 2017, E. Pinnington.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.

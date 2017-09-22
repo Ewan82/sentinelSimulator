@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sentinel_simulator.jules package</title>
+    
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> 
+  </head>
+  <body>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sentinel_simulator.html" title="sentinel_simulator package"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">sentinelSimulator 0.0.1 documentation</a> &raquo;</li>
+          <li><a href="modules.html" >sentinel_simulator</a> &raquo;</li>
+          <li><a href="sentinel_simulator.html" accesskey="U">sentinel_simulator package</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body">
+            
+  <div class="section" id="sentinel-simulator-jules-package">
+<h1>sentinel_simulator.jules package</h1>
+<div class="section" id="submodules">
+<h2>Submodules</h2>
+</div>
+<div class="section" id="module-sentinel_simulator.jules.py_importNML">
+<span id="sentinel-simulator-jules-py-importnml-module"></span><h2>sentinel_simulator.jules.py_importNML module</h2>
+<dl class="function">
+<dt id="sentinel_simulator.jules.py_importNML.importJulesNML">
+<tt class="descclassname">sentinel_simulator.jules.py_importNML.</tt><tt class="descname">importJulesNML</tt><big>(</big><em>nml</em><big>)</big></dt>
+<dd><p>Parse a JULES nml file and write it in the style used for the
+julesNML class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>nml</strong> (<em>str.</em>) &#8211; JULES NML file name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sentinel_simulator.jules.py_jules">
+<span id="sentinel-simulator-jules-py-jules-module"></span><h2>sentinel_simulator.jules.py_jules module</h2>
+<dl class="function">
+<dt id="sentinel_simulator.jules.py_jules.crop_run">
+<tt class="descclassname">sentinel_simulator.jules.py_jules.</tt><tt class="descname">crop_run</tt><big>(</big><em>sow_date=110</em>, <em>b=6.631</em>, <em>smwilt=0.1866</em>, <em>neff=0.00057</em><big>)</big></dt>
+<dd><p>Function that runs JULES with crop model turned on and given user defined parameters at Wallerfing site. Output is
+saved in folder and file specified within function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sow_date</strong> (<em>int.</em>) &#8211; Sow date, between 90 and 150.</li>
+<li><strong>b</strong> (<em>float.</em>) &#8211; Brooks-Corey exponent factor.</li>
+<li><strong>smwilt</strong> (<em>float.</em>) &#8211; Soil moisture wilting point.</li>
+<li><strong>neff</strong> (<em>float.</em>) &#8211; Nitrogen use efficiency of crop (Vcmax).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">&#8216;Done&#8217; to notify used JULES run has finished.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="sentinel_simulator.jules.py_jules.jules">
+<em class="property">class </em><tt class="descclassname">sentinel_simulator.jules.py_jules.</tt><tt class="descname">jules</tt><big>(</big><em>jules_exe='/home/if910917/jules/models/jules4.8/build/bin/jules.exe'</em><big>)</big></dt>
+<dd><p>Bases: <a class="reference internal" href="#sentinel_simulator.jules.py_jules.julesAllNML" title="sentinel_simulator.jules.py_jules.julesAllNML"><tt class="xref py py-class docutils literal"><span class="pre">sentinel_simulator.jules.py_jules.julesAllNML</span></tt></a></p>
+<p>Class to run JULES.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>jules_exe</strong> (<em>str</em>) &#8211; location of JULES executable.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You must have JULES installed on local system with a version of 4.8 or higher.</p>
+</div>
+<dl class="method">
+<dt id="sentinel_simulator.jules.py_jules.jules.runJules">
+<tt class="descname">runJules</tt><big>(</big><big>)</big></dt>
+<dd><p>Write all NML files to disk.
+Run JULES in a subprocess.
+Check output for fatal errors.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">stdout and stderr output from JULES model run.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sentinel_simulator.jules.py_jules.julesAllNML">
+<em class="property">class </em><tt class="descclassname">sentinel_simulator.jules.py_jules.</tt><tt class="descname">julesAllNML</tt></dt>
+<dd><p>This class is populated by the contents
+of a module which contains templates
+of all the required JULES namelist files</p>
+<dl class="method">
+<dt id="sentinel_simulator.jules.py_jules.julesAllNML.writeNML">
+<tt class="descname">writeNML</tt><big>(</big><big>)</big></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-sentinel_simulator.jules.py_julesNML">
+<span id="sentinel-simulator-jules-py-julesnml-module"></span><h2>sentinel_simulator.jules.py_julesNML module</h2>
+<p>This module holds JULES namelist files. 
+It has been automatically generated.</p>
+<dl class="class">
+<dt id="sentinel_simulator.jules.py_julesNML.julesNML">
+<em class="property">class </em><tt class="descclassname">sentinel_simulator.jules.py_julesNML.</tt><tt class="descname">julesNML</tt><big>(</big><em>template</em>, <em>filename</em><big>)</big></dt>
+<dd><p>This is the base class for storing
+and writing JULES namelist files</p>
+<dl class="method">
+<dt id="sentinel_simulator.jules.py_julesNML.julesNML.update">
+<tt class="descname">update</tt><big>(</big><em>template</em><big>)</big></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sentinel_simulator.jules.py_julesNML.julesNML.write">
+<tt class="descname">write</tt><big>(</big><big>)</big></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-sentinel_simulator.jules">
+<span id="module-contents"></span><h2>Module contents</h2>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2017, E. Pinnington.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

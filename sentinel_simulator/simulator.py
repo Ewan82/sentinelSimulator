@@ -1,12 +1,8 @@
-
 import numpy as np
-import netCDF4 as nc
 import datetime as dt
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import seaborn as sns
-sns.set_style('whitegrid')
-
 import opticalCanopyRT as op_can_rt
 import satelliteGeometry as satgeo
 import stateVector as sv
@@ -111,6 +107,7 @@ class S2_simulator(Simulator):
 
 def plot_class_var(date_lst, var, y_lab=None, line_type='-'):
     """Plot specified variable.
+
     :param var: Class attribute variable as list.
     :type var: list
     :param y_lab: Label for Y-axis.

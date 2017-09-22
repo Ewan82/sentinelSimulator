@@ -3,7 +3,6 @@
 It has been automatically generated.
 """
 
-import sys
 from string import Template
 
 
