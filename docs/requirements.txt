@@ -1,7 +1,1 @@
-numpy
-matplotlib
-subprocess
-pyorbital
-netCDF4
-datetime
 seaborn
