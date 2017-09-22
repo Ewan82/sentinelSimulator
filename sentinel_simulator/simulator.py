@@ -150,7 +150,7 @@ if __name__ == "__main__":
     fig.savefig('../docs/source/simulator/soil_m.png')
     for x in xrange(3):  # Currently using vv polarisation (vv, hh, hv) is this correct?
         fig = plot_class_var(sim_c1.date_lst,
-                             [sim_c1.SAR_list[s1c].__dict__['stot'][sim_c1.backscatter_keys[x]]
+                             [10*np.log10(sim_c1.SAR_list[s1c].__dict__['stot'][sim_c1.backscatter_keys[x]])
                               for s1c in xrange(len(sim_c1.SAR_list))],
                              y_lab='Backscatter ' + sim_c1.backscatter_keys[x] + ' polarisation (db)',
                              line_type='o')
