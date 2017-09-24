@@ -13,7 +13,7 @@ from sense import soil as sense_soil
 from sense import canopy as sense_canopy
 
 class Simulator(object):
-    """Class to simulate Sentinel 2 observations over Wallerfing for a given year.
+    """Class to simulate Sentinel observations over Wallerfing for a given year.
 
     """
     def __init__(self, year=2012, month=1, days=365):
