@@ -63,7 +63,7 @@ class S1_simulator(Simulator):
         super(S1_simulator, self).__init__(**kwargs)
         # Setup SAR RT spectra list (Sentinel 1)
         self.freq = 5.
-        self.theta = np.deg2rad(50)
+        self.theta = np.deg2rad(37.0)
         self.stype = 'turbid_rayleigh'
         # stype='turbid_isotropic'
         self.models = {'surface': 'Oh92', 'canopy': self.stype}
@@ -155,7 +155,6 @@ if __name__ == "__main__":
                              y_lab='Backscatter ' + sim_c1.backscatter_keys[x] + ' polarisation (db)',
                              line_type='o')
         # Must also think about canopy height and extinction coefficient!!!
-        # Also Philip has plotted 10*np.log10(class result) why is this?
         fig.savefig('../docs/source/simulator/' + sim_c1.backscatter_keys[x] + '.png')
     #for x in range(13):
     #    fig = plot_class_var(sim_c2.date_lst, sim_c2.all_BRF_arr[:,x], y_lab=sim_c2.band_labels[x]+' reflectance',
