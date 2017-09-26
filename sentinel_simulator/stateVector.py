@@ -21,6 +21,7 @@ class stateVector:
 
 def get_jules_state(date_utc, nc_file='jules/output/wallerfing_79_12.3_hourly.nc'):
     """Function that returns a stateVector instance for a given time.
+
     :param date_utc: datetime object of when to extract JULES output.
     :type date_utc: object
     :param nc_file: JULES output file from which to extract data.

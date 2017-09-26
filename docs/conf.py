@@ -14,7 +14,6 @@
 
 import sys
 import os
-import glob
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -30,8 +29,8 @@ class Mock(MagicMock):
     def __getattr__(cls, name):
             return MagicMock()
 
-MOCK_MODULES = ['numpy', 'matplotlib', 'matplotlib.pyplot', 'pyorbital', 'pyorbital.astronomy', 'pyorbital.orbital',
-                'subprocess', 'netCDF4', 'matplotlib.dates', 'seaborn', 'sense']
+MOCK_MODULES = ['numpy', 'scipy', 'scipy.integrate','matplotlib', 'matplotlib.pyplot', 'pyorbital', 'pyorbital.astronomy', 'pyorbital.orbital',
+                'subprocess', 'netCDF4', 'matplotlib.dates', 'seaborn', 'sense', 'numba']
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # -- General configuration ------------------------------------------------
@@ -144,7 +143,7 @@ html_theme = 'default'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-
+autoclass_content = 'both'
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
 # directly to the root of the documentation.

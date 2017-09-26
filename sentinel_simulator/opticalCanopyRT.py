@@ -47,7 +47,7 @@ def canopyRTOptical(state, geom, resln=1.0):
     # set up nadim command line
     cmd = "semiDiscrete"
     if state.lai != None:
-        cmd = cmd + " -LAI %f " % state.lai
+        cmd = cmd + " -LAI %f -hc %f -rsl1 %f" %(state.lai, state.can_height, 0.2*(1.-0.25*(state.soil_moisture/0.47)))
     cmd = cmd + " < %s" % temp_path
 
     # run process

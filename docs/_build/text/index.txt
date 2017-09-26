@@ -1,0 +1,38 @@
+Welcome to sentinelSimulator's documentation!
+*********************************************
+
+
+Contents:
+=========
+
+* sentinelSimulator
+
+  * Features
+
+  * Source Code
+
+  * Support
+
+  * License
+
+* Example Output
+
+  * Biophysical variables and solar zenith angle
+
+  * Sentinel 1 output
+
+  * Sentinel 2 output
+
+* sentinel_simulator
+
+  * sentinel_simulator package
+
+
+Indices and tables
+******************
+
+* Index
+
+* Module Index
+
+* Search Page

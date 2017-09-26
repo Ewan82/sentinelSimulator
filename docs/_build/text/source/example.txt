@@ -1,0 +1,23 @@
+Example Output
+**************
+
+Here we show some example output from the Sentinel simulator.
+
+
+Biophysical variables and solar zenith angle
+============================================
+
+[image][image][image][image]
+
+
+Sentinel 1 output
+=================
+
+[image][image][image]
+
+
+Sentinel 2 output
+=================
+
+[image][image][image][image][image][image][image][image][image][image
+][image][image][image][image]

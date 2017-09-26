@@ -1,0 +1,104 @@
+sentinel_simulator.jules package
+********************************
+
+
+Submodules
+==========
+
+
+sentinel_simulator.jules.py_importNML module
+============================================
+
+sentinel_simulator.jules.py_importNML.importJulesNML(nml)
+
+   Parse a JULES nml file and write it in the style used for the
+   julesNML class.
+
+   Parameters:
+      **nml** (*str.*) -- JULES NML file name.
+
+   Returns:
+      None
+
+
+sentinel_simulator.jules.py_jules module
+========================================
+
+sentinel_simulator.jules.py_jules.crop_run(sow_date=110, b=6.631, smwilt=0.1866, neff=0.00057)
+
+   Function that runs JULES with crop model turned on and given user
+   defined parameters at Wallerfing site. Output is saved in folder
+   and file specified within function.
+
+   Parameters:
+      * **sow_date** (*int.*) -- Sow date, between 90 and 150.
+
+      * **b** (*float.*) -- Brooks-Corey exponent factor.
+
+      * **smwilt** (*float.*) -- Soil moisture wilting point.
+
+      * **neff** (*float.*) -- Nitrogen use efficiency of crop
+        (Vcmax).
+
+   Returns:
+      'Done' to notify used JULES run has finished.
+
+   Return type:
+      str
+
+class sentinel_simulator.jules.py_jules.jules(jules_exe='/home/if910917/jules/models/jules4.8/build/bin/jules.exe')
+
+   Bases: "sentinel_simulator.jules.py_jules.julesAllNML"
+
+   Class to run JULES.
+
+   Parameters:
+      **jules_exe** (*str*) -- location of JULES executable.
+
+   Note: You must have JULES installed on local system with a
+     version of 4.8 or higher.
+
+   Class to run JULES.
+
+   Parameters:
+      **jules_exe** (*str*) -- location of JULES executable.
+
+   Note: You must have JULES installed on local system with a
+     version of 4.8 or higher.
+
+   runJules()
+
+      Write all NML files to disk. Run JULES in a subprocess. Check
+      output for fatal errors.
+
+      Returns:
+         stdout and stderr output from JULES model run.
+
+      Return type:
+         str
+
+class sentinel_simulator.jules.py_jules.julesAllNML
+
+   This class is populated by the contents of a module which contains
+   templates of all the required JULES namelist files
+
+   writeNML()
+
+
+sentinel_simulator.jules.py_julesNML module
+===========================================
+
+This module holds JULES namelist files.  It has been automatically
+generated.
+
+class sentinel_simulator.jules.py_julesNML.julesNML(template, filename)
+
+   This is the base class for storing and writing JULES namelist files
+
+   update(template)
+
+   write()
+
+
+Module contents
+===============

@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sentinel_simulator.sense package &#8212; sentinelSimulator 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="sentinel_simulator.jules package" href="sentinel_simulator.jules.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sentinel_simulator.jules.html" title="sentinel_simulator.jules package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">sentinelSimulator 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >sentinel_simulator</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="sentinel_simulator.html" accesskey="U">sentinel_simulator package</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sentinel-simulator-sense-package">
+<h1>sentinel_simulator.sense package<a class="headerlink" href="#sentinel-simulator-sense-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-sentinel_simulator.sense.model">
+<span id="sentinel-simulator-sense-model-module"></span><h2>sentinel_simulator.sense.model module<a class="headerlink" href="#module-sentinel_simulator.sense.model" title="Permalink to this headline">¶</a></h2>
+<p>Basic class for scattering modelling</p>
+<dl class="class">
+<dt id="sentinel_simulator.sense.model.CanopyHomoRT">
+<em class="property">class </em><code class="descclassname">sentinel_simulator.sense.model.</code><code class="descname">CanopyHomoRT</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.model.CanopyHomoRT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Homogeneous canopy RT model
+assumes homogeneous vertical distribution of scatterers</p>
+<p>in that case the Lambert Beer law applies</p>
+<p>..note:: This model is only for backscatter geometry</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ke_h</strong> (<em>float</em>) &#8211; volume extinction coefficient h polarisation [Np/m]</li>
+<li><strong>ke_v</strong> (<em>float</em>) &#8211; volume extinction coefficient v polarisation [Np/m]</li>
+<li><strong>d</strong> (<em>float</em>) &#8211; height of canopy layer</li>
+<li><strong>theta</strong> (<em>float</em>) &#8211; incidence angle [rad]</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sentinel_simulator.sense.model.CanopyHomoRT.sigma_c">
+<code class="descname">sigma_c</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.model.CanopyHomoRT.sigma_c" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate canopy volume contribution only
+Eq. 11.10 + 11.16 as seen in 11.17, Ulaby (2014)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sentinel_simulator.sense.model.CanopyHomoRT.sigma_gcg">
+<code class="descname">sigma_gcg</code><span class="sig-paren">(</span><em>G_v</em>, <em>G_h</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.model.CanopyHomoRT.sigma_gcg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate ground-canopy-ground interactions Eq. 11.16, Ulaby(2014)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>G_v</strong> (<em>float</em>) &#8211; v-polarized coherent Fresnel reflectivity under rough conditions see eq. 11.11 for explanations.
+As this depends on the surface model used, these should be provided here explicitely</li>
+<li><strong>G_h</strong> (<em>float</em>) &#8211; same as G_v, but for h-polarization.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sentinel_simulator.sense.model.Ground">
+<em class="property">class </em><code class="descclassname">sentinel_simulator.sense.model.</code><code class="descname">Ground</code><span class="sig-paren">(</span><em>S</em>, <em>C</em>, <em>RT_s</em>, <em>RT_c</em>, <em>theta=None</em>, <em>freq=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.model.Ground" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>calculate the (attenuated) ground contribution
+sigma_pq
+where p is receive and q is transmit polarization</p>
+<p>Calculate the attenuated ground contribution
+to the scattering</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>S</strong> (<em>object</em>) &#8211; descibing the surface properties</li>
+<li><strong>C</strong> (<em>object</em>) &#8211; describing the canopy properties</li>
+<li><strong>RT_s</strong> (<em>str</em>) &#8211; key describing the surface scattering model</li>
+<li><strong>RT_c</strong> (<em>str</em>) &#8211; key specifying the canopy scattering model</li>
+<li><strong>freq</strong> (<em>float</em>) &#8211; frequency[GHz]</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sentinel_simulator.sense.model.Ground.sigma">
+<code class="descname">sigma</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.model.Ground.sigma" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate the backscattering coefficient
+Eq. 11.4, p.463 Ulaby (2014)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sentinel_simulator.sense.model.Ground.sigma_c_g">
+<code class="descname">sigma_c_g</code><span class="sig-paren">(</span><em>coherent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.model.Ground.sigma_c_g" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate canopy ground scattering coefficient
+This is based on Eq. 11.17 (last term) in Ulaby (2014)
+and 11.14 in Ulaby (2014)</p>
+<p>for co-pol, coherent addition can be made as an option</p>
+<p>:param coherent : option to do coherent calculation for co-pol calculations
+:type coherent: bool</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sentinel_simulator.sense.model.Ground.sigma_g_c_g">
+<code class="descname">sigma_g_c_g</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.model.Ground.sigma_g_c_g" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sentinel_simulator.sense.model.Model">
+<em class="property">class </em><code class="descclassname">sentinel_simulator.sense.model.</code><code class="descname">Model</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.model.Model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="sentinel_simulator.sense.model.Model.sigma0">
+<code class="descname">sigma0</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.model.Model.sigma0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate sigma</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dB</strong> (<em>bool</em>) &#8211; option to return results in decibel</li>
+<li><strong>pol</strong> (<em>list</em>) &#8211; list with polarizations pq whereas p=receive, q=transmit p,g can be either H or V</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sentinel_simulator.sense.model.SingleScatRT">
+<em class="property">class </em><code class="descclassname">sentinel_simulator.sense.model.</code><code class="descname">SingleScatRT</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.model.SingleScatRT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#sentinel_simulator.sense.model.Model" title="sentinel_simulator.sense.model.Model"><code class="xref py py-class docutils literal"><span class="pre">sentinel_simulator.sense.model.Model</span></code></a></p>
+<p>Single scattering model according to Ulaby and Long (2014) Eq. 11.17</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>surface</strong> (<em>object</em>) &#8211; Surface description</li>
+<li><strong>canopy</strong> (<em>object</em>) &#8211; Canopy description</li>
+<li><strong>models</strong> &#8211; dictionary with configuration of scattering models</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sentinel_simulator.sense.soil">
+<span id="sentinel-simulator-sense-soil-module"></span><h2>sentinel_simulator.sense.soil module<a class="headerlink" href="#module-sentinel_simulator.sense.soil" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="sentinel_simulator.sense.soil.Soil">
+<em class="property">class </em><code class="descclassname">sentinel_simulator.sense.soil.</code><code class="descname">Soil</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.soil.Soil" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class specifying a soil.</p>
+<p>Initialise with the following.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>eps</strong> (<em>complex</em>) &#8211; relative permittivity, if this is not given, then mv needs to be given.</li>
+<li><strong>s</strong> (<em>float</em>) &#8211; surface rms height [m].</li>
+<li><strong>mv</strong> (<em>float</em>) &#8211; volumetric soil moisture [m3 m-3]; either eps or mv needs to be given.</li>
+<li><strong>f</strong> (<em>float</em>) &#8211; frequency [GHz].</li>
+<li><strong>l</strong> (<em>float</em>) &#8211; optional: auto-correlation length.</li>
+<li><strong>acl</strong> (<em>str</em>) &#8211; identifier for shape of auto-correlation fucntion, G - Gaussian, E -Exponential.</li>
+<li><strong>clay</strong> (<em>float</em>) &#8211; optional fractional clay content.</li>
+<li><strong>sand</strong> (<em>float</em>) &#8211; optional fraction sand content.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Instance of the Soil class.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">instance</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sentinel_simulator.sense.canopy">
+<span id="sentinel-simulator-sense-canopy-module"></span><h2>sentinel_simulator.sense.canopy module<a class="headerlink" href="#module-sentinel_simulator.sense.canopy" title="Permalink to this headline">¶</a></h2>
+<p>Specification of canopies</p>
+<dl class="class">
+<dt id="sentinel_simulator.sense.canopy.Canopy">
+<em class="property">class </em><code class="descclassname">sentinel_simulator.sense.canopy.</code><code class="descname">Canopy</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.canopy.Canopy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sentinel_simulator.sense.canopy.OneLayer">
+<em class="property">class </em><code class="descclassname">sentinel_simulator.sense.canopy.</code><code class="descname">OneLayer</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.canopy.OneLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#sentinel_simulator.sense.canopy.Canopy" title="sentinel_simulator.sense.canopy.Canopy"><code class="xref py py-class docutils literal"><span class="pre">sentinel_simulator.sense.canopy.Canopy</span></code></a></p>
+<p>Define a homogeneous one layer canopy</p>
+<p>Initiate with chosen key word arguments.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>kwargs</strong> &#8211; extinction coefficient, canopy height, specular reflectivity, etc.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sentinel_simulator.sense">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-sentinel_simulator.sense" title="Permalink to this headline">¶</a></h2>
+<p>Main init module</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">sentinel_simulator.sense package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-sentinel_simulator.sense.model">sentinel_simulator.sense.model module</a></li>
+<li><a class="reference internal" href="#module-sentinel_simulator.sense.soil">sentinel_simulator.sense.soil module</a></li>
+<li><a class="reference internal" href="#module-sentinel_simulator.sense.canopy">sentinel_simulator.sense.canopy module</a></li>
+<li><a class="reference internal" href="#module-sentinel_simulator.sense">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sentinel_simulator.jules.html"
+                        title="previous chapter">sentinel_simulator.jules package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/source/sentinel_simulator.sense.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sentinel_simulator.jules.html" title="sentinel_simulator.jules package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">sentinelSimulator 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >sentinel_simulator</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="sentinel_simulator.html" >sentinel_simulator package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, E. Pinnington.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+    </div>
+  </body>
+</html>

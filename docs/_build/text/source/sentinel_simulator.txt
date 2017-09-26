@@ -1,0 +1,317 @@
+sentinel_simulator package
+**************************
+
+
+Subpackages
+===========
+
+* sentinel_simulator.jules package
+
+  * Submodules
+
+  * sentinel_simulator.jules.py_importNML module
+
+  * sentinel_simulator.jules.py_jules module
+
+  * sentinel_simulator.jules.py_julesNML module
+
+  * Module contents
+
+
+Submodules
+==========
+
+
+sentinel_simulator.opticalCanopyRT module
+=========================================
+
+sentinel_simulator.opticalCanopyRT.canopyRTOptical(state, geom, resln=1.0)
+
+   A python wrapper to the SemiDiscrete optical canopy RT model of
+   Nadine Gobron. Runs the model for the the whole of its valid
+   spectra range at a resolution set by resln.
+
+   Parameters:
+      * **state** (*instance*) -- Instance of the stateVector class.
+
+      * **geom** (*instance*) -- Instance of the sensorGeomety
+        class.
+
+      * **resln** (*float*) -- the spectral resolution in nm
+        [optional].
+
+   Returns:
+      Instance of the spectra class.
+
+   Return type:
+      instance
+
+
+sentinel_simulator.satelliteGeometry module
+===========================================
+
+sentinel_simulator.satelliteGeometry.getSentinel2Geometry(startDateUTC, lengthDays, lat, lon, alt=0.0, mission='Sentinel-2a', tleFile='../TLE/norad_resource_tle.txt')
+
+   Calculate approximate geometry for Sentinel overpasses. Approximate
+   because it assumes maximum satellite elevation is the time at which
+   target is imaged.
+
+   Parameters:
+      * **startDateUTC** (*object*) -- a datetime object specifying
+        when to start prediction.
+
+      * **lengthDays** (*int*) -- number of days over which to
+        perform calculations.
+
+      * **lat** (*float*) -- latitude of target.
+
+      * **lon** (*float*) -- longitude of target.
+
+      * **alt** (*float*) -- altitude of target (in km).
+
+      * **mission** (*str*) -- mission name as in TLE file.
+
+      * **tleFile** (*str*) -- TLE file.
+
+   Returns:
+      a python list containing instances of the sensorGeometry class
+      arranged in date order.
+
+   Return type:
+      list
+
+class sentinel_simulator.satelliteGeometry.sensorGeometry
+
+   Class to hold sun-sensor geometry information.
+
+   printGeom()
+
+      Prints currently specified class attributes.
+
+
+sentinel_simulator.spectra module
+=================================
+
+exception sentinel_simulator.spectra.UnknownFileType
+
+   Bases: "exceptions.Exception"
+
+   Exception class for unknown filetypes
+
+sentinel_simulator.spectra.convolve(s1orig, s2orig, resln=1.0, s2norm=True)
+
+   Convolve one spectra with another, for example to apply a band
+   pass, or a spectral response function.
+
+   Parameters:
+      * **s1orig** (*object*) -- A spectra object.
+
+      * **s2orig** (*float*) -- A spectra object.
+
+      * **resln** (*float*) -- The spectral resolution to use.
+
+      * **s2norm** (*bool*) -- If True normalise the second spectra
+        (e.g. to apply a spectra response function).
+
+   Returns:
+      Convolved spectra.
+
+   Return type:
+      object
+
+sentinel_simulator.spectra.sentinel2(s, mission='a')
+
+class sentinel_simulator.spectra.spectra(fname=None, ftype='SVC', wavlCol=0, reflCol=1, hdrLines=1)
+
+   Bases: "object"
+
+   Spectra class for sentinel simulator.
+
+   interpolate(resltn=0.1)
+
+      Interpolate spectra to the given resolution. Overwites exisiting
+      data.
+
+      Parameters:
+         **resltn** (*float*) -- resolution of the interpolation.
+
+   loadCSV(f, wavlCol=0, reflCol=1, hdrLines=1)
+
+      Read in data from a standard CSV file object.
+
+      Parameters:
+         * **f** (*file*) -- File object.
+
+         * **wavlCol** (*int*) -- Column containing wavelengths.
+
+         * **reflCol** (*int*) -- Column containing reflectance
+           data.
+
+         * **hdrLines** (*int*) -- Number of lines to skip at start
+           of file.
+
+   loadSVCSig(f)
+
+      Read in data from an SVC .sig ascii file.
+
+      Parameters:
+         **f** (*file*) -- File object.
+
+   loadSpectra(fname, wavlCol=0, reflCol=1, hdrLines=1)
+
+      Load in the spectra from a given file using a method appropriate
+      to the type of file.
+
+      Note: Current supported formats are:SVC - SCV .sig ascii
+        fileCSV - standard ascii comma seperated values
+
+      Parameters:
+         * **fname** (*str*) -- Valid filename containing spectra.
+
+         * **wavlCol** (*int*) -- Column containing wavelengths.
+
+         * **reflCol** (*int*) -- Column containing reflectance
+           data.
+
+         * **hdrLines** (*int*) -- Number of lines to skip at start
+           of file.
+
+   trim(wlmin, wlmax)
+
+      Trim the spectra so it is between two specified wavelengths.
+      Destroys the original data.
+
+      Parameters:
+         * **wlmin** (*float*) -- The lowest wavelength of the new
+           spectra.
+
+         * **wlmax** (*float*) -- The highest wavelength of the new
+           spectra.
+
+
+sentinel_simulator.stateVector module
+=====================================
+
+sentinel_simulator.stateVector.get_jules_state(date_utc, nc_file='jules/output/wallerfing_79_12.3_hourly.nc')
+
+   Function that returns a stateVector instance for a given time.
+
+   Parameters:
+      * **date_utc** (*object*) -- datetime object of when to
+        extract JULES output.
+
+      * **nc_file** (*str*) -- JULES output file from which to
+        extract data.
+
+   Returns:
+      Instance of stateVector class.
+
+   Return type:
+      instance
+
+sentinel_simulator.stateVector.nearest(items, pivot)
+
+sentinel_simulator.stateVector.read(file_format='jules', file_str=None, year=None)
+
+   Reads output data to a dictionary of state vectors indexed by time.
+
+   Note: This function requires sub-functions capable of reading
+     specified file format.
+
+   Parameters:
+      * **file_format** -- format of output to read.
+
+      * **file_str** (*str*) -- location of file.
+
+      * **year** (*int*) -- year of data to extract, if equal to
+        None whole time series extracted
+
+   Returns:
+      state dictionary.
+
+   Return type:
+      dict
+
+sentinel_simulator.stateVector.read_jules(nc_file=None, year=None)
+
+   Reads jules output from netCDF file and writes it to a dictionary
+   indexed by date.
+
+   Parameters:
+      * **nc_file** (*str*) -- location of nc_file.
+
+      * **year** (*int*) -- year of data to extract, if equal to
+        None whole time series extracted.
+
+   Returns:
+      state dictionary.
+
+   Return type:
+      dict
+
+class sentinel_simulator.stateVector.stateVector
+
+   Class to hold state vector data for optical and microwave canopy RT
+   models.
+
+
+sentinel_simulator.simulator module
+===================================
+
+class sentinel_simulator.simulator.S1_simulator(**kwargs)
+
+   Bases: "sentinel_simulator.simulator.Simulator"
+
+   Given Simulator class this subclass will simulate Sentinel 1 data.
+
+   Note: This function requires the Community SAR ScattEring model
+     (SenSE) to be installed on the system. This code is available
+     from:
+
+     * https://github.com/PMarzahn/sense
+
+   Initialize with same arguemnts as superClass 'Simulator'.
+
+class sentinel_simulator.simulator.S2_simulator(**kwargs)
+
+   Bases: "sentinel_simulator.simulator.Simulator"
+
+   Given Simulator class this subclass will simulate Sentinel 2 data.
+
+   Initialize with same arguemnts as superClass 'Simulator'.
+
+class sentinel_simulator.simulator.Simulator(year=2012, month=1, days=365)
+
+   Bases: "object"
+
+   Class to simulate Sentinel observations over Wallerfing for a given
+   year.
+
+   Calculate class attributes for given year, month and number of
+   days.
+
+   Parameters:
+      * **year** (*int*) -- Start year.
+
+      * **month** (*int*) -- Start month.
+
+      * **days** (*int*) -- number of days to run for.
+
+sentinel_simulator.simulator.plot_class_var(date_lst, var, y_lab=None, line_type='-')
+
+   Plot specified variable.
+
+   Parameters:
+      * **var** (*list*) -- Class attribute variable as list.
+
+      * **y_lab** (*str*) -- Label for Y-axis.
+
+   Returns:
+      Figure.
+
+   Return type:
+      object
+
+
+Module contents
+===============

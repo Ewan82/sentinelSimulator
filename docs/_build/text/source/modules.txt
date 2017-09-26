@@ -1,0 +1,32 @@
+sentinel_simulator
+******************
+
+* sentinel_simulator package
+
+  * Subpackages
+
+    * sentinel_simulator.jules package
+
+      * Submodules
+
+      * sentinel_simulator.jules.py_importNML module
+
+      * sentinel_simulator.jules.py_jules module
+
+      * sentinel_simulator.jules.py_julesNML module
+
+      * Module contents
+
+  * Submodules
+
+  * sentinel_simulator.opticalCanopyRT module
+
+  * sentinel_simulator.satelliteGeometry module
+
+  * sentinel_simulator.spectra module
+
+  * sentinel_simulator.stateVector module
+
+  * sentinel_simulator.simulator module
+
+  * Module contents

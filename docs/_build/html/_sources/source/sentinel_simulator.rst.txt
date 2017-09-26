@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
 
     sentinel_simulator.jules
+    sentinel_simulator.sense
 
 Submodules
 ----------

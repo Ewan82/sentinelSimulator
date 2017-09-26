@@ -62,23 +62,28 @@ class S1_simulator(Simulator):
         """
         super(S1_simulator, self).__init__(**kwargs)
         # Setup SAR RT spectra list (Sentinel 1)
-        self.freq = 5.
+        self.freq = 5.405
         self.theta = np.deg2rad(37.0)
         self.stype = 'turbid_rayleigh'
-        # stype='turbid_isotropic'
-        self.models = {'surface': 'Oh92', 'canopy': self.stype}
+        # self.stype='turbid_isotropic'
+        self.surf = 'Oh92'
+        # self.surf = 'Dubois95'
+        self.models = {'surface': self.surf, 'canopy': self.stype}
         self.s = 0.02
+        self.lai_coef = 0.2
         d = 0.22
         ke = 1.
+        self.eps = 15. - 0.j
         # canopy = sense_canopy.OneLayer(ke_h=ke, ke_v=ke, d=0.1*self.state_lst[x].can_height, ks_h=omega * ke, ks_v=omega * ke)
-        omega = 0.12
+        omega = 0.2  # 0.12
 
         self.SAR_list = [sense_mod.SingleScatRT(
-            surface=sense_soil.Soil(mv=self.state_lst[x].soil_moisture, f=self.freq, s=self.s, clay=0.23, sand=0.27),
-            canopy=sense_canopy.OneLayer(ke_h=0.1*self.state_lst[x].lai, ke_v=0.1*self.state_lst[x].lai,
+            surface=sense_soil.Soil(eps=self.eps*(0.9 + 0.1*(self.state_lst[x].soil_moisture/0.45)), f=self.freq, s=self.s),  # mv=self.state_lst[x].soil_moisture, f=self.freq, s=self.s, clay=0.23, sand=0.27),  # eps=self.eps, f=self.freq, s=self.s),
+            canopy=sense_canopy.OneLayer(ke_h=1. - self.lai_coef*self.state_lst[x].lai,
+                                         ke_v=1. - self.lai_coef*self.state_lst[x].lai,
                                          d=0.1*self.state_lst[x].can_height,
-                                         ks_h=omega * 0.1*self.state_lst[x].lai,
-                                         ks_v=omega * 0.1*self.state_lst[x].lai),
+                                         ks_h=omega * (1 - self.lai_coef * self.state_lst[x].lai),
+                                         ks_v=omega * (1 - self.lai_coef * self.state_lst[x].lai)),
             models=self.models,
             theta=self.theta,
             freq=self.freq) for x in xrange(len(self.state_lst))]
@@ -136,7 +141,7 @@ if __name__ == "__main__":
     sns.set_context('poster', font_scale=1.2, rc={'lines.linewidth': 2, 'lines.markersize': 6})
     sns.set_style('whitegrid')
     sim_c1 = S1_simulator()
-    #sim_c2 = S2_simulator()
+    sim_c2 = S2_simulator()
 
     fig = plot_class_var(sim_c1.date_lst, sim_c1.vza_lst, y_lab='View zenith angle (degrees)', line_type='o')
     fig.savefig('../docs/source/simulator/vza.png')
@@ -148,7 +153,8 @@ if __name__ == "__main__":
     fig.savefig('../docs/source/simulator/can_ht.png')
     fig = plot_class_var(sim_c1.date_lst, sim_c1.soilm_lst, y_lab=r'Soil moisture (m$^{3}~$m$^{-3}$)')
     fig.savefig('../docs/source/simulator/soil_m.png')
-    for x in xrange(3):  # Currently using vv polarisation (vv, hh, hv) is this correct?
+    plt.close('all')
+    for x in xrange(3):
         fig = plot_class_var(sim_c1.date_lst,
                              [10*np.log10(sim_c1.SAR_list[s1c].__dict__['stot'][sim_c1.backscatter_keys[x]])
                               for s1c in xrange(len(sim_c1.SAR_list))],
@@ -156,7 +162,9 @@ if __name__ == "__main__":
                              line_type='o')
         # Must also think about canopy height and extinction coefficient!!!
         fig.savefig('../docs/source/simulator/' + sim_c1.backscatter_keys[x] + '.png')
-    #for x in range(13):
-    #    fig = plot_class_var(sim_c2.date_lst, sim_c2.all_BRF_arr[:,x], y_lab=sim_c2.band_labels[x]+' reflectance',
-    #                         line_type='o')
-    #    fig.savefig('../docs/source/simulator/'+sim_c2.band_labels[x]+'.png')
+        plt.close()
+    for x in range(13):
+        fig = plot_class_var(sim_c2.date_lst, sim_c2.all_BRF_arr[:,x], y_lab=sim_c2.band_labels[x]+' reflectance',
+                             line_type='o')
+        fig.savefig('../docs/source/simulator/'+sim_c2.band_labels[x]+'.png')
+        plt.close()

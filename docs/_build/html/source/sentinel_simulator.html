@@ -70,6 +70,14 @@
 <li class="toctree-l2"><a class="reference internal" href="sentinel_simulator.jules.html#module-sentinel_simulator.jules">Module contents</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="sentinel_simulator.sense.html">sentinel_simulator.sense package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sentinel_simulator.sense.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sentinel_simulator.sense.html#module-sentinel_simulator.sense.model">sentinel_simulator.sense.model module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sentinel_simulator.sense.html#module-sentinel_simulator.sense.soil">sentinel_simulator.sense.soil module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sentinel_simulator.sense.html#module-sentinel_simulator.sense.canopy">sentinel_simulator.sense.canopy module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sentinel_simulator.sense.html#module-sentinel_simulator.sense">Module contents</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -301,13 +309,25 @@ method appropriate to the type of file.</p>
 <dl class="function">
 <dt id="sentinel_simulator.stateVector.get_jules_state">
 <code class="descclassname">sentinel_simulator.stateVector.</code><code class="descname">get_jules_state</code><span class="sig-paren">(</span><em>date_utc</em>, <em>nc_file='jules/output/wallerfing_79_12.3_hourly.nc'</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.stateVector.get_jules_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function that returns a stateVector instance for a given time.
-:param date_utc: datetime object of when to extract JULES output.
-:type date_utc: object
-:param nc_file: JULES output file from which to extract data.
-:type nc_file: str
-:return: Instance of stateVector class.
-:rtype: instance</p>
+<dd><p>Function that returns a stateVector instance for a given time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>date_utc</strong> (<em>object</em>) &#8211; datetime object of when to extract JULES output.</li>
+<li><strong>nc_file</strong> (<em>str</em>) &#8211; JULES output file from which to extract data.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Instance of stateVector class.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">instance</p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -391,6 +411,7 @@ code is available from:</p>
 <li><a class="reference external" href="https://github.com/PMarzahn/sense">https://github.com/PMarzahn/sense</a></li>
 </ul>
 </div>
+<p>Initialize with same arguemnts as superClass &#8216;Simulator&#8217;.</p>
 </dd></dl>
 
 <dl class="class">
@@ -398,13 +419,28 @@ code is available from:</p>
 <em class="property">class </em><code class="descclassname">sentinel_simulator.simulator.</code><code class="descname">S2_simulator</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.simulator.S2_simulator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#sentinel_simulator.simulator.Simulator" title="sentinel_simulator.simulator.Simulator"><code class="xref py py-class docutils literal"><span class="pre">sentinel_simulator.simulator.Simulator</span></code></a></p>
 <p>Given Simulator class this subclass will simulate Sentinel 2 data.</p>
+<p>Initialize with same arguemnts as superClass &#8216;Simulator&#8217;.</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="sentinel_simulator.simulator.Simulator">
 <em class="property">class </em><code class="descclassname">sentinel_simulator.simulator.</code><code class="descname">Simulator</code><span class="sig-paren">(</span><em>year=2012</em>, <em>month=1</em>, <em>days=365</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.simulator.Simulator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>Class to simulate Sentinel 2 observations over Wallerfing for a given year.</p>
+<p>Class to simulate Sentinel observations over Wallerfing for a given year.</p>
+<p>Calculate class attributes for given year, month and number of days.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>year</strong> (<em>int</em>) &#8211; Start year.</li>
+<li><strong>month</strong> (<em>int</em>) &#8211; Start month.</li>
+<li><strong>days</strong> (<em>int</em>) &#8211; number of days to run for.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
