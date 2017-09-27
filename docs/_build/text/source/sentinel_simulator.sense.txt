@@ -1,0 +1,229 @@
+sentinel_simulator.sense package
+********************************
+
+
+Submodules
+==========
+
+
+sentinel_simulator.sense.model module
+=====================================
+
+Basic class for scattering modelling
+
+class sentinel_simulator.sense.model.CanopyHomoRT(**kwargs)
+
+   Bases: "object"
+
+   Homogeneous canopy RT model assumes homogeneous vertical
+   distribution of scatterers
+
+   in that case the Lambert Beer law applies
+
+   Note: This model is only for backscatter geometry.
+
+   Parameters:
+      * **ke_h** (*float*) -- volume extinction coefficient h
+        polarisation [Np/m]
+
+      * **ke_v** (*float*) -- volume extinction coefficient v
+        polarisation [Np/m]
+
+      * **d** (*float*) -- height of canopy layer
+
+      * **theta** (*float*) -- incidence angle [rad]
+
+   Returns:
+      Instance of CanopyHomoRT class.
+
+   Return type:
+      instance
+
+   sigma_c()
+
+      Calculate canopy volume contribution only         Eq. 11.10 +
+      11.16 as seen in 11.17, Ulaby (2014).
+
+   sigma_gcg(G_v, G_h)
+
+      Calculate ground-canopy-ground interactions Eq. 11.16,
+      Ulaby(2014)
+
+      Parameters:
+         * **G_v** (*float*) -- v-polarized coherent Fresnel
+           reflectivity under rough conditions see eq. 11.11 for
+           explanations. As this depends on the surface model used,
+           these should be provided here explicitely
+
+         * **G_h** (*float*) -- same as G_v, but for h-polarization.
+
+      Returns:
+         Ground-canopy-ground backscatter
+
+      Return type:
+         float
+
+class sentinel_simulator.sense.model.Ground(S, C, RT_s, RT_c, theta=None, freq=None)
+
+   Bases: "object"
+
+   Calculate the (attenuated) ground contribution sigma_pq where p is
+   receive and q is transmit polarization
+
+   Calculate the attenuated ground contribution to the scattering
+
+   Parameters:
+      * **S** (*object*) -- descibing the surface properties
+
+      * **C** (*object*) -- describing the canopy properties
+
+      * **RT_s** (*str*) -- key describing the surface scattering
+        model
+
+      * **RT_c** (*str*) -- key specifying the canopy scattering
+        model
+
+      * **freq** (*float*) -- frequency[GHz]
+
+   Returns:
+      Instance of Ground class.
+
+   Return type:
+      object
+
+   sigma()
+
+      Calculate the backscattering coefficient Eq. 11.4, p.463 Ulaby
+      (2014).
+
+   sigma_c_g(coherent=None)
+
+      Calculate canopy ground scattering coefficient This is based on
+      Eq. 11.17 (last term) in Ulaby (2014) and 11.14 in Ulaby (2014)
+
+      for co-pol, coherent addition can be made as an option
+
+      Parameters:
+         **coherent** (*bool*) -- option to do coherent calculation
+         for co-pol calculations
+
+      Returns:
+         canopy ground scattering coefficient
+
+      Return type:
+         dict
+
+   sigma_g_c_g()
+
+class sentinel_simulator.sense.model.Model(**kwargs)
+
+   Bases: "object"
+
+   sigma0(**kwargs)
+
+      Calculate sigma
+
+      Parameters:
+         * **dB** (*bool*) -- option to return results in decibel
+
+         * **pol** (*list*) -- list with polarizations pq whereas
+           p=receive, q=transmit p,g can be either H or V
+
+      Returns:
+         sigma
+
+      Return type:
+         float
+
+class sentinel_simulator.sense.model.SingleScatRT(**kwargs)
+
+   Bases: "sentinel_simulator.sense.model.Model"
+
+   Single scattering model according to Ulaby and Long (2014) Eq.
+   11.17
+
+   Parameters:
+      * **surface** (*object*) -- Surface description
+
+      * **canopy** (*object*) -- Canopy description
+
+      * **models** -- dictionary with configuration of scattering
+        models
+
+   Returns:
+      Instance of SingleScatRT class.
+
+   Return type:
+      object
+
+
+sentinel_simulator.sense.soil module
+====================================
+
+class sentinel_simulator.sense.soil.Soil(**kwargs)
+
+   Bases: "object"
+
+   Class specifying a soil.
+
+   Initialise with the following.
+
+   Parameters:
+      * **eps** (*complex*) -- relative permittivity, if this is not
+        given, then mv needs to be given.
+
+      * **s** (*float*) -- surface rms height [m].
+
+      * **mv** (*float*) -- volumetric soil moisture [m3 m-3];
+        either eps or mv needs to be given.
+
+      * **f** (*float*) -- frequency [GHz].
+
+      * **l** (*float*) -- optional: auto-correlation length.
+
+      * **acl** (*str*) -- identifier for shape of auto-correlation
+        fucntion, G - Gaussian, E -Exponential.
+
+      * **clay** (*float*) -- optional fractional clay content.
+
+      * **sand** (*float*) -- optional fraction sand content.
+
+   Returns:
+      Instance of the Soil class.
+
+   Return type:
+      instance
+
+
+sentinel_simulator.sense.canopy module
+======================================
+
+Specification of canopies
+
+class sentinel_simulator.sense.canopy.Canopy(**kwargs)
+
+   Bases: "object"
+
+class sentinel_simulator.sense.canopy.OneLayer(**kwargs)
+
+   Bases: "sentinel_simulator.sense.canopy.Canopy"
+
+   Define a homogeneous one layer canopy
+
+   Initiate with chosen key word arguments.
+
+   Parameters:
+      **kwargs** -- extinction coefficient, canopy height, specular
+      reflectivity, etc.
+
+   Returns:
+      Instance of OneLayer Canopy sub-class.
+
+   Return type:
+      object
+
+
+Module contents
+===============
+
+Main init module

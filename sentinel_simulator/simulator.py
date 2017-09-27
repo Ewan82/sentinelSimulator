@@ -25,6 +25,8 @@ class Simulator(object):
         :type month: int
         :param days: number of days to run for.
         :type days: int
+        :return: Instance of SImulator class.
+        :rtype: object
         """
         #  Setup satellite geometry list
         self.start_date = dt.datetime(year, month, 1)
@@ -78,7 +80,7 @@ class S1_simulator(Simulator):
         omega = 0.2  # 0.12
 
         self.SAR_list = [sense_mod.SingleScatRT(
-            surface=sense_soil.Soil(eps=self.eps*(0.9 + 0.1*(self.state_lst[x].soil_moisture/0.45)), f=self.freq, s=self.s),  # mv=self.state_lst[x].soil_moisture, f=self.freq, s=self.s, clay=0.23, sand=0.27),  # eps=self.eps, f=self.freq, s=self.s),
+            surface=sense_soil.Soil(mv=self.state_lst[x].soil_moisture, f=self.freq, s=self.s, clay=0.23, sand=0.27, l=1.0, acl='G'), # eps=self.eps*(1. + 0.02*(self.state_lst[x].soil_moisture/0.45)), f=self.freq, s=self.s),  # eps=self.eps, f=self.freq, s=self.s),
             canopy=sense_canopy.OneLayer(ke_h=1. - self.lai_coef*self.state_lst[x].lai,
                                          ke_v=1. - self.lai_coef*self.state_lst[x].lai,
                                          d=0.1*self.state_lst[x].can_height,
@@ -141,7 +143,7 @@ if __name__ == "__main__":
     sns.set_context('poster', font_scale=1.2, rc={'lines.linewidth': 2, 'lines.markersize': 6})
     sns.set_style('whitegrid')
     sim_c1 = S1_simulator()
-    sim_c2 = S2_simulator()
+    #sim_c2 = S2_simulator()
 
     fig = plot_class_var(sim_c1.date_lst, sim_c1.vza_lst, y_lab='View zenith angle (degrees)', line_type='o')
     fig.savefig('../docs/source/simulator/vza.png')
@@ -161,10 +163,10 @@ if __name__ == "__main__":
                              y_lab='Backscatter ' + sim_c1.backscatter_keys[x] + ' polarisation (db)',
                              line_type='o')
         # Must also think about canopy height and extinction coefficient!!!
-        fig.savefig('../docs/source/simulator/' + sim_c1.backscatter_keys[x] + '.png')
+        fig.savefig('../docs/source/simulator/' + sim_c1.backscatter_keys[x] + '_test.png')
         plt.close()
-    for x in range(13):
-        fig = plot_class_var(sim_c2.date_lst, sim_c2.all_BRF_arr[:,x], y_lab=sim_c2.band_labels[x]+' reflectance',
-                             line_type='o')
-        fig.savefig('../docs/source/simulator/'+sim_c2.band_labels[x]+'.png')
-        plt.close()
+    #for x in range(13):
+    #    fig = plot_class_var(sim_c2.date_lst, sim_c2.all_BRF_arr[:,x], y_lab=sim_c2.band_labels[x]+' reflectance',
+    #                         line_type='o')
+    #    fig.savefig('../docs/source/simulator/'+sim_c2.band_labels[x]+'.png')
+    #    plt.close()

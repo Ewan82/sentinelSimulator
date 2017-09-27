@@ -65,15 +65,17 @@
 <dt id="sentinel_simulator.sense.model.CanopyHomoRT">
 <em class="property">class </em><code class="descclassname">sentinel_simulator.sense.model.</code><code class="descname">CanopyHomoRT</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.model.CanopyHomoRT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>Homogeneous canopy RT model
-assumes homogeneous vertical distribution of scatterers</p>
+<p>Homogeneous canopy RT model assumes homogeneous vertical distribution of scatterers</p>
 <p>in that case the Lambert Beer law applies</p>
-<p>..note:: This model is only for backscatter geometry</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This model is only for backscatter geometry.</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>ke_h</strong> (<em>float</em>) &#8211; volume extinction coefficient h polarisation [Np/m]</li>
 <li><strong>ke_v</strong> (<em>float</em>) &#8211; volume extinction coefficient v polarisation [Np/m]</li>
 <li><strong>d</strong> (<em>float</em>) &#8211; height of canopy layer</li>
@@ -81,13 +83,18 @@ assumes homogeneous vertical distribution of scatterers</p>
 </ul>
 </td>
 </tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Instance of CanopyHomoRT class.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">instance</p>
+</td>
+</tr>
 </tbody>
 </table>
 <dl class="method">
 <dt id="sentinel_simulator.sense.model.CanopyHomoRT.sigma_c">
 <code class="descname">sigma_c</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.model.CanopyHomoRT.sigma_c" title="Permalink to this definition">¶</a></dt>
-<dd><p>calculate canopy volume contribution only
-Eq. 11.10 + 11.16 as seen in 11.17, Ulaby (2014)</p>
+<dd><p>Calculate canopy volume contribution only         Eq. 11.10 + 11.16 as seen in 11.17, Ulaby (2014).</p>
 </dd></dl>
 
 <dl class="method">
@@ -98,11 +105,17 @@ Eq. 11.10 + 11.16 as seen in 11.17, Ulaby (2014)</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>G_v</strong> (<em>float</em>) &#8211; v-polarized coherent Fresnel reflectivity under rough conditions see eq. 11.11 for explanations.
 As this depends on the surface model used, these should be provided here explicitely</li>
 <li><strong>G_h</strong> (<em>float</em>) &#8211; same as G_v, but for h-polarization.</li>
 </ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Ground-canopy-ground backscatter</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
 </td>
 </tr>
 </tbody>
@@ -115,7 +128,7 @@ As this depends on the surface model used, these should be provided here explici
 <dt id="sentinel_simulator.sense.model.Ground">
 <em class="property">class </em><code class="descclassname">sentinel_simulator.sense.model.</code><code class="descname">Ground</code><span class="sig-paren">(</span><em>S</em>, <em>C</em>, <em>RT_s</em>, <em>RT_c</em>, <em>theta=None</em>, <em>freq=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.model.Ground" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>calculate the (attenuated) ground contribution
+<p>Calculate the (attenuated) ground contribution
 sigma_pq
 where p is receive and q is transmit polarization</p>
 <p>Calculate the attenuated ground contribution
@@ -124,7 +137,7 @@ to the scattering</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>S</strong> (<em>object</em>) &#8211; descibing the surface properties</li>
 <li><strong>C</strong> (<em>object</em>) &#8211; describing the canopy properties</li>
 <li><strong>RT_s</strong> (<em>str</em>) &#8211; key describing the surface scattering model</li>
@@ -133,24 +146,39 @@ to the scattering</p>
 </ul>
 </td>
 </tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Instance of Ground class.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">object</p>
+</td>
+</tr>
 </tbody>
 </table>
 <dl class="method">
 <dt id="sentinel_simulator.sense.model.Ground.sigma">
 <code class="descname">sigma</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.model.Ground.sigma" title="Permalink to this definition">¶</a></dt>
-<dd><p>calculate the backscattering coefficient
-Eq. 11.4, p.463 Ulaby (2014)</p>
+<dd><p>Calculate the backscattering coefficient Eq. 11.4, p.463 Ulaby (2014).</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sentinel_simulator.sense.model.Ground.sigma_c_g">
 <code class="descname">sigma_c_g</code><span class="sig-paren">(</span><em>coherent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.sense.model.Ground.sigma_c_g" title="Permalink to this definition">¶</a></dt>
-<dd><p>calculate canopy ground scattering coefficient
+<dd><p>Calculate canopy ground scattering coefficient
 This is based on Eq. 11.17 (last term) in Ulaby (2014)
 and 11.14 in Ulaby (2014)</p>
 <p>for co-pol, coherent addition can be made as an option</p>
-<p>:param coherent : option to do coherent calculation for co-pol calculations
-:type coherent: bool</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>coherent</strong> (<em>bool</em>) &#8211; option to do coherent calculation for co-pol calculations</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">canopy ground scattering coefficient</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -172,10 +200,16 @@ and 11.14 in Ulaby (2014)</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>dB</strong> (<em>bool</em>) &#8211; option to return results in decibel</li>
 <li><strong>pol</strong> (<em>list</em>) &#8211; list with polarizations pq whereas p=receive, q=transmit p,g can be either H or V</li>
 </ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">sigma</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
 </td>
 </tr>
 </tbody>
@@ -193,11 +227,17 @@ and 11.14 in Ulaby (2014)</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>surface</strong> (<em>object</em>) &#8211; Surface description</li>
 <li><strong>canopy</strong> (<em>object</em>) &#8211; Canopy description</li>
 <li><strong>models</strong> &#8211; dictionary with configuration of scattering models</li>
 </ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Instance of SingleScatRT class.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">object</p>
 </td>
 </tr>
 </tbody>
@@ -260,6 +300,10 @@ and 11.14 in Ulaby (2014)</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>kwargs</strong> &#8211; extinction coefficient, canopy height, specular reflectivity, etc.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Instance of OneLayer Canopy sub-class.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">object</td>
 </tr>
 </tbody>
 </table>

@@ -17,6 +17,18 @@ Subpackages
 
   * Module contents
 
+* sentinel_simulator.sense package
+
+  * Submodules
+
+  * sentinel_simulator.sense.model module
+
+  * sentinel_simulator.sense.soil module
+
+  * sentinel_simulator.sense.canopy module
+
+  * Module contents
+
 
 Submodules
 ==========
@@ -296,6 +308,12 @@ class sentinel_simulator.simulator.Simulator(year=2012, month=1, days=365)
       * **month** (*int*) -- Start month.
 
       * **days** (*int*) -- number of days to run for.
+
+   Returns:
+      Instance of SImulator class.
+
+   Return type:
+      object
 
 sentinel_simulator.simulator.plot_class_var(date_lst, var, y_lab=None, line_type='-')
 

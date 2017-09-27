@@ -1,8 +1,8 @@
 sentinelSimulator
 =================
 
-This Python package simulates Sentinel 2 data based on output from the JULES land surface model. Here we provide
-documentation on this package. Below we illustrate a basic explanation of the package in use.
+This Python package simulates Sentinel 1 & 2 data based on output from the JULES land surface model. Here we provide
+documentation on this package. Below we illustrate a basic example of the package in use.
 
 Example of using sentinelSimulator package::
 
@@ -13,13 +13,13 @@ Example of using sentinelSimulator package::
 Features
 --------
 
-- Simulates sentinel 2 data from JULES output
-- Add additional explanation
+- Simulates Sentinel 1 & 2 data from JULES output
+- Allows for for sensitivity analysis using an ensemble of model runs from JULES
 
 Source Code
 -----------
 
-github.com/example_user/sentinelSimulator
+www.github.com/Ewan82/sentinelSimulator
 
 Support
 -------

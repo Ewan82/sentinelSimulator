@@ -19,6 +19,8 @@ class OneLayer(Canopy):
         """Initiate with chosen key word arguments.
 
         :param kwargs: extinction coefficient, canopy height, specular reflectivity, etc.
+        :return: Instance of OneLayer Canopy sub-class.
+        :rtype: object
         """
         super(OneLayer, self).__init__(**kwargs)
         self.ke_h = kwargs.get('ke_h', None)
