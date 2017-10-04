@@ -2,76 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7482d48-4180-44dc-bbfe-8243e20ae74b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/B1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/B10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/B11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/B12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/B2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/B3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/B4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/B5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/B6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/B7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/B8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/B8A.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/B9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/can_ht.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/hh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/hv.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/lai.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/soil_m.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/sensitivity/vv.png" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/source/simulator/hh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/source/simulator/hh_test.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/source/simulator/hv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/source/simulator/hv_test.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/source/simulator/vv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/source/simulator/vv_test.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/environment.pickle" afterPath="$PROJECT_DIR$/docs/_build/doctrees/environment.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/index.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/index.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/source/example.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/source/example.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/source/sentinel_simulator.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/source/sentinel_simulator.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B1.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B10.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B10.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B11.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B11.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B12.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B12.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B2.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B3.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B4.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B5.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B6.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B7.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B7.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B8.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B8A.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B8A.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/B9.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/B9.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/hh.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/hh.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/hv.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/hv.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/vv.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/vv.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/objects.inv" afterPath="$PROJECT_DIR$/docs/_build/html/objects.inv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/B1.png" afterPath="$PROJECT_DIR$/docs/source/simulator/B1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/B10.png" afterPath="$PROJECT_DIR$/docs/source/simulator/B10.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/B11.png" afterPath="$PROJECT_DIR$/docs/source/simulator/B11.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/B12.png" afterPath="$PROJECT_DIR$/docs/source/simulator/B12.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/B2.png" afterPath="$PROJECT_DIR$/docs/source/simulator/B2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/B3.png" afterPath="$PROJECT_DIR$/docs/source/simulator/B3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/B4.png" afterPath="$PROJECT_DIR$/docs/source/simulator/B4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/B5.png" afterPath="$PROJECT_DIR$/docs/source/simulator/B5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/B6.png" afterPath="$PROJECT_DIR$/docs/source/simulator/B6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/B7.png" afterPath="$PROJECT_DIR$/docs/source/simulator/B7.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/B8.png" afterPath="$PROJECT_DIR$/docs/source/simulator/B8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/B8A.png" afterPath="$PROJECT_DIR$/docs/source/simulator/B8A.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/simulator/B9.png" afterPath="$PROJECT_DIR$/docs/source/simulator/B9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/source/sensitivity.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/source/sensitivity.doctree" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_sources/index.rst.txt" afterPath="$PROJECT_DIR$/docs/_build/html/_sources/index.rst.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/genindex.html" afterPath="$PROJECT_DIR$/docs/_build/html/genindex.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_sources/source/sensitivity.rst.txt" afterPath="$PROJECT_DIR$/docs/_build/html/_sources/source/sensitivity.rst.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/index.html" afterPath="$PROJECT_DIR$/docs/_build/html/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/searchindex.js" afterPath="$PROJECT_DIR$/docs/_build/html/searchindex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/source/example.html" afterPath="$PROJECT_DIR$/docs/_build/html/source/example.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/source/modules.html" afterPath="$PROJECT_DIR$/docs/_build/html/source/modules.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/source/sentinel_simulator.html" afterPath="$PROJECT_DIR$/docs/_build/html/source/sentinel_simulator.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.rst" afterPath="$PROJECT_DIR$/docs/index.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/opticalCanopyRT.py" afterPath="$PROJECT_DIR$/sentinel_simulator/opticalCanopyRT.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/simulator.py" afterPath="$PROJECT_DIR$/sentinel_simulator/simulator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/source/sensitivity.html" afterPath="$PROJECT_DIR$/docs/_build/html/source/sensitivity.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/sensitivity.rst" afterPath="$PROJECT_DIR$/docs/source/sensitivity.rst" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -113,8 +51,18 @@
       <file leaf-file-name="sensitivity.rst" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/source/sensitivity.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+            <state relative-caret-position="613">
+              <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="py_jules.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sentinel_simulator/jules/py_jules.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2162">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -125,16 +73,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.rst" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/index.rst">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -177,10 +115,12 @@
       <find>note</find>
       <find>bulk</find>
       <find>simulator</find>
+      <find>sensitivity/</find>
     </findStrings>
     <replaceStrings>
       <replace>200px</replace>
       <replace>sensitivity</replace>
+      <replace>sensitivity/parameter/</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -291,7 +231,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
+              <option name="myItemId" value="sentinel_simulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sentinelSimulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sentinelSimulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sentinel_simulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sense" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sentinelSimulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sentinelSimulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sentinel_simulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -306,10 +282,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -364,12 +336,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/source/sensitivity" />
       <recent name="$PROJECT_DIR$/docs/source" />
       <recent name="$PROJECT_DIR$/sentinel_simulator/jules" />
       <recent name="$PROJECT_DIR$/sentinel_simulator" />
       <recent name="$PROJECT_DIR$/jules/output" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/source/sensitivity/parameter" />
       <recent name="$PROJECT_DIR$/docs/source" />
       <recent name="$PROJECT_DIR$/docs/source/sensitivity" />
       <recent name="$PROJECT_DIR$/sentinel_simulator" />
@@ -603,11 +577,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/source/simulator/testS1_s0cgt_vv.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/simulator/testS1_s0g_hh.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -873,6 +842,14 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sentinel_simulator/simulator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -893,18 +870,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.rst">
+    <entry file="file://$PROJECT_DIR$/sentinel_simulator/jules/py_jules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="-2162">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/sensitivity.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+        <state relative-caret-position="613">
+          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
           <folding />
         </state>
       </provider>
