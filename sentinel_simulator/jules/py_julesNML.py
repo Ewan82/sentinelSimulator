@@ -300,20 +300,20 @@ var_name= ${jules_output_profile_1_var_name},
 
 """
 output_nml = julesNML(output_txt, "output.nml")
-output_nml.mapping["jules_output_profile_1_nvars"] = "19,"
+output_nml.mapping["jules_output_profile_1_nvars"] = "20,"
 output_nml.mapping["jules_output_profile_1_profile_name"] = "'3_hourly',"
 output_nml.mapping["jules_output_profile_1_output_spinup"] = ".false.,"
 output_nml.mapping["jules_output_profile_1_output_main_run"] = ".true.,"
 output_nml.mapping["jules_output_profile_1_var"] = "'rainfall', 't1p5m', 'smcl', 't_soil', 'tstar', 'cropdvi', 'croprootc', " \
                                     "'cropharvc', 'cropreservec', 'croplai', 'cropcanht', 'cropyield', 'harvest_counter'," \
-                                    " 'harvest_trigger', 'cropstemc', 'cropleafc', 'cropsowdate', 'fsmc', 'fsmc_gb'"
+                                    " 'harvest_trigger', 'cropstemc', 'cropleafc', 'cropsowdate', 'fsmc', 'fsmc_gb', 'gpp_gb'"
 output_nml.mapping["jules_output_profile_1_file_period"] = "0,"
 output_nml.mapping["jules_output_1_run_id"] = "'wallerfing_79_12',"
 output_nml.mapping["jules_output_profile_1_var_name"] = "'rainfall', 't1p5m', 'smcl', 't_soil', 'tstar', 'cropdvi', 'croprootc', " \
                                     "'cropharvc', 'cropreservec', 'croplai', 'cropcanht', 'cropyield', 'harvest_counter'," \
-                                    " 'harvest_trigger', 'cropstemc', 'cropleafc', 'cropsowdate', 'fsmc', 'fsmc_gb'"
+                                    " 'harvest_trigger', 'cropstemc', 'cropleafc', 'cropsowdate', 'fsmc', 'fsmc_gb', 'gpp_gb'"
 output_nml.mapping["jules_output_profile_1_output_period"] = "10800,"
-output_nml.mapping["jules_output_profile_1_output_type"] = "19*'M',"
+output_nml.mapping["jules_output_profile_1_output_type"] = "20*'M',"
 output_nml.mapping["jules_output_1_dump_period"] = "100,"
 output_nml.mapping["jules_output_1_output_dir"] = "'./output',"
 output_nml.mapping["jules_output_1_nprofiles"] = "1,"

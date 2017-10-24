@@ -76,11 +76,33 @@ def param_sen_S1(save_dir):
     return 'finished parameter sensitivity run'
 
 
-def param_sen_S2(save_dir):
+def param_sen_S2(dir):
     glob_list = pickle.load(open('glob_list.p', 'rb'))
     for fname in glob_list:
         try:
-            S2_run(jules_nc=fname, fname=save_dir+'/'+fname[30:46]+'_s2_sim_dict.p')
+            S2_run(jules_nc=fname, fname=dir+'/'+fname[30:46]+'_s2_sim_dict.p')
+        except ValueError:
+            print 'caught a value error, doing next year'
+            continue
+    return 'finished parameter sensitivity run'
+
+
+def demo_sen_S1(direct):
+    glob_list = glob.glob(direct + '/*.nc')
+    for fname in glob_list:
+        try:
+            S1_run(jules_nc=fname, fname=direct + '/' + fname[-16:-13] + '_s1_sim_dict.p')
+        except ValueError:
+            print 'caught a value error, doing next year'
+            continue
+    return 'finished parameter sensitivity run'
+
+
+def demo_sen_S2(direct):
+    glob_list = glob.glob(direct + '/*.nc')
+    for fname in glob_list:
+        try:
+            S2_run(jules_nc=fname, fname=direct + '/' + fname[-16:-13] + '_s2_sim_dict.p')
         except ValueError:
             print 'caught a value error, doing next year'
             continue

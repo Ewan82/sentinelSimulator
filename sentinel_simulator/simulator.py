@@ -17,7 +17,8 @@ class Simulator(object):
 
     """
     def __init__(self, year=2012, month=1, days=365,
-                 jules_nc='jules/output/sensitivity_runs/crp_g_77_6.8535_0.17727_0.000573.3_hourly.nc'):
+                 jules_nc='jules/output/sensitivity_runs/crp_g_77_6.8535_0.17727_0.000573.3_hourly.nc',
+                 mission='S1'):
         """Calculate class attributes for given year, month, number of days and netCDF file with driving data.
 
         :param year: Start year.
@@ -28,6 +29,8 @@ class Simulator(object):
         :type days: int
         :param jules_nc: location of netCDF file to use
         :type jules_nc: str
+        :param mission: S1 or S2 for satellite geometry
+        :type mission: str
         :return: Instance of Simulator class.
         :rtype: object
         """
@@ -38,8 +41,12 @@ class Simulator(object):
         self.lat = 48.684
         self.alt = 0.
         self.days = days
-        self.geom_lst = satgeo.getSentinel2Geometry(self.start_date, self.days, self.lat, self.lon,
-                                                    mission="Sentinel-2a", alt=self.alt)
+        if mission == 'S1':
+            self.geom_lst = satgeo.getSentinel2Geometry(self.start_date, self.days, self.lat, self.lon,
+                                                    mission="Sentinel-1b", alt=self.alt)
+        elif mission == 'S2':
+            self.geom_lst = satgeo.getSentinel2Geometry(self.start_date, self.days, self.lat, self.lon,
+                                                        mission="Sentinel-2a", alt=self.alt)
         self.vza_lst = [geo.vza for geo in self.geom_lst]
         self.sza_lst = [geo.sza for geo in self.geom_lst]
 
@@ -60,12 +67,74 @@ class S1_simulator(Simulator):
      - https://github.com/PMarzahn/sense
 
     """
+    def __init__(self, lai_coef=0.1, s=0.006, **kwargs):
+        """
+        Initialize with same arguemnts as superClass 'Simulator'.
+
+        """
+        super(S1_simulator, self).__init__(mission='S1', **kwargs)
+        # Setup SAR RT spectra list (Sentinel 1)
+        self.freq = 5.405
+        self.theta = np.deg2rad(37.0)
+        self.stype = 'turbid_rayleigh'
+        # self.stype='turbid_isotropic'
+        self.surf = 'Oh92'
+        # self.surf = 'Dubois95'
+        self.models = {'surface': self.surf, 'canopy': self.stype}
+        self.s = s  # 0.02
+        self.lai_coef = lai_coef  # 0.1
+        self.eps = 15. - 0.j
+        omega = 0.1  # 0.12
+
+        self.SAR_list = [sense_mod.SingleScatRT(
+            surface=sense_soil.Soil(mv=self.state_lst[x].soil_moisture, f=self.freq, s=s, clay=0.23, sand=0.27, bulk=1.65),
+            canopy=sense_canopy.OneLayer(ke_h=self.lai_coef*self.state_lst[x].lai,
+                                         ke_v=self.lai_coef*self.state_lst[x].lai,
+                                         d=self.state_lst[x].can_height,
+                                         ks_h=omega * self.lai_coef*self.state_lst[x].lai,
+                                         ks_v=omega * self.lai_coef*self.state_lst[x].lai),
+            models=self.models,
+            theta=self.theta,
+            freq=self.freq) for x in xrange(len(self.state_lst))]
+        for s in self.SAR_list:
+            s.sigma0()
+        self.backscatter_keys = ['vv', 'hh', 'hv']
+
+
+class S2_simulator(Simulator):
+    """Given Simulator class this subclass will simulate Sentinel 2 data.
+
+    """
+    def __init__(self, **kwargs):
+        """
+        Initialize with same arguemnts as superClass 'Simulator'.
+
+        """
+        super(S2_simulator, self).__init__(mission='S2', **kwargs)
+        # Setup canopy optical RT spectra list (Sentinel 2)
+        self.spect_lst = [op_can_rt.canopyRTOptical(self.state_lst[x], self.geom_lst[x]) for x in
+                          xrange(len(self.state_lst))]
+        self.all_spect_lst = [sp.sentinel2(spect) for spect in self.spect_lst]
+        self.all_BRF_arr = np.array([all_sp.refl for all_sp in self.all_spect_lst])
+        self.band_labels = ['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B9', 'B10', 'B11', 'B12']
+
+
+
+class S1_simulator_testbed(Simulator):
+    """TEST S1 SIM. Given Simulator class this subclass will simulate Sentinel 1 data.
+
+    .. note:: This function requires the Community SAR ScattEring model (SenSE) to be installed on the system. This
+     code is available from:
+
+     - https://github.com/PMarzahn/sense
+
+    """
     def __init__(self, lai_coef=0.01, s=0.006, **kwargs):
         """
         Initialize with same arguemnts as superClass 'Simulator'.
 
         """
-        super(S1_simulator, self).__init__(**kwargs)
+        super(S1_simulator_testbed, self).__init__(mission='S1', **kwargs)
         # Setup SAR RT spectra list (Sentinel 1)
         self.freq = 5.405
         self.theta = np.deg2rad(37.0)
@@ -101,24 +170,6 @@ class S1_simulator(Simulator):
         for s in self.SAR_list:
             s.sigma0()
         self.backscatter_keys = ['vv', 'hh', 'hv']
-
-
-class S2_simulator(Simulator):
-    """Given Simulator class this subclass will simulate Sentinel 2 data.
-
-    """
-    def __init__(self, **kwargs):
-        """
-        Initialize with same arguemnts as superClass 'Simulator'.
-
-        """
-        super(S2_simulator, self).__init__(**kwargs)
-        # Setup canopy optical RT spectra list (Sentinel 2)
-        self.spect_lst = [op_can_rt.canopyRTOptical(self.state_lst[x], self.geom_lst[x]) for x in
-                          xrange(len(self.state_lst))]
-        self.all_spect_lst = [sp.sentinel2(spect) for spect in self.spect_lst]
-        self.all_BRF_arr = np.array([all_sp.refl for all_sp in self.all_spect_lst])
-        self.band_labels = ['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B9', 'B10', 'B11', 'B12']
 
 
 def plot_class_var(date_lst, var, y_lab=None, line_type='-', axes=None):
@@ -160,9 +211,9 @@ def plot_backscat(lai_coeff, s):
                              [10*np.log10(sim_c1.SAR_list[s1c].__dict__['stot'][sim_c1.backscatter_keys[x]])
                               for s1c in xrange(len(sim_c1.SAR_list))],
                              y_lab='Backscatter ' + sim_c1.backscatter_keys[x] + ' polarisation (db)',
-                             line_type='o')
+                             line_type='o')[0]
         # Must also think about canopy height and extinction coefficient!!!
-        fig.savefig('../docs/source/simulator/ztest_' + sim_c1.backscatter_keys[x] + '_' + str(np.round(lai_coeff,4)) +
+        fig.savefig('jules/output/demo/' + sim_c1.backscatter_keys[x] + '_' + str(np.round(lai_coeff,4)) +
                     '_test.png')
         plt.close('all')
     plt.close('all')

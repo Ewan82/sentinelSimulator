@@ -94,7 +94,7 @@ Sentinel 2 output
 
 
 Parameter sensitivity
---------------------------
+---------------------
 
 Below are examples of the Sentinel Simulator's sensitivity to JULES land surface model parameters. Here we are varying
 crop sow date, crop nitrogen use efficiency, soil moisture wilting point and the Brooks and Corey exponent factor for

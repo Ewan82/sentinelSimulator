@@ -14,7 +14,7 @@ Features
 --------
 
 - Simulates Sentinel 1 & 2 data from JULES output
-- Allows for for sensitivity analysis using an ensemble of model runs from JULES
+- Allows for sensitivity analysis using an ensemble of model runs from JULES
 
 Source Code
 -----------

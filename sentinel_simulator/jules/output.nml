@@ -2,8 +2,8 @@
 &jules_output
 dump_period= 100,,
 nprofiles= 1,,
-output_dir= './output/sensitivity_runs',,
-run_id= 'crp_g_99_8.0496_0.20745_0.000561',,
+output_dir= './output',,
+run_id= 'test_smwilt05',,
 /
 
 &jules_output_profile
