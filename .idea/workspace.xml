@@ -2,29 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7482d48-4180-44dc-bbfe-8243e20ae74b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/.idea/codeStyleSettings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/.idea/dictionaries/if910917.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/.idea/point_germany_crop.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/output/demo/hh_s0.002_test.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/output/demo/hh_s0.006_test.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/output/demo/hv_s0.002_test.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/output/demo/hv_s0.006_test.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/output/demo/vv_s0.002_test.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/output/demo/vv_s0.006_test.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/ancillaries.nml" afterPath="$PROJECT_DIR$/sentinel_simulator/jules/ancillaries.nml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/drive-file-WFDEI-79-12.txt" afterPath="$PROJECT_DIR$/sentinel_simulator/jules/drive-file-WFDEI-79-12.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/output.nml" afterPath="$PROJECT_DIR$/sentinel_simulator/jules/output.nml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/output/demo/lt0_s1_sim_dict.p" afterPath="$PROJECT_DIR$/sentinel_simulator/jules/output/demo/lt0_s1_sim_dict.p" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/output/demo/ow7_s1_sim_dict.p" afterPath="$PROJECT_DIR$/sentinel_simulator/jules/output/demo/ow7_s1_sim_dict.p" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/output/demo/tes_s1_sim_dict.p" afterPath="$PROJECT_DIR$/sentinel_simulator/jules/output/demo/tes_s1_sim_dict.p" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/jules/py_jules.py" afterPath="$PROJECT_DIR$/sentinel_simulator/jules/py_jules.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/sensitivity_analysis.py" afterPath="$PROJECT_DIR$/sentinel_simulator/sensitivity_analysis.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/simulator.py" afterPath="$PROJECT_DIR$/sentinel_simulator/simulator.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/ancillaries.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/crop_params.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/drive.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/fire.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/glob_list.p" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/imogen.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/initial_conditions.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules_hydrology.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules_radiation.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules_rivers.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules_snow.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules_soil.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules_soil_biogeochem.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules_surface.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules_surface_types.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/jules_vegetation.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/model_grid.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/nveg_params.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/output.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/pft_params.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/prescribed_data.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/timesteps.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/triffid_params.nml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sentinel_simulator/urban.nml" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -232,72 +233,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sentinel_simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinel_simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinel_simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="output" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinel_simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="output" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -522,9 +457,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="852" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26634213" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26634213" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6684607" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275401" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
