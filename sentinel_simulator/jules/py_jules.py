@@ -216,7 +216,7 @@ def crop_run(sow_date=110, b=6.631, smwilt=0.1866, neff=5.70e-4, output_name='no
     return 'Done'
 
 
-def plot_class_var(output_nc, var, level=0, line_type='-'):
+def plot_class_var(output_nc, var, level=0, line_type='-', ax='None'):
     """Plot specified variable.
 
     :param output_nc: Location of JULES output netCDF file.
@@ -247,6 +247,7 @@ def plot_class_var(output_nc, var, level=0, line_type='-'):
     plt.xlabel('Date')
     plt.title('JULES output for Wallerfing')
     myFmt = mdates.DateFormatter('%B')
+    plt.gca().xaxis.set_major_formatter(myFmt)
     plt.gcf().autofmt_xdate()
     # plt.xaxis.set_major_formatter(myFmt)
     # plt.legend(loc=2)

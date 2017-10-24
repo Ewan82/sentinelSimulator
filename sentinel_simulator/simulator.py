@@ -67,7 +67,7 @@ class S1_simulator(Simulator):
      - https://github.com/PMarzahn/sense
 
     """
-    def __init__(self, lai_coef=0.1, s=0.006, **kwargs):
+    def __init__(self, lai_coef=0.1, s=0.015, omega=0.1, **kwargs):
         """
         Initialize with same arguemnts as superClass 'Simulator'.
 
@@ -84,15 +84,15 @@ class S1_simulator(Simulator):
         self.s = s  # 0.02
         self.lai_coef = lai_coef  # 0.1
         self.eps = 15. - 0.j
-        omega = 0.1  # 0.12
+        omega = omega  # 0.12
 
         self.SAR_list = [sense_mod.SingleScatRT(
-            surface=sense_soil.Soil(mv=self.state_lst[x].soil_moisture, f=self.freq, s=s, clay=0.23, sand=0.27, bulk=1.65),
+            surface=sense_soil.Soil(mv=self.state_lst[x].soil_moisture/100., f=self.freq, s=s, clay=0.23, sand=0.27, bulk=1.65),
             canopy=sense_canopy.OneLayer(ke_h=self.lai_coef*self.state_lst[x].lai,
                                          ke_v=self.lai_coef*self.state_lst[x].lai,
                                          d=self.state_lst[x].can_height,
-                                         ks_h=omega * self.lai_coef*self.state_lst[x].lai,
-                                         ks_v=omega * self.lai_coef*self.state_lst[x].lai),
+                                         ks_h=omega * (self.lai_coef*self.state_lst[x].lai),
+                                         ks_v=omega * (self.lai_coef*self.state_lst[x].lai)),
             models=self.models,
             theta=self.theta,
             freq=self.freq) for x in xrange(len(self.state_lst))]
@@ -129,7 +129,7 @@ class S1_simulator_testbed(Simulator):
      - https://github.com/PMarzahn/sense
 
     """
-    def __init__(self, lai_coef=0.01, s=0.006, **kwargs):
+    def __init__(self, lai_coef=0.01, s=0.015, omega=0.1, **kwargs):
         """
         Initialize with same arguemnts as superClass 'Simulator'.
 
@@ -148,11 +148,11 @@ class S1_simulator_testbed(Simulator):
         ke = 1.
         self.eps = 15. - 0.j
         # canopy = sense_canopy.OneLayer(ke_h=ke, ke_v=ke, d=0.1*self.state_lst[x].can_height, ks_h=omega * ke, ks_v=omega * ke)
-        omega = 0.12  # 0.12
+        omega = omega  # 0.12
 
         self.SAR_list = [sense_mod.SingleScatRT(
             #surface=sense_soil.Soil(mv=self.state_lst[x].soil_moisture, f=self.freq, s=self.s-0.01*(self.state_lst[x].lai / 4.), clay=0.23, sand=0.27),
-            surface=sense_soil.Soil(mv=self.state_lst[x].soil_moisture, f=self.freq, s=s, clay=0.23, sand=0.27, bulk=1.65),
+            surface=sense_soil.Soil(mv=self.state_lst[x].soil_moisture/100, f=self.freq, s=s, clay=0.23, sand=0.27, bulk=1.65),
             #surface=sense_soil.Soil(eps=self.eps*(1. + 0.01*(self.state_lst[x].soil_moisture/0.45)), f=self.freq, s=self.s-0.01*(self.state_lst[x].lai / 4.)),
             #canopy=sense_canopy.OneLayer(ke_h=1-self.lai_coef*self.state_lst[x].lai,
             #                             ke_v=1-self.lai_coef*self.state_lst[x].lai,
@@ -167,6 +167,7 @@ class S1_simulator_testbed(Simulator):
             models=self.models,
             theta=self.theta,
             freq=self.freq) for x in xrange(len(self.state_lst))]
+
         for s in self.SAR_list:
             s.sigma0()
         self.backscatter_keys = ['vv', 'hh', 'hv']
@@ -202,10 +203,10 @@ def plot_class_var(date_lst, var, y_lab=None, line_type='-', axes=None):
     return ret_val
 
 
-def plot_backscat(lai_coeff, s):
+def plot_backscat(lai_coeff, s, omega):
     """Plot specified variable.
     """
-    sim_c1 = S1_simulator(lai_coef=lai_coeff, s=s)
+    sim_c1 = S1_simulator(lai_coef=lai_coeff, s=s, omega=omega)
     for x in xrange(3):
         fig = plot_class_var(sim_c1.date_lst,
                              [10*np.log10(sim_c1.SAR_list[s1c].__dict__['stot'][sim_c1.backscatter_keys[x]])
@@ -213,7 +214,7 @@ def plot_backscat(lai_coeff, s):
                              y_lab='Backscatter ' + sim_c1.backscatter_keys[x] + ' polarisation (db)',
                              line_type='o')[0]
         # Must also think about canopy height and extinction coefficient!!!
-        fig.savefig('jules/output/demo/' + sim_c1.backscatter_keys[x] + '_' + str(np.round(lai_coeff,4)) +
+        fig.savefig('jules/output/demo/ztest_' + sim_c1.backscatter_keys[x] + '_s' + str(np.round(s,4)) +
                     '_test.png')
         plt.close('all')
     plt.close('all')

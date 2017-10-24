@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 
 
 def S1_run(jules_nc='jules/output/sensitivity_runs/crp_g_77_6.8535_0.17727_0.000573.3_hourly.nc',
-           fname='s1_sim_dict.p', year=2012, month=1, days=365):
-    simulator = sim.S1_simulator(lai_coef=0.01, s=0.006, jules_nc=jules_nc, year=year, month=month, days=days)
+           fname='s1_sim_dict.p', year=2012, month=1, days=365, lai_coeff=0.01, s=0.006):
+    simulator = sim.S1_simulator(lai_coef=lai_coeff, s=s, jules_nc=jules_nc, year=year, month=month, days=days)
     sim_dict = {}
     sim_dict['nc_file'] = jules_nc
     sim_dict['dates'] = simulator.date_lst
@@ -91,7 +91,7 @@ def demo_sen_S1(direct):
     glob_list = glob.glob(direct + '/*.nc')
     for fname in glob_list:
         try:
-            S1_run(jules_nc=fname, fname=direct + '/' + fname[-16:-13] + '_s1_sim_dict.p')
+            S1_run(jules_nc=fname, fname=direct + '/' + fname[-16:-13] + '_s1_sim_dict.p', lai_coeff=0.1, s=0.002)
         except ValueError:
             print 'caught a value error, doing next year'
             continue
