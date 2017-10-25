@@ -123,6 +123,60 @@ class S2_simulator(Simulator):
         self.band_labels = ['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B9', 'B10', 'B11', 'B12']
 
 
+
+class S1_simulator_testbed(Simulator):
+    """TEST S1 SIM. Given Simulator class this subclass will simulate Sentinel 1 data.
+
+    .. note:: This function requires the Community SAR ScattEring model (SenSE) to be installed on the system. This
+     code is available from:
+
+     - https://github.com/PMarzahn/sense
+
+    """
+    def __init__(self, lai_coef=0.01, s=0.015, omega=0.1, **kwargs):
+        """
+        Initialize with same arguemnts as superClass 'Simulator'.
+
+        """
+        super(S1_simulator_testbed, self).__init__(mission='S1', **kwargs)
+        # Setup SAR RT spectra list (Sentinel 1)
+        self.freq = 5.405
+        self.theta = np.deg2rad(37.0)
+        self.stype = 'turbid_rayleigh'
+        # self.stype='turbid_isotropic'
+        self.surf = 'Oh92'
+        # self.surf = 'Dubois95'
+        self.models = {'surface': self.surf, 'canopy': self.stype}
+        self.s = s  # 0.02
+        self.lai_coef = lai_coef  # 0.1
+        ke = 1.
+        self.eps = 15. - 0.j
+        # canopy = sense_canopy.OneLayer(ke_h=ke, ke_v=ke, d=0.1*self.state_lst[x].can_height, ks_h=omega * ke, ks_v=omega * ke)
+        omega = omega  # 0.12
+
+        self.SAR_list = [sense_mod.SingleScatRT(
+            #surface=sense_soil.Soil(mv=self.state_lst[x].soil_moisture, f=self.freq, s=self.s-0.01*(self.state_lst[x].lai / 4.), clay=0.23, sand=0.27),
+            surface=sense_soil.Soil(mv=self.state_lst[x].soil_moisture/100, f=self.freq, s=s, clay=0.23, sand=0.27, bulk=1.65),
+            #surface=sense_soil.Soil(eps=self.eps*(1. + 0.01*(self.state_lst[x].soil_moisture/0.45)), f=self.freq, s=self.s-0.01*(self.state_lst[x].lai / 4.)),
+            #canopy=sense_canopy.OneLayer(ke_h=1-self.lai_coef*self.state_lst[x].lai,
+            #                             ke_v=1-self.lai_coef*self.state_lst[x].lai,
+            #                             d=self.state_lst[x].can_height,
+            #                             ks_h=omega * (1-self.lai_coef * self.state_lst[x].lai),
+            #                             ks_v=omega * (1-self.lai_coef * self.state_lst[x].lai)),
+            canopy=sense_canopy.OneLayer(ke_h=self.lai_coef*np.sqrt(self.state_lst[x].lai / self.state_lst[x].can_height),
+                                         ke_v=self.lai_coef*np.sqrt(self.state_lst[x].lai / self.state_lst[x].can_height),
+                                         d=self.state_lst[x].can_height,
+                                         ks_h=omega * (self.lai_coef*np.sqrt(self.state_lst[x].lai / self.state_lst[x].can_height)),
+                                         ks_v=omega * (self.lai_coef*np.sqrt(self.state_lst[x].lai / self.state_lst[x].can_height))),
+            models=self.models,
+            theta=self.theta,
+            freq=self.freq) for x in xrange(len(self.state_lst))]
+
+        for s in self.SAR_list:
+            s.sigma0()
+        self.backscatter_keys = ['vv', 'hh', 'hv']
+
+
 def plot_class_var(date_lst, var, y_lab=None, line_type='-', axes=None):
     """Plot specified variable.
 
@@ -154,7 +208,7 @@ def plot_class_var(date_lst, var, y_lab=None, line_type='-', axes=None):
 
 
 def plot_backscat(lai_coeff, s, omega):
-    """Plot backscatter for given coefficients.
+    """Plot specified variable.
     """
     sim_c1 = S1_simulator(lai_coef=lai_coeff, s=s, omega=omega, jules_nc='jules/output/demo/test.3_hourly.nc')
     for x in xrange(3):

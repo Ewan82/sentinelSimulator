@@ -576,7 +576,7 @@ drive_txt = """
 """
 drive_nml = julesNML(drive_txt, "drive.nml")
 drive_nml.mapping[
-    "jules_drive_1_interp"] = "         'nf'                   'nf'                 'nf'                     'nf'                   'i'                 'i'                'i'               'i'"
+    "jules_drive_1_interp"] = "'nf' 'nf' 'nf' 'nf' 'i' 'i' 'i' 'i'"
 drive_nml.mapping["jules_drive_1_read_list"] = " T,"
 drive_nml.mapping["jules_drive_1_data_end"] = " '2013-01-01 00:00:00',"
 drive_nml.mapping["jules_drive_1_data_start"] = " '1979-01-01 00:00:00',"
@@ -584,17 +584,18 @@ drive_nml.mapping["jules_drive_1_l_daily_disagg"] = ".false.,"
 drive_nml.mapping["jules_drive_1_z1_tq_in"] = " 2.0,"
 drive_nml.mapping["jules_drive_1_nfiles"] = " 408,"
 drive_nml.mapping[
-    "jules_drive_1_var"] = "      'sw_down'             'lw_down'            'tot_rain'               'tot_snow'                  't'              'wind'              'pstar'            'q',"
+    "jules_drive_1_var"] = "'sw_down' 'lw_down' 'tot_rain' 'tot_snow' 't' 'wind' 'pstar' 'q',"
 drive_nml.mapping["jules_drive_1_l_imogen"] = ".false.,"
 drive_nml.mapping["jules_drive_1_data_period"] = " 10800,"
 drive_nml.mapping["jules_drive_1_z1_uv_in"] = " 10.0,"
 drive_nml.mapping["jules_drive_1_file"] = " 'drive-file-WFDEI-79-12.txt',"
 drive_nml.mapping[
-    "jules_drive_1_var_name"] = "       'SWdown'              'LWdown'              'Rainf'                  'Snowf'                 'Tair'             'Wind'              'PSurf'            'Qair',"
+    "jules_drive_1_var_name"] = "'SWdown' 'LWdown' 'Rainf' 'Snowf' 'Tair' 'Wind' 'PSurf' 'Qair',"
 drive_nml.mapping["jules_drive_1_nvars"] = " 8,"
 drive_nml.mapping["jules_drive_1_l_perturb_driving"] = ".false.,"
 drive_nml.mapping[
-    "jules_drive_1_tpl_name"] = " 'SWdown_WFDEI'  'LWdown_WFDEI'  'Rainf_WFDEI_CRU'  'Snowf_WFDEI_CRU'  'Tair_WFDEI'  'Wind_WFDEI'  'PSurf_WFDEI'  'Qair_WFDEI',"
+    "jules_drive_1_tpl_name"] = "'SWdown_WFDEI' 'LWdown_WFDEI' 'Rainf_WFDEI_CRU' 'Snowf_WFDEI_CRU' 'Tair_WFDEI'" \
+                                " 'Wind_WFDEI' 'PSurf_WFDEI' 'Qair_WFDEI',"
 
 prescribed_data_txt = """
 &jules_prescribed
@@ -730,7 +731,7 @@ initial_conditions_txt = """
 initial_conditions_nml = julesNML(initial_conditions_txt, "initial_conditions.nml")
 initial_conditions_nml.mapping["JULES_INITIAL_1_total_snow"] = " F,"
 initial_conditions_nml.mapping["JULES_INITIAL_1_dump_file"] = " T,"
-initial_conditions_nml.mapping["JULES_INITIAL_1_file"] = " 'output/crop_germ_gl4.dump.spin3.19830101.0.nc',"
+initial_conditions_nml.mapping["JULES_INITIAL_1_file"] = " 'output/gl4.dump.spin3.19830101.0.nc',"
 
 fire_txt = """
 &fire_switches

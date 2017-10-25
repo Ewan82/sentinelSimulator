@@ -1,7 +1,9 @@
+"""
+Class specifying a soil
+"""
 import numpy as np
 from . util import f2lam
 from . dielectric import Dobson85
-
 
 class Soil(object):
     """Class specifying a soil.
@@ -29,6 +31,7 @@ class Soil(object):
         :return: Instance of the Soil class.
         :rtype: instance
         """
+
         self.eps = kwargs.get('eps', None)
         self.mv = kwargs.get('mv', None)
         self.f = kwargs.get('f', None)
@@ -44,7 +47,7 @@ class Soil(object):
         if self.mv is not None:
             self._convert_mv2eps()
 
-        # wave number
+        # wavenumber
         self.k = 2.*np.pi / f2lam(self.f)  # note that wavenumber is in meter and NOT in cm!
         
         # roughness parameters
@@ -53,6 +56,7 @@ class Soil(object):
             self.kl = self.k*self.l
         else:
             self.kl = None
+
 
     def _convert_mv2eps(self):
         """Convert mv to eps using dielectric model.
@@ -68,8 +72,11 @@ class Soil(object):
         
         self.eps = DC.eps
 
+
+
     def _convert_eps2mv(self):
-        """This routine converts soil moisture into dielectric properties and vice versa future implementations will comprise e.g. the Dobson model and others.
+        """This routine converts soil moisture into dielectric properties and vice versa \
+        future implementations will comprise e.g. the Dobson model and others.
 
         """
         assert self.eps is not None, 'Currently cnversion not implemented yet; you need to provide the DC directly!'

@@ -9,7 +9,7 @@ frac_name =  'field1391',
   use_file      =  9*.false.,,
   nvars     =  9,,
   var       =  'b' 'sathh' 'satcon' 'sm_sat' 'sm_crit' 'sm_wilt' 'hcap' 'hcon' 'albsoil',,
-  const_val  = 6.631, 0.3967309, 0.0027729999, 0.45809999, 0.3283205, 0.66, 1185786.0, 0.2269195, 0.17,,
+  const_val  = 6.631, 0.3967309, 0.0027729999, 0.45809999, 0.3283205, 0.5, 1185786.0, 0.2269195, 0.17,,
 /
 
 &jules_top

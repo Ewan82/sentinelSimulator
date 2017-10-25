@@ -48,6 +48,7 @@ def canopyRTOptical(state, geom, resln=1.0):
     cmd = "semiDiscrete"
     if state.lai != None:
         cmd = cmd + " -LAI %f -hc %f -rsl1 %f" %(state.lai, state.can_height, 0.2*(1.-0.005*(state.soil_moisture/0.45)))
+        # CHANGE SOIL MOISTURE IMPLEMENTATION HERE, SHOULD BE IN M3 M-3 NOT KG M-2!!!!!
     cmd = cmd + " < %s" % temp_path
 
     # run process

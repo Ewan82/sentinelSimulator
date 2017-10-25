@@ -49,6 +49,7 @@ class Model(object):
                 assert False, 'Invalid polarization: ' + k
 
 
+
 class SingleScatRT(Model):
     def __init__(self, **kwargs):
         """Single scattering model according to Ulaby and Long (2014) Eq. 11.17
@@ -80,6 +81,9 @@ class SingleScatRT(Model):
         for k in ['surface', 'canopy']:
             assert k in self.models.keys()  # check that all models have been specified
 
+        assert self.freq == self.surface.f, "Different frequencies in model and soil definition"
+            # check that frequencies are the same!
+
     def _sigma0(self):
         """Basic calculation of Sigma0
         based on Eq. 11.17 in Ulaby and Long (2014)
@@ -87,8 +91,7 @@ class SingleScatRT(Model):
         """
 
         # ground backscatter = attenuated surface
-        self.G = Ground(self.surface, self.canopy, self.models['surface'], self.models['canopy'], theta=self.theta,
-                        freq=self.freq)
+        self.G = Ground(self.surface, self.canopy, self.models['surface'], self.models['canopy'], theta=self.theta, freq=self.freq)
         self.s0g = self.G.sigma()  # returns dictionary with different components
 
         # canopy contribution
@@ -106,20 +109,18 @@ class SingleScatRT(Model):
             self.stot.update({k : self._combine(k)})
 
     def _combine(self, k):
-        """Combine previous calculated backscatter values.
-
+        """Combine previous calculated backscatter values
         """
         if self.s0g[k] is None:
             return None
         if self.s0c[k] is None:
             return None
-        return self.s0g[k] + self.s0c[k] + self.s0gcg[k] + self.s0cgt[k]
+        return np.nansum(np.array([self.s0g[k], self.s0c[k], self.s0gcg[k], self.s0cgt[k]]))
 
 class Ground(object):
     """Calculate the (attenuated) ground contribution
     sigma_pq
     where p is receive and q is transmit polarization
-
     """
     def __init__(self, S, C, RT_s, RT_c, theta=None, freq=None):
         """Calculate the attenuated ground contribution
@@ -174,13 +175,12 @@ class Ground(object):
         else:
             assert False, 'Unknown surface scattering model'
 
+
         # set canopy models
         if RT_c == 'turbid_isotropic':  # turbid media (homogenous vegetation)
-            self.rt_c = CanopyHomoRT(ke_h=self.C.ke_h, ke_v=self.C.ke_v, ks_h=self.C.ks_h, ks_v=self.C.ks_v, d=self.C.d,
-                                     theta=self.theta, stype='iso')
+            self.rt_c = CanopyHomoRT(ke_h=self.C.ke_h, ke_v=self.C.ke_v, ks_h=self.C.ks_h, ks_v=self.C.ks_v, d=self.C.d, theta=self.theta, stype='iso')
         elif RT_c == 'turbid_rayleigh':
-            self.rt_c = CanopyHomoRT(ke_h=self.C.ke_h, ke_v=self.C.ke_v, ks_h=self.C.ks_h, ks_v=self.C.ks_v, d=self.C.d,
-                                     theta=self.theta, stype='rayleigh')
+            self.rt_c = CanopyHomoRT(ke_h=self.C.ke_h, ke_v=self.C.ke_v, ks_h=self.C.ks_h, ks_v=self.C.ks_v, d=self.C.d, theta=self.theta, stype='rayleigh')
         else:
             assert False, 'Invalid canopy scattering model: ' + RT_c
 
@@ -193,13 +193,13 @@ class Ground(object):
 
     def sigma_g_c_g(self):
 
-        s_vv = self.rt_c.sigma_vol_back['vv']*np.cos(self.theta)*self.rho_v*self.rho_v*\
-               (self.rt_c.t_v*self.rt_c.t_v-self.rt_c.t_v**4.) / (self.C.ke_v + self.C.ke_v)
-        s_hh = self.rt_c.sigma_vol_back['hh']*np.cos(self.theta)*self.rho_h*self.rho_h*\
-               (self.rt_c.t_h*self.rt_c.t_h-self.rt_c.t_h**4.) / (self.C.ke_h + self.C.ke_h)
-        s_hv = self.rt_c.sigma_vol_back['hv']*np.cos(self.theta)*self.rho_h*self.rho_v*\
-               (self.rt_c.t_h*self.rt_c.t_v-self.rt_c.t_h**2.*self.rt_c.t_v**2.) / (self.C.ke_h + self.C.ke_v)
+
+        s_vv = self.rt_c.sigma_vol_back['vv']*np.cos(self.theta)*self.rho_v*self.rho_v*(self.rt_c.t_v*self.rt_c.t_v-self.rt_c.t_v**4.) / (self.C.ke_v + self.C.ke_v)
+        s_hh = self.rt_c.sigma_vol_back['hh']*np.cos(self.theta)*self.rho_h*self.rho_h*(self.rt_c.t_h*self.rt_c.t_h-self.rt_c.t_h**4.) / (self.C.ke_h + self.C.ke_h)
+        s_hv = self.rt_c.sigma_vol_back['hv']*np.cos(self.theta)*self.rho_h*self.rho_v*(self.rt_c.t_h*self.rt_c.t_v-self.rt_c.t_h**2.*self.rt_c.t_v**2.) / (self.C.ke_h + self.C.ke_v)
+
         return {'vv' : s_vv, 'hh' : s_hh, 'hv' : s_hv}
+
 
     def sigma_c_g(self, coherent=None):
         """Calculate canopy ground scattering coefficient
@@ -219,11 +219,14 @@ class Ground(object):
         else:
             n = 1.
 
-        s_vv = n * self.rt_c.sigma_vol_bistatic['vv'] * self.C.d *(self.rho_v + self.rho_v)*self.rt_c.t_v*self.rt_c.t_v
-        s_hh = n * self.rt_c.sigma_vol_bistatic['hh'] * self.C.d *(self.rho_h + self.rho_h)*self.rt_c.t_h*self.rt_c.t_h
+        s_vv = n  * self.rt_c.sigma_vol_bistatic['vv'] * self.C.d *(self.rho_v + self.rho_v)*self.rt_c.t_v*self.rt_c.t_v
+        s_hh = n  * self.rt_c.sigma_vol_bistatic['hh'] * self.C.d *(self.rho_h + self.rho_h)*self.rt_c.t_h*self.rt_c.t_h
         s_hv = 1. * self.rt_c.sigma_vol_bistatic['hv'] * self.C.d *(self.rho_v + self.rho_h)*self.rt_c.t_h*self.rt_c.t_v
 
+
         return {'vv' : s_vv, 'hh' : s_hh, 'hv' : s_hv}
+
+
 
     def sigma(self):
         """Calculate the backscattering coefficient Eq. 11.4, p.463 Ulaby (2014).
@@ -242,6 +245,7 @@ class Ground(object):
             s_hv = None
         else:
             s_hv = self.rt_s.hv*t_v*t_h
+
 
         return {'vv' : s_vv, 'hh' : s_hh, 'hv' : s_hv}
 
@@ -301,13 +305,12 @@ class CanopyHomoRT(object):
         assert self.ks_h >=0.
         assert self.ks_v >=0.
 
+
         assert self.ks_h <= self.ke_h
         assert self.ks_v <= self.ke_v
 
     def _set_scat_type(self):
-        """Set scatterer type
-
-        """
+        """ set scatterer type """
         if self.stype == 'iso':
             self.SC = ScatIso(sigma_s_hh=self.ks_h, sigma_s_vv=self.ks_v, sigma_s_hv=self.ks_v)   # note that the cross pol scatt. coeff. is the same as the copol due to isotropic behavior
         elif self.stype == 'rayleigh':
@@ -330,6 +333,9 @@ class CanopyHomoRT(object):
 
         """
         return self.SC.sigma_v_bist()
+
+
+
 
     def _tau(self, k):
         # assumption: extinction is isotropic

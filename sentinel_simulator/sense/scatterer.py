@@ -1,6 +1,7 @@
 """
 Definition of scatter types
 """
+import numpy as np
 
 class Scatterer(object):
     def __init__(self, **kwargs):
@@ -54,7 +55,7 @@ class ScatRayleigh(Scatterer):
 
     def sigma_v_back(self):
         # sigma_s_pp is assumed to correspond to volume extinction coefficient
-        return {'hh' : 1.5*self.sigma_s_hh, 'vv' : 1.5*self.sigma_s_vv, 'hv' : 1.5*self.sigma_s_hv}
+        return {'hh' : 1.5*self.sigma_s_hh, 'vv' : 1.5*self.sigma_s_vv, 'hv' : np.nan}
 
     def sigma_v_bist(self):
         # same as sigma_v_back (Eq. 11.22)

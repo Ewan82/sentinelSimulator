@@ -6,7 +6,7 @@
 /
 
 &jules_spinup
-  max_spinup_cycles =  4,
+  max_spinup_cycles =  2,
   spinup_start =  '1983-01-01 00:00:00',,
   spinup_end   =  '1983-12-31 21:00:00',,
   terminate_on_spinup_fail =  F,

@@ -2,6 +2,7 @@
 Specification of canopies
 """
 
+
 class Canopy(object):
     def __init__(self, **kwargs):
         self.d = kwargs.get('d', None)
@@ -9,7 +10,6 @@ class Canopy(object):
 
     def _check(self):
         assert self.d is not None, 'Vegetation height needs to be given'
-
 
 
 class OneLayer(Canopy):
