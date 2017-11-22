@@ -206,7 +206,7 @@ def crop_run(sow_date=110, b=6.631, smwilt=0.1866, neff=5.70e-4, output_name='no
         output_nml.mapping["jules_output_1_output_dir"] = "'./output/demo',"
     print j.output_nml.mapping["jules_output_1_run_id"]
     j.timesteps_nml.mapping["jules_time_1_main_run_start"] = " '2012-01-01 00:00:00',"
-    j.timesteps_nml.mapping["jules_spinup_1_max_spinup_cycles"] = " 4"
+    j.timesteps_nml.mapping["jules_spinup_1_max_spinup_cycles"] = " 2"
     j.ancillaries_nml.mapping["jules_crop_props_1_const_val"] = " 510.11138916 501.136169434 " + str(sow_date)
     j.ancillaries_nml.mapping["jules_soil_props_1_const_val"] = str(b)+", 0.3967309, 0.0027729999, 0.45809999, " \
                                                               "0.3283205, "+str(smwilt)+", 1185786.0, 0.2269195, 0.17,"

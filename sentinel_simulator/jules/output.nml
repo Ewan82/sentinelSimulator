@@ -3,7 +3,7 @@
 dump_period= 100,,
 nprofiles= 1,,
 output_dir= './output/demo',,
-run_id= 'test_smwilt05',,
+run_id= 'test',,
 /
 
 &jules_output_profile

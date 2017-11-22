@@ -4,6 +4,7 @@ import pickle
 import glob
 import seaborn as sns
 import matplotlib.pyplot as plt
+from SMAC import smac
 
 
 def S1_run(jules_nc='jules/output/sensitivity_runs/crp_g_77_6.8535_0.17727_0.000573.3_hourly.nc',
@@ -168,6 +169,7 @@ def plot_sens_s2(pik_dir, save_dir):
     fig3.savefig(save_dir + '/soil_m.png')
     plt.close('all')
     band_labels = ['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B9', 'B10', 'B11', 'B12']
+    band_labels2 = ['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8a', 'B9', 'B10', 'B11', 'B12']
     for x in xrange(13):
         fig, ax = sim.plot_class_var(date_lst, glob_0[band_labels[x]], y_lab=band_labels[x] + ' reflectance',
                                      line_type='o')
@@ -177,6 +179,31 @@ def plot_sens_s2(pik_dir, save_dir):
             sim.plot_class_var(date_lst[0:len(glob_dict['dates'])], glob_dict[band_labels[x]],
                                y_lab=band_labels[x] + ' reflectance', line_type='o', axes=ax)
         fig.savefig(save_dir + '/' + band_labels[x] + '.png')
+        plt.close()
+    for x in xrange(13):
+        fig, ax = sim.plot_class_var(date_lst, glob_0[band_labels[x]], y_lab=band_labels[x] + ' reflectance',
+                                     line_type='o')
+        # Must also think about canopy height and extinction coefficient!!!
+        for i in xrange(1, len(glob_list)):
+            glob_dict = pickle.load(open(glob_list[i], 'rb'))
+            sim.plot_class_var(date_lst[0:len(glob_dict['dates'])], glob_dict[band_labels[x]],
+                               y_lab=band_labels[x] + ' reflectance', line_type='o', axes=ax)
+        fig.savefig(save_dir + '/' + band_labels[x] + '.png')
+        plt.close()
+    for x in xrange(13):
+        coeffs_file = 'SMAC/COEFS/Coef_S2A_CONT_' + band_labels2[x] + '.dat'
+        coeffs = smac.coeff(coeffs_file)
+        fig, ax = sim.plot_class_var(date_lst, smac.smac_dir(glob_0[band_labels[x]], 49.17, 163.18, 5.14, 195.5,
+                                     1013, 0.1, 0.3, 0.3, coeffs), y_lab=band_labels[x] + ' TOA reflectance',
+                                     line_type='o')
+        # Must also think about canopy height and extinction coefficient!!!
+        for i in xrange(1, len(glob_list)):
+            glob_dict = pickle.load(open(glob_list[i], 'rb'))
+            sim.plot_class_var(date_lst[0:len(glob_dict['dates'])], smac.smac_dir(glob_dict[band_labels[x]], 49.17,
+                                                                                  163.18, 5.14, 195.5, 1013, 0.1, 0.3,
+                                                                                  0.3, coeffs),
+                               y_lab=band_labels[x] + ' TOA reflectance', line_type='o', axes=ax)
+        fig.savefig(save_dir + '/' + band_labels[x] + '_TOA.png')
         plt.close()
 
 if __name__ == "__main__":

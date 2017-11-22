@@ -1,8 +1,8 @@
 
 &JULES_INITIAL
-  file =  'output/gl4.dump.spin3.19830101.0.nc',,
-  total_snow =  F,,
-  dump_file =  T,,
+file =  'output/gl4.dump.spin3.19830101.0.nc',,
+total_snow =  F,,
+dump_file =  T,,
 /
 
 

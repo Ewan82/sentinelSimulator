@@ -722,9 +722,9 @@ jules_hydrology_nml.mapping["jules_hydrology_1_ti_wetl"] = "1.5,"
 
 initial_conditions_txt = """
 &JULES_INITIAL
-  file = ${JULES_INITIAL_1_file},
-  total_snow = ${JULES_INITIAL_1_total_snow},
-  dump_file = ${JULES_INITIAL_1_dump_file},
+file = ${JULES_INITIAL_1_file},
+total_snow = ${JULES_INITIAL_1_total_snow},
+dump_file = ${JULES_INITIAL_1_dump_file},
 /
 
 """

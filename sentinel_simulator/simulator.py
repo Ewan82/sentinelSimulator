@@ -11,6 +11,8 @@ import spectra as sp
 from sense import model as sense_mod
 from sense import soil as sense_soil
 from sense import canopy as sense_canopy
+# Import smac code
+from SMAC import smac
 
 class Simulator(object):
     """Class to simulate Sentinel observations over Wallerfing for a given year.
@@ -50,6 +52,7 @@ class Simulator(object):
         self.vza_lst = [geo.vza for geo in self.geom_lst]
         self.vaa_lst = [geo.vaa for geo in self.geom_lst]
         self.sza_lst = [geo.sza for geo in self.geom_lst]
+        self.saa_lst = [geo.saa for geo in self.geom_lst]
 
         #  Setup JULES state vector list
         self.state_lst = [sv.get_jules_state(geo.date_utc, self.jules_nc) for geo in self.geom_lst]
@@ -120,7 +123,7 @@ class S2_simulator(Simulator):
                           xrange(len(self.state_lst))]
         self.all_spect_lst = [sp.sentinel2(spect) for spect in self.spect_lst]
         self.all_BRF_arr = np.array([all_sp.refl for all_sp in self.all_spect_lst])
-        self.band_labels = ['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A', 'B9', 'B10', 'B11', 'B12']
+        self.band_labels = ['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8a', 'B9', 'B10', 'B11', 'B12']
 
 
 def plot_class_var(date_lst, var, y_lab=None, line_type='-', axes=None):
@@ -176,20 +179,20 @@ if __name__ == "__main__":
     """
     sns.set_context('poster', font_scale=1.2, rc={'lines.linewidth': 2, 'lines.markersize': 6})
     sns.set_style('whitegrid')
-    sim_c1 = S1_simulator(lai_coef=0.01, s=0.006)
-    sim_c2 = S2_simulator()
+    sim_c1 = S1_simulator()  # lai_coef=0.01, s=0.006)
+    #sim_c2 = S2_simulator()
 
-    fig = plot_class_var(sim_c1.date_lst, sim_c1.vza_lst, y_lab='View zenith angle (degrees)', line_type='o')[0]
-    fig.savefig('../docs/source/simulator/vza.png')
-    fig = plot_class_var(sim_c1.date_lst, sim_c1.sza_lst, y_lab='Solar zenith angle (degrees)', line_type='o')[0]
-    fig.savefig('../docs/source/simulator/sza.png')
-    fig = plot_class_var(sim_c1.date_lst, sim_c1.lai_lst, y_lab='Leaf area index')[0]
-    fig.savefig('../docs/source/simulator/lai.png')
-    fig = plot_class_var(sim_c1.date_lst, sim_c1.canht_lst, y_lab='Canopy height (m)')[0]
-    fig.savefig('../docs/source/simulator/can_ht.png')
-    fig = plot_class_var(sim_c1.date_lst, sim_c1.soilm_lst, y_lab=r'Soil moisture (m$^{3}~$m$^{-3}$)')[0]
-    fig.savefig('../docs/source/simulator/soil_m.png')
-    plt.close('all')
+    #fig = plot_class_var(sim_c1.date_lst, sim_c1.vza_lst, y_lab='View zenith angle (degrees)', line_type='o')[0]
+    #fig.savefig('../docs/source/simulator/vza.png')
+    #fig = plot_class_var(sim_c1.date_lst, sim_c1.sza_lst, y_lab='Solar zenith angle (degrees)', line_type='o')[0]
+    #fig.savefig('../docs/source/simulator/sza.png')
+    #fig = plot_class_var(sim_c1.date_lst, sim_c1.lai_lst, y_lab='Leaf area index')[0]
+    #fig.savefig('../docs/source/simulator/lai.png')
+    #fig = plot_class_var(sim_c1.date_lst, sim_c1.canht_lst, y_lab='Canopy height (m)')[0]
+    #fig.savefig('../docs/source/simulator/can_ht.png')
+    #fig = plot_class_var(sim_c1.date_lst, sim_c1.soilm_lst, y_lab=r'Soil moisture (m$^{3}~$m$^{-3}$)')[0]
+    #fig.savefig('../docs/source/simulator/soil_m.png')
+    #plt.close('all')
     sig_list = ['stot', 's0cgt', 's0c', 's0gcg', 's0g']
     sig = 'stot'  # for sig in sig_list:
     for x in xrange(3):
@@ -199,10 +202,19 @@ if __name__ == "__main__":
                              y_lab='Backscatter ' + sim_c1.backscatter_keys[x] + ' polarisation (db)',
                              line_type='o')[0]
         # Must also think about canopy height and extinction coefficient!!!
-        fig.savefig('../docs/source/simulator/' + sim_c1.backscatter_keys[x] + '.png')
+        fig.savefig('../docs/source/simulator/test/' + sim_c1.backscatter_keys[x] + '.png')
         plt.close()
-    for x in range(13):
-        fig = plot_class_var(sim_c2.date_lst, sim_c2.all_BRF_arr[:,x], y_lab=sim_c2.band_labels[x]+' reflectance',
-                             line_type='o')[0]
-        fig.savefig('../docs/source/simulator/'+sim_c2.band_labels[x]+'.png')
-        plt.close()
+    #for x in range(13):
+    #    fig = plot_class_var(sim_c2.date_lst, sim_c2.all_BRF_arr[:,x], y_lab=sim_c2.band_labels[x]+' reflectance',
+    #                         line_type='o')[0]
+    #    fig.savefig('../docs/source/simulator/test/'+sim_c2.band_labels[x]+'.png')
+    #    plt.close()
+    #    coeffs_file = 'SMAC/COEFS/Coef_S2A_CONT_'+sim_c2.band_labels[x]+'.dat'
+    #    coeffs = smac.coeff(coeffs_file)
+    #    r_toa = smac.smac_dir(sim_c2.all_BRF_arr[:,x], np.mean(sim_c2.sza_lst), np.mean(sim_c2.saa_lst),
+    #                          np.mean(sim_c2.vza_lst), np.mean(sim_c2.vaa_lst),
+    #                          1013, 0.1, 0.3, 0.3, coeffs)
+    #    fig = plot_class_var(sim_c2.date_lst, r_toa, y_lab=sim_c2.band_labels[x]+' TOA reflectance',
+    #                         line_type='o')[0]
+    #    fig.savefig('../docs/source/simulator/test/' + sim_c2.band_labels[x] + '_TOA.png')
+    #    plt.close()
