@@ -60,7 +60,7 @@ def getSentinel2Geometry(startDateUTC, lengthDays, lat, lon, alt=0.0, mission="S
         saa = np.rad2deg(ast.get_alt_az(p[2], lon, lat)[1])
 
         if mission == 'Sentinel-1b':
-            if 0 < vaa < 180 and 20. < vza < 45.:
+            if 75 < vaa < 105 and 20. < vza < 45.:  # vaa usually [0, 180], testing observation times
                 thisGeom = sensorGeometry()
                 thisGeom.date_utc = p[2]
                 thisGeom.vza = vza
@@ -69,7 +69,7 @@ def getSentinel2Geometry(startDateUTC, lengthDays, lat, lon, alt=0.0, mission="S
                 thisGeom.saa = saa
                 geomList.append(thisGeom)
         elif mission == 'Sentinel-1a':
-            if 0 < vaa < 180 and 20. < vza < 45.:
+            if 75 < vaa < 105 and 20. < vza < 45.:  # vaa usually [0, 180], testing observation times
                 thisGeom = sensorGeometry()
                 thisGeom.date_utc = p[2]
                 thisGeom.vza = vza
@@ -99,6 +99,6 @@ if __name__ == "__main__":
     alt = 0.
     days = 30
 
-    geomList = getSentinel2Geometry(startDate, days, lat, lon, mission="Sentinel-2a", alt=alt)
+    geomList = getSentinel2Geometry(startDate, days, lat, lon, mission="Sentinel-1a", alt=alt)
     for g in geomList:
         g.printGeom()

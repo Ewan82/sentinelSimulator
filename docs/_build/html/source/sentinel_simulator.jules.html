@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>sentinel_simulator.jules package &#8212; sentinelSimulator 0.0.1 documentation</title>
+    <title>sentinel_simulator.jules package &mdash; sentinelSimulator 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -18,15 +18,15 @@
         VERSION:     '0.0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
+        HAS_SOURCE:  true
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="sentinelSimulator 0.0.1 documentation" href="../index.html" />
+    <link rel="up" title="sentinel_simulator package" href="sentinel_simulator.html" />
+    <link rel="next" title="sentinel_simulator.sense package" href="sentinel_simulator.sense.html" />
     <link rel="prev" title="sentinel_simulator package" href="sentinel_simulator.html" /> 
   </head>
   <body role="document">
@@ -40,11 +40,14 @@
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
+          <a href="sentinel_simulator.sense.html" title="sentinel_simulator.sense package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
           <a href="sentinel_simulator.html" title="sentinel_simulator package"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">sentinelSimulator 0.0.1 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="modules.html" >sentinel_simulator</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="sentinel_simulator.html" accesskey="U">sentinel_simulator package</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">sentinelSimulator 0.0.1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >sentinel_simulator</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="sentinel_simulator.html" accesskey="U">sentinel_simulator package</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -82,7 +85,7 @@ julesNML class.</p>
 <span id="sentinel-simulator-jules-py-jules-module"></span><h2>sentinel_simulator.jules.py_jules module<a class="headerlink" href="#module-sentinel_simulator.jules.py_jules" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="sentinel_simulator.jules.py_jules.crop_run">
-<code class="descclassname">sentinel_simulator.jules.py_jules.</code><code class="descname">crop_run</code><span class="sig-paren">(</span><em>sow_date=110</em>, <em>b=6.631</em>, <em>smwilt=0.1866</em>, <em>neff=0.00057</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.jules.py_jules.crop_run" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">sentinel_simulator.jules.py_jules.</code><code class="descname">crop_run</code><span class="sig-paren">(</span><em>sow_date=110</em>, <em>b=6.631</em>, <em>smwilt=0.1866</em>, <em>neff=0.00057</em>, <em>output_name='none'</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.jules.py_jules.crop_run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function that runs JULES with crop model turned on and given user defined parameters at Wallerfing site. Output is
 saved in folder and file specified within function.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -94,6 +97,7 @@ saved in folder and file specified within function.</p>
 <li><strong>b</strong> (<em>float.</em>) &#8211; Brooks-Corey exponent factor.</li>
 <li><strong>smwilt</strong> (<em>float.</em>) &#8211; Soil moisture wilting point.</li>
 <li><strong>neff</strong> (<em>float.</em>) &#8211; Nitrogen use efficiency of crop (Vcmax).</li>
+<li><strong>output_name</strong> (<em>str.</em>) &#8211; Name to use for outputted JULES netCDF file.</li>
 </ul>
 </td>
 </tr>
@@ -155,6 +159,24 @@ Check output for fatal errors.</p>
 </table>
 </dd></dl>
 
+<dl class="method">
+<dt id="sentinel_simulator.jules.py_jules.jules.runJules_print">
+<code class="descname">runJules_print</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.jules.py_jules.jules.runJules_print" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write all NML files to disk.
+Run JULES in a subprocess.
+Check output for fatal errors.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">stdout and stderr output from JULES model run.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -168,6 +190,30 @@ of all the required JULES namelist files</p>
 <code class="descname">writeNML</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.jules.py_jules.julesAllNML.writeNML" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="sentinel_simulator.jules.py_jules.plot_class_var">
+<code class="descclassname">sentinel_simulator.jules.py_jules.</code><code class="descname">plot_class_var</code><span class="sig-paren">(</span><em>output_nc</em>, <em>var</em>, <em>level=0</em>, <em>line_type='-'</em>, <em>ax='None'</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.jules.py_jules.plot_class_var" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot specified variable.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>output_nc</strong> (<em>str</em>) &#8211; Location of JULES output netCDF file.</li>
+<li><strong>var</strong> (<em>str</em>) &#8211; Variables from JULES to plot.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Figure.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">object</p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>
@@ -219,18 +265,21 @@ and writing JULES namelist files</p>
   <h4>Previous topic</h4>
   <p class="topless"><a href="sentinel_simulator.html"
                         title="previous chapter">sentinel_simulator package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sentinel_simulator.sense.html"
+                        title="next chapter">sentinel_simulator.sense package</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/source/sentinel_simulator.jules.rst.txt"
+      <li><a href="../_sources/source/sentinel_simulator.jules.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
@@ -250,16 +299,19 @@ and writing JULES namelist files</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
+          <a href="sentinel_simulator.sense.html" title="sentinel_simulator.sense package"
+             >next</a> |</li>
+        <li class="right" >
           <a href="sentinel_simulator.html" title="sentinel_simulator package"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">sentinelSimulator 0.0.1 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="modules.html" >sentinel_simulator</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="sentinel_simulator.html" >sentinel_simulator package</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">sentinelSimulator 0.0.1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >sentinel_simulator</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="sentinel_simulator.html" >sentinel_simulator package</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, E. Pinnington.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+        &copy; Copyright 2017, E. Pinnington.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>
