@@ -30,7 +30,7 @@ class Mock(MagicMock):
             return MagicMock()
 
 MOCK_MODULES = ['numpy', 'scipy', 'scipy.integrate','matplotlib', 'matplotlib.pyplot', 'pyorbital', 'pyorbital.astronomy', 'pyorbital.orbital',
-                'subprocess', 'netCDF4', 'matplotlib.dates', 'seaborn', 'sense', 'numba']
+                'subprocess', 'netCDF4', 'matplotlib.dates', 'seaborn', 'sense', 'numba', 'pandas']
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # -- General configuration ------------------------------------------------

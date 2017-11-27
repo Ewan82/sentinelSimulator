@@ -1,6 +1,7 @@
 import netCDF4 as nc
 import datetime as dt
 import numpy as np
+import pandas as pd
 
 
 class stateVector:
@@ -42,6 +43,12 @@ def get_jules_state(date_utc, nc_file='jules/output/wallerfing_79_12.3_hourly.nc
 
 def nearest(items, pivot):
     return min(items, key=lambda x: abs(x - pivot))
+
+
+def get_date_list(year):
+    start_date = dt.datetime(year, 1, 1, 12, 0)
+    date_list = pd.date_range(start_date, periods=365).tolist()
+    return date_list
 
 
 def read(file_format='jules', file_str=None, year=None):

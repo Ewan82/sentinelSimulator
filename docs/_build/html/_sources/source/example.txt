@@ -6,15 +6,15 @@ Here we show some example output from the Sentinel simulator.
 Biophysical variables
 ---------------------
 
-.. image:: simulator/lai.png
+.. image:: simulator/lai2.png
     :width: 600px
     :height: 200px
 
-.. image:: simulator/can_ht.png
+.. image:: simulator/can_ht2.png
     :width: 600px
     :height: 200px
 
-.. image:: simulator/soil_m.png
+.. image:: simulator/soil_m2.png
     :width: 600px
     :height: 200px
 
