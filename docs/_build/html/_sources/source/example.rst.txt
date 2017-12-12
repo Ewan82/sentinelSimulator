@@ -3,22 +3,18 @@ Example Output
 
 Here we show some example output from the Sentinel simulator.
 
-Biophysical variables and solar zenith angle
---------------------------------------------
+Biophysical variables
+---------------------
 
-.. image:: simulator/sza.png
+.. image:: simulator/lai2.png
     :width: 600px
     :height: 200px
 
-.. image:: simulator/lai.png
+.. image:: simulator/can_ht2.png
     :width: 600px
     :height: 200px
 
-.. image:: simulator/can_ht.png
-    :width: 600px
-    :height: 200px
-
-.. image:: simulator/soil_m.png
+.. image:: simulator/soil_m2.png
     :width: 600px
     :height: 200px
 
@@ -39,10 +35,6 @@ Sentinel 1 output
 
 Sentinel 2 output
 -----------------
-
-.. image:: simulator/vza.png
-    :width: 600px
-    :height: 200px
 
 .. image:: simulator/B1.png
     :width: 600px
@@ -76,7 +68,7 @@ Sentinel 2 output
     :width: 600px
     :height: 200px
 
-.. image:: simulator/B8A.png
+.. image:: simulator/B8a.png
     :width: 600px
     :height: 200px
 
@@ -93,5 +85,30 @@ Sentinel 2 output
     :height: 200px
 
 .. image:: simulator/B12.png
+    :width: 600px
+    :height: 200px
+
+Satellite geometries
+--------------------
+
+Sentinel 1
+~~~~~~~~~~
+
+.. image:: simulator/sza_s1.png
+    :width: 600px
+    :height: 200px
+
+.. image:: simulator/vza_s1.png
+    :width: 600px
+    :height: 200px
+
+Sentinel 2
+~~~~~~~~~~
+
+.. image:: simulator/sza_s2.png
+    :width: 600px
+    :height: 200px
+
+.. image:: simulator/vza_s2.png
     :width: 600px
     :height: 200px

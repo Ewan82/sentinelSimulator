@@ -45,9 +45,9 @@ def nearest(items, pivot):
     return min(items, key=lambda x: abs(x - pivot))
 
 
-def get_date_list(year):
-    start_date = dt.datetime(year, 1, 1, 12, 0)
-    date_list = pd.date_range(start_date, periods=365).tolist()
+def get_date_list(year, month=1, days=365):
+    start_date = dt.datetime(year, month, 1, 12, 0)
+    date_list = pd.date_range(start_date, periods=days).tolist()
     return date_list
 
 

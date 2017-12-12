@@ -16,13 +16,14 @@ from SMAC import smac
 # import plot sub-module
 import plot_sim as plt_s
 
+
 class Simulator(object):
     """Class to simulate Sentinel observations over Wallerfing for a given year.
 
     """
     def __init__(self, year=2012, month=1, days=365,
                  jules_nc='jules/output/sensitivity_runs/crp_g_77_6.8535_0.17727_0.000573.3_hourly.nc',
-                 mission='S1'):
+                 mission="None"):
         """Calculate class attributes for given year, month, number of days and netCDF file with driving data.
 
         :param year: Start year.
@@ -33,7 +34,7 @@ class Simulator(object):
         :type days: int
         :param jules_nc: location of netCDF file to use
         :type jules_nc: str
-        :param mission: S1 or S2 for satellite geometry
+        :param mission: Sentinel-1b or Sentinel-2a for satellite geometry
         :type mission: str
         :return: Instance of Simulator class.
         :rtype: object
@@ -45,19 +46,19 @@ class Simulator(object):
         self.lat = 48.684
         self.alt = 0.
         self.days = days
-        if mission == 'S1':
+        if mission == "None":
+            self.date_lst_in = sv.get_date_list(year, month, days)
+        else:
             self.geom_lst = satgeo.getSentinel2Geometry(self.start_date, self.days, self.lat, self.lon,
-                                                    mission="Sentinel-1b", alt=self.alt)
-        elif mission == 'S2':
-            self.geom_lst = satgeo.getSentinel2Geometry(self.start_date, self.days, self.lat, self.lon,
-                                                        mission="Sentinel-2a", alt=self.alt)
-        self.vza_lst = [geo.vza for geo in self.geom_lst]
-        self.vaa_lst = [geo.vaa for geo in self.geom_lst]
-        self.sza_lst = [geo.sza for geo in self.geom_lst]
-        self.saa_lst = [geo.saa for geo in self.geom_lst]
+                                                        mission=mission, alt=self.alt)
+            self.vza_lst = [geo.vza for geo in self.geom_lst]
+            self.vaa_lst = [geo.vaa for geo in self.geom_lst]
+            self.sza_lst = [geo.sza for geo in self.geom_lst]
+            self.saa_lst = [geo.saa for geo in self.geom_lst]
+            self.date_lst_in = [geo.date_utc for geo in self.geom_lst]
 
         #  Setup JULES state vector list
-        self.state_lst = [sv.get_jules_state(geo.date_utc, self.jules_nc) for geo in self.geom_lst]
+        self.state_lst = [sv.get_jules_state(dat, self.jules_nc) for dat in self.date_lst_in]
         self.date_lst = [state.date_utc for state in self.state_lst]
         self.lai_lst = [state.lai for state in self.state_lst]
         self.canht_lst = [state.can_height for state in self.state_lst]
@@ -78,7 +79,7 @@ class S1_simulator(Simulator):
         Initialize with same arguemnts as superClass 'Simulator'.
 
         """
-        super(S1_simulator, self).__init__(mission='S1', **kwargs)
+        super(S1_simulator, self).__init__(mission="Sentinel-1b", **kwargs)
         # Setup SAR RT spectra list (Sentinel 1)
         self.freq = 5.405
         self.theta = np.deg2rad(37.0)
@@ -119,7 +120,7 @@ class S2_simulator(Simulator):
         Initialize with same arguemnts as superClass 'Simulator'.
 
         """
-        super(S2_simulator, self).__init__(mission='S2', **kwargs)
+        super(S2_simulator, self).__init__(mission="Sentinel-2a", **kwargs)
         # Setup canopy optical RT spectra list (Sentinel 2)
         self.spect_lst = [op_can_rt.canopyRTOptical(self.state_lst[x], self.geom_lst[x]) for x in
                           xrange(len(self.state_lst))]

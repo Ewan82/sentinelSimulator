@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>sentinel_simulator package &mdash; sentinelSimulator 0.0.1 documentation</title>
+    <title>sentinel_simulator package &#8212; sentinelSimulator 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -18,14 +18,15 @@
         VERSION:     '0.0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="sentinelSimulator 0.0.1 documentation" href="../index.html" />
-    <link rel="up" title="sentinel_simulator" href="modules.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="sentinel_simulator.jules package" href="sentinel_simulator.jules.html" />
     <link rel="prev" title="sentinel_simulator" href="modules.html" /> 
   </head>
@@ -45,8 +46,8 @@
         <li class="right" >
           <a href="modules.html" title="sentinel_simulator"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">sentinelSimulator 0.0.1 documentation</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">sentinel_simulator</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">sentinelSimulator 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">sentinel_simulator</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -307,7 +308,7 @@ method appropriate to the type of file.</p>
 <span id="sentinel-simulator-statevector-module"></span><h2>sentinel_simulator.stateVector module<a class="headerlink" href="#module-sentinel_simulator.stateVector" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="sentinel_simulator.stateVector.get_date_list">
-<code class="descclassname">sentinel_simulator.stateVector.</code><code class="descname">get_date_list</code><span class="sig-paren">(</span><em>year</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.stateVector.get_date_list" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">sentinel_simulator.stateVector.</code><code class="descname">get_date_list</code><span class="sig-paren">(</span><em>year</em>, <em>month=1</em>, <em>days=365</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.stateVector.get_date_list" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -428,7 +429,7 @@ code is available from:</p>
 
 <dl class="class">
 <dt id="sentinel_simulator.simulator.Simulator">
-<em class="property">class </em><code class="descclassname">sentinel_simulator.simulator.</code><code class="descname">Simulator</code><span class="sig-paren">(</span><em>year=2012</em>, <em>month=1</em>, <em>days=365</em>, <em>jules_nc='jules/output/sensitivity_runs/crp_g_77_6.8535_0.17727_0.000573.3_hourly.nc'</em>, <em>mission='S1'</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.simulator.Simulator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sentinel_simulator.simulator.</code><code class="descname">Simulator</code><span class="sig-paren">(</span><em>year=2012</em>, <em>month=1</em>, <em>days=365</em>, <em>jules_nc='jules/output/sensitivity_runs/crp_g_77_6.8535_0.17727_0.000573.3_hourly.nc'</em>, <em>mission='None'</em><span class="sig-paren">)</span><a class="headerlink" href="#sentinel_simulator.simulator.Simulator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Class to simulate Sentinel observations over Wallerfing for a given year.</p>
 <p>Calculate class attributes for given year, month, number of days and netCDF file with driving data.</p>
@@ -441,7 +442,7 @@ code is available from:</p>
 <li><strong>month</strong> (<em>int</em>) &#8211; Start month.</li>
 <li><strong>days</strong> (<em>int</em>) &#8211; number of days to run for.</li>
 <li><strong>jules_nc</strong> (<em>str</em>) &#8211; location of netCDF file to use</li>
-<li><strong>mission</strong> (<em>str</em>) &#8211; S1 or S2 for satellite geometry</li>
+<li><strong>mission</strong> (<em>str</em>) &#8211; Sentinel-1b or Sentinel-2a for satellite geometry</li>
 </ul>
 </td>
 </tr>
@@ -491,15 +492,15 @@ code is available from:</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/source/sentinel_simulator.txt"
+      <li><a href="../_sources/source/sentinel_simulator.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
@@ -524,13 +525,13 @@ code is available from:</p>
         <li class="right" >
           <a href="modules.html" title="sentinel_simulator"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">sentinelSimulator 0.0.1 documentation</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="modules.html" >sentinel_simulator</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">sentinelSimulator 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >sentinel_simulator</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, E. Pinnington.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+        &#169; Copyright 2017, E. Pinnington.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
     </div>
   </body>
 </html>
