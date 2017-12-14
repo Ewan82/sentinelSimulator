@@ -109,6 +109,13 @@ class S1_simulator(Simulator):
         for s in self.SAR_list:
             s.sigma0()
         self.backscatter_keys = ['vv', 'hh', 'hv']
+        # Extract total backscatter in the three polarisations from SAR list
+        self.stot_hv = np.array([10 * np.log10(self.SAR_list[s1c].__dict__['stot']['hv'])
+                                for s1c in xrange(len(self.SAR_list))])
+        self.stot_hh = np.array([10 * np.log10(self.SAR_list[s1c].__dict__['stot']['hh'])
+                                for s1c in xrange(len(self.SAR_list))])
+        self.stot_vv = np.array([10 * np.log10(self.SAR_list[s1c].__dict__['stot']['vv'])
+                                for s1c in xrange(len(self.SAR_list))])
 
 
 class S2_simulator(Simulator):
