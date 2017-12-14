@@ -2,77 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7482d48-4180-44dc-bbfe-8243e20ae74b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/environment.pickle" afterPath="$PROJECT_DIR$/docs/_build/doctrees/environment.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/index.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/index.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/source/README.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/source/README.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/source/example.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/source/example.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/source/modules.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/source/modules.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/source/sensitivity.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/source/sensitivity.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/source/sentinel_simulator.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/source/sentinel_simulator.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/source/sentinel_simulator.jules.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/source/sentinel_simulator.jules.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/doctrees/source/sentinel_simulator.sense.doctree" afterPath="$PROJECT_DIR$/docs/_build/doctrees/source/sentinel_simulator.sense.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/can_ht.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/can_ht.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/can_ht1.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/can_ht1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/can_ht2.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/can_ht2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/hh1.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/hh1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/hh2.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/hh2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/hv1.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/hv1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/hv2.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/hv2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/lai.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/lai.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/lai1.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/lai1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/lai2.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/lai2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/soil_m.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/soil_m.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/soil_m1.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/soil_m1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/soil_m2.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/soil_m2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/vv1.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/vv1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_images/vv2.png" afterPath="$PROJECT_DIR$/docs/_build/html/_images/vv2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/comment-bright.png" afterPath="$PROJECT_DIR$/docs/_build/html/_static/comment-bright.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/comment-close.png" afterPath="$PROJECT_DIR$/docs/_build/html/_static/comment-close.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/comment.png" afterPath="$PROJECT_DIR$/docs/_build/html/_static/comment.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/down-pressed.png" afterPath="$PROJECT_DIR$/docs/_build/html/_static/down-pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/down.png" afterPath="$PROJECT_DIR$/docs/_build/html/_static/down.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/file.png" afterPath="$PROJECT_DIR$/docs/_build/html/_static/file.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/minus.png" afterPath="$PROJECT_DIR$/docs/_build/html/_static/minus.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/plus.png" afterPath="$PROJECT_DIR$/docs/_build/html/_static/plus.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/up-pressed.png" afterPath="$PROJECT_DIR$/docs/_build/html/_static/up-pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/up.png" afterPath="$PROJECT_DIR$/docs/_build/html/_static/up.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/sensitivity/can_ht.png" afterPath="$PROJECT_DIR$/docs/source/sensitivity/can_ht.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/sensitivity/hh.png" afterPath="$PROJECT_DIR$/docs/source/sensitivity/hh.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/sensitivity/hv.png" afterPath="$PROJECT_DIR$/docs/source/sensitivity/hv.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/sensitivity/lai.png" afterPath="$PROJECT_DIR$/docs/source/sensitivity/lai.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/sensitivity/parameter/can_ht.png" afterPath="$PROJECT_DIR$/docs/source/sensitivity/parameter/can_ht.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/sensitivity/parameter/hh.png" afterPath="$PROJECT_DIR$/docs/source/sensitivity/parameter/hh.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/sensitivity/parameter/hv.png" afterPath="$PROJECT_DIR$/docs/source/sensitivity/parameter/hv.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/sensitivity/parameter/lai.png" afterPath="$PROJECT_DIR$/docs/source/sensitivity/parameter/lai.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/sensitivity/parameter/soil_m.png" afterPath="$PROJECT_DIR$/docs/source/sensitivity/parameter/soil_m.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/sensitivity/parameter/vv.png" afterPath="$PROJECT_DIR$/docs/source/sensitivity/parameter/vv.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/sensitivity/soil_m.png" afterPath="$PROJECT_DIR$/docs/source/sensitivity/soil_m.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/sensitivity/vv.png" afterPath="$PROJECT_DIR$/docs/source/sensitivity/vv.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/.buildinfo" afterPath="$PROJECT_DIR$/docs/_build/html/.buildinfo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_sources/source/example.rst.txt" afterPath="$PROJECT_DIR$/docs/_build/html/_sources/source/example.rst.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_sources/source/sensitivity.rst.txt" afterPath="$PROJECT_DIR$/docs/_build/html/_sources/source/sensitivity.rst.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/basic.css" afterPath="$PROJECT_DIR$/docs/_build/html/_static/basic.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/classic.css" afterPath="$PROJECT_DIR$/docs/_build/html/_static/classic.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/doctools.js" afterPath="$PROJECT_DIR$/docs/_build/html/_static/doctools.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/jquery.js" afterPath="$PROJECT_DIR$/docs/_build/html/_static/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/searchtools.js" afterPath="$PROJECT_DIR$/docs/_build/html/_static/searchtools.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/sidebar.js" afterPath="$PROJECT_DIR$/docs/_build/html/_static/sidebar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/_static/websupport.js" afterPath="$PROJECT_DIR$/docs/_build/html/_static/websupport.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/genindex.html" afterPath="$PROJECT_DIR$/docs/_build/html/genindex.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/index.html" afterPath="$PROJECT_DIR$/docs/_build/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/py-modindex.html" afterPath="$PROJECT_DIR$/docs/_build/html/py-modindex.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/search.html" afterPath="$PROJECT_DIR$/docs/_build/html/search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/searchindex.js" afterPath="$PROJECT_DIR$/docs/_build/html/searchindex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/source/README.html" afterPath="$PROJECT_DIR$/docs/_build/html/source/README.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/source/example.html" afterPath="$PROJECT_DIR$/docs/_build/html/source/example.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/source/modules.html" afterPath="$PROJECT_DIR$/docs/_build/html/source/modules.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/source/sensitivity.html" afterPath="$PROJECT_DIR$/docs/_build/html/source/sensitivity.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/source/sentinel_simulator.html" afterPath="$PROJECT_DIR$/docs/_build/html/source/sentinel_simulator.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/source/sentinel_simulator.jules.html" afterPath="$PROJECT_DIR$/docs/_build/html/source/sentinel_simulator.jules.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_build/html/source/sentinel_simulator.sense.html" afterPath="$PROJECT_DIR$/docs/_build/html/source/sentinel_simulator.sense.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/sensitivity_analysis.py" afterPath="$PROJECT_DIR$/sentinel_simulator/sensitivity_analysis.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/simulator.py" afterPath="$PROJECT_DIR$/sentinel_simulator/simulator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sentinel_simulator/stateVector.py" afterPath="$PROJECT_DIR$/sentinel_simulator/stateVector.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -102,18 +33,8 @@
       <file leaf-file-name="sensitivity.rst" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/source/sensitivity.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-945">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/_build/html/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -136,11 +57,21 @@
       <file leaf-file-name="simulator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sentinel_simulator/simulator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="36" column="39" lean-forward="false" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+            <state relative-caret-position="90">
+              <caret line="24" column="101" lean-forward="false" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="101" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -243,7 +174,6 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/sentinel_simulator/spectra.py" />
         <option value="$PROJECT_DIR$/docs/_static/theme_overrides.css" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/docs/requirements.txt" />
         <option value="$PROJECT_DIR$/docs/source/sentinel_simulator.rst" />
         <option value="$PROJECT_DIR$/docs/source/sentinel_simulator.sense.rst" />
@@ -268,6 +198,7 @@
         <option value="$PROJECT_DIR$/sentinel_simulator/stateVector.py" />
         <option value="$PROJECT_DIR$/sentinel_simulator/simulator.py" />
         <option value="$PROJECT_DIR$/sentinel_simulator/sensitivity_analysis.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -333,60 +264,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sentinel_simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sentinelSimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -660,14 +537,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sentinel_simulator/satelliteGeometry.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="62" column="29" lean-forward="false" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/simulator/B3.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -907,16 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sentinel_simulator/simulator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="36" column="39" lean-forward="false" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sentinel_simulator/sensitivity_analysis.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="719">
@@ -927,28 +786,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/sensitivity/vv.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/sensitivity/soil_m.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/sensitivity.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-945">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/_build/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/sensitivity.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/sensitivity/vv.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sentinel_simulator/simulator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="24" column="101" lean-forward="false" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="101" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
           <folding />
         </state>
       </provider>
