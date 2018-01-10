@@ -18,14 +18,17 @@ class Model(object):
         assert self.theta is not None, 'ERROR: no incidence angle was specified!'
 
     def sigma0(self, **kwargs):
-        """Calculate sigma
+        """
+        calculate sigma
 
-        :param dB: option to return results in decibel
-        :type dB: bool
-        :param pol: list with polarizations pq whereas p=receive, q=transmit p,g can be either H or V
-        :type pol: list
-        :return: sigma
-        :rtype: float
+        Parameters
+        ----------
+        dB : bool
+            return results in decibel
+        pol : list
+            list with polarizations pq
+            whereas p=receive, q=transmit
+            p,g can be either H or V
         """
 
         self.dB = kwargs.get('dB', False)
@@ -52,16 +55,18 @@ class Model(object):
 
 class SingleScatRT(Model):
     def __init__(self, **kwargs):
-        """Single scattering model according to Ulaby and Long (2014) Eq. 11.17
+        """
+        Single scattering model according to Ulaby and Long (2014)
+        Eq. 11.17
 
-        :param surface: Surface description
-        :type surface: object
-        :param canopy: Canopy description
-        :type canopy: object
-        :param models: dictionary with configuration of scattering models
-        :type model: dict
-        :return: Instance of SingleScatRT class.
-        :rtype: object
+        Parameters
+        ----------
+        surface : Surface description
+            object describing the surface
+        canopy : Canopy description
+            object describing the canopy
+        models : dict
+            dictionary with configuration of scattering models
         """
         super(SingleScatRT, self).__init__(**kwargs)
         self.surface = kwargs.get('surface', None)
@@ -85,9 +90,9 @@ class SingleScatRT(Model):
             # check that frequencies are the same!
 
     def _sigma0(self):
-        """Basic calculation of Sigma0
+        """
+        basic calculation of Sigma0
         based on Eq. 11.17 in Ulaby and Long (2014)
-
         """
 
         # ground backscatter = attenuated surface
@@ -109,7 +114,8 @@ class SingleScatRT(Model):
             self.stot.update({k : self._combine(k)})
 
     def _combine(self, k):
-        """Combine previous calculated backscatter values
+        """
+        combine previous calculated backscatter values
         """
         if self.s0g[k] is None:
             return None
@@ -118,26 +124,28 @@ class SingleScatRT(Model):
         return np.nansum(np.array([self.s0g[k], self.s0c[k], self.s0gcg[k], self.s0cgt[k]]))
 
 class Ground(object):
-    """Calculate the (attenuated) ground contribution
+    """
+    calculate the (attenuated) ground contribution
     sigma_pq
     where p is receive and q is transmit polarization
     """
     def __init__(self, S, C, RT_s, RT_c, theta=None, freq=None):
-        """Calculate the attenuated ground contribution
+        """
+        calculate the attenuated ground contribution
         to the scattering
 
-        :param S: descibing the surface properties
-        :type S: object
-        :param C: describing the canopy properties
-        :type C: object
-        :param RT_s: key describing the surface scattering model
-        :type RT_s: str
-        :param RT_c: key specifying the canopy scattering model
-        :type RT_c: str
-        :param freq: frequency[GHz]
-        :type freq: float
-        :return: Instance of Ground class.
-        :rtype: object
+        Parameters
+        ----------
+        S : object
+            descibing the surface properties
+        C : object
+            describing the canopy properties
+        RT_s : str
+            key describing the surface scattering model
+        RT_c : str
+            key specifying the canopy scattering model
+        freq : float
+            frequency[GHz]
         """
         self.S = S
         self.C = C
@@ -149,22 +157,25 @@ class Ground(object):
         self._calc_rho()
 
     def _calc_rho(self):
-        """Calculate coherent p-polarized reflectivity, Ref: Eq. 11.11 (Ulaby, 2014)
+        """
+        calculate coherent p-polarized
+        reflectivity
+        Ref: Eq. 11.11 (Ulaby, 2014)
 
-        .. note:: The specular reflectivity is corrected by a roughness term if ks>0.2
+        Note that the specular reflectivity is corrected by a roughness term
+        if ks>0.2
 
-        however, a sensitivity analysis showed that even for ks==0.2 \
-        deviations can be up to 15% for typical incidence angles \
-        Only in case that ks << 0.1, the correction can be neglected. \
+        however, a sensitivity analysis showed that even for ks==0.2
+        deviations can be up to 15% for typical incidence angles
+        Only in case that ks << 0.1, the correction can be neglected.
         We therefore always use the roughness correction factor!
 
         TODO: unclear so far how this relates to surface (soil) scattering models
-
         """
 
         R = Reflectivity(self.S.eps, self.theta)
-        self.rho_v = R.v #* np.exp(-4.*np.cos(self.theta)**2.*(self.S.ks**2.))
-        self.rho_h = R.h #* np.exp(-4.*np.cos(self.theta)**2.*(self.S.ks**2.))
+        self.rho_v = R.v * np.exp(-4.*np.cos(self.theta)**2.*(self.S.ks**2.))
+        self.rho_h = R.h * np.exp(-4.*np.cos(self.theta)**2.*(self.S.ks**2.))
 
     def _set_models(self, RT_s, RT_c):
         # set surface model
@@ -202,16 +213,17 @@ class Ground(object):
 
 
     def sigma_c_g(self, coherent=None):
-        """Calculate canopy ground scattering coefficient
+        """
+        calculate canopy ground scattering coefficient
         This is based on Eq. 11.17 (last term) in Ulaby (2014)
         and 11.14 in Ulaby (2014)
 
         for co-pol, coherent addition can be made as an option
 
-        :param coherent: option to do coherent calculation for co-pol calculations
-        :type coherent: bool
-        :return: canopy ground scattering coefficient
-        :rtype: dict
+        Parameters
+        ----------
+        coherent : bool
+            do coherent calculation for co-pol calculations
         """
         assert coherent is not None, 'ERROR: please specify explicity if coherent calculations should be made.'
         if coherent:
@@ -229,8 +241,9 @@ class Ground(object):
 
 
     def sigma(self):
-        """Calculate the backscattering coefficient Eq. 11.4, p.463 Ulaby (2014).
-
+        """
+        calculate the backscattering coefficient
+        Eq. 11.4, p.463 Ulaby (2014)
         """
 
         # canopy transmisivities
@@ -251,26 +264,24 @@ class Ground(object):
 
 
 class CanopyHomoRT(object):
-    """Homogeneous canopy RT model assumes homogeneous vertical distribution of scatterers
+    """
+    homogeneous canopy RT model
+    assumes homogeneous vertical distribution of scatterers
 
     in that case the Lambert Beer law applies
 
-    .. note:: This model is only for backscatter geometry.
-
+    NOTE that this model is only for BACKSCATTERING GEOMETRY!
     """
     def __init__(self, **kwargs):
         """
-
-        :param ke_h: volume extinction coefficient h polarisation [Np/m]
-        :type ke_h: float
-        :param ke_v: volume extinction coefficient v polarisation [Np/m]
-        :type ke_v: float
-        :param d: height of canopy layer
-        :type d: float
-        :param theta: incidence angle [rad]
-        :type theta: float
-        :return: Instance of CanopyHomoRT class.
-        :rtype: instance
+        Parameters
+        ----------
+        ke_h, ke_v : float
+            volume extinction coefficient [Np/m]
+        d : float
+            height of canopy layer
+        theta : float, ndarray
+            incidence angle [rad]
         """
         self.ke_h = kwargs.get('ke_h', None)
         self.ke_v = kwargs.get('ke_v', None)
@@ -321,16 +332,17 @@ class CanopyHomoRT(object):
             assert False, 'Invalid scatterer type specified: ' + self.stype
 
     def _calc_back_volume(self):
-        """Calculate the volume backscattering coefficient sigma_v \
-        This is a function of the scatterer type chosen (e.g. isotropic, \
-        rayleigh, cloud model, ...).
-
+        """
+        calculate the volume backscattering coefficient sigma_v
+        This is a function of the scatterer type chosen (e.g. isotropic,
+        rayleigh, cloud model, ...)
         """
         return self.SC.sigma_v_back()
 
     def _calc_sigma_bistatic(self):
-        """Calculate volume bistatic scattering coefficient of scatterer.
-
+        """
+        calculate volume bistatic scattering coefficient
+        of scatterer
         """
         return self.SC.sigma_v_bist()
 
@@ -342,22 +354,25 @@ class CanopyHomoRT(object):
         return k*self.d/np.cos(self.theta)
 
     def sigma_gcg(self, G_v, G_h):
-        """Calculate ground-canopy-ground interactions Eq. 11.16, Ulaby(2014)
+        """
+        calculate ground-canopy-ground interactions
+        Eq. 11.16, Ulaby(2014)
 
-        :param G_v: v-polarized coherent Fresnel reflectivity under rough conditions see eq. 11.11 for explanations.
-            As this depends on the surface model used, these should be provided here explicitely
-        :type G_v: float
-        :param G_h: same as G_v, but for h-polarization.
-        :type G_h: float
-        :return: Ground-canopy-ground backscatter
-        :rtype: float
+        Parameters
+        ----------
+        G_v : float
+            v-polarized coherent Fresnel reflectivity under rough conditions
+            see eq. 11.11 for explanations. As this depends on the
+            surface model used, these should be provided here explicitely
+        G_h : float
+            same as above, but for h-polarization.
         """
         return G_v*G_h*(self.t_h*self.t_v-self.t_h**2.*self.t_v**2.)*(self.sigma_vol*np.cos(self.theta))/(self.ke_h+self.ke_v)
 
     def sigma_c(self):
-        """Calculate canopy volume contribution only \
-        Eq. 11.10 + 11.16 as seen in 11.17, Ulaby (2014).
-
+        """
+        calculate canopy volume contribution only
+        Eq. 11.10 + 11.16 as seen in 11.17, Ulaby (2014)
         """
 
         s_hh = (1.-self.t_h*self.t_h)*(self.sigma_vol_back['hh']*np.cos(self.theta))/(self.ke_h+self.ke_h)

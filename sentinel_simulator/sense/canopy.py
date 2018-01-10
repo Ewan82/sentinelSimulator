@@ -2,7 +2,6 @@
 Specification of canopies
 """
 
-
 class Canopy(object):
     def __init__(self, **kwargs):
         self.d = kwargs.get('d', None)
@@ -12,16 +11,12 @@ class Canopy(object):
         assert self.d is not None, 'Vegetation height needs to be given'
 
 
+
 class OneLayer(Canopy):
-    """Define a homogeneous one layer canopy
+    """
+    define a homogeneous one layer canopy
     """
     def __init__(self, **kwargs):
-        """Initiate with chosen key word arguments.
-
-        :param kwargs: extinction coefficient, canopy height, specular reflectivity, etc.
-        :return: Instance of OneLayer Canopy sub-class.
-        :rtype: object
-        """
         super(OneLayer, self).__init__(**kwargs)
         self.ke_h = kwargs.get('ke_h', None)
         self.ke_v = kwargs.get('ke_v', None)
