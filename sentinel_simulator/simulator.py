@@ -129,6 +129,22 @@ class S2_simulator(Simulator):
         """
         super(S2_simulator, self).__init__(mission="Sentinel-2a", **kwargs)
         # Setup canopy optical RT spectra list (Sentinel 2)
+        self.all_BRF_arr = np.array([op_can_rt.canopyRTOptical_fast(self.state_lst[x], self.geom_lst[x]) for x in
+                          xrange(len(self.state_lst))])
+        self.band_labels = ['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8a', 'B9', 'B10', 'B11', 'B12']
+
+
+class S2_simulator_old_semid(Simulator):
+    """Given Simulator class this subclass will simulate Sentinel 2 data.
+
+    """
+    def __init__(self, **kwargs):
+        """
+        Initialize with same arguemnts as superClass 'Simulator'.
+
+        """
+        super(S2_simulator_old_semid, self).__init__(mission="Sentinel-2a", **kwargs)
+        # Setup canopy optical RT spectra list (Sentinel 2)
         self.spect_lst = [op_can_rt.canopyRTOptical(self.state_lst[x], self.geom_lst[x]) for x in
                           xrange(len(self.state_lst))]
         self.all_spect_lst = [sp.sentinel2(spect) for spect in self.spect_lst]
@@ -143,21 +159,23 @@ if __name__ == "__main__":
     sns.set_style('whitegrid')
     sim_c1 = S1_simulator()  # lai_coef=0.01, s=0.006)
     sim_c2 = S2_simulator()
+    # sim_c2_slow = S2_simulator_old_semid()
+    output_dir = '../docs/source/simulator/test_fast/'
 
     fig = plt_s.plot_class_var(sim_c2.date_lst, sim_c2.vza_lst, y_lab='View zenith angle (degrees)', line_type='o')[0]
-    fig.savefig('../docs/source/simulator/vza_s2.png')
+    fig.savefig(output_dir + 'vza_s2.png')
     fig = plt_s.plot_class_var(sim_c2.date_lst, sim_c2.sza_lst, y_lab='Solar zenith angle (degrees)', line_type='o')[0]
-    fig.savefig('../docs/source/simulator/sza_s2.png')
+    fig.savefig(output_dir + 'sza_s2.png')
     fig = plt_s.plot_class_var(sim_c1.date_lst, sim_c1.vza_lst, y_lab='View zenith angle (degrees)', line_type='o')[0]
-    fig.savefig('../docs/source/simulator/vza_s1.png')
+    fig.savefig(output_dir + 'vza_s1.png')
     fig = plt_s.plot_class_var(sim_c1.date_lst, sim_c1.sza_lst, y_lab='Solar zenith angle (degrees)', line_type='o')[0]
-    fig.savefig('../docs/source/simulator/sza_s1.png')
+    fig.savefig(output_dir + 'sza_s1.png')
     fig = plt_s.plot_class_var(sim_c1.date_lst, sim_c1.lai_lst, y_lab='Leaf area index')[0]
-    fig.savefig('../docs/source/simulator/lai.png')
+    fig.savefig(output_dir + 'lai.png')
     fig = plt_s.plot_class_var(sim_c1.date_lst, sim_c1.canht_lst, y_lab='Canopy height (m)')[0]
-    fig.savefig('../docs/source/simulator/can_ht.png')
+    fig.savefig(output_dir + 'can_ht.png')
     fig = plt_s.plot_class_var(sim_c1.date_lst, sim_c1.soilm_lst, y_lab=r'Soil moisture (m$^{3}~$m$^{-3}$)')[0]
-    fig.savefig('../docs/source/simulator/soil_m.png')
+    fig.savefig(output_dir + 'soil_m.png')
     plt.close('all')
     sig_list = ['stot', 's0cgt', 's0c', 's0gcg', 's0g']
     sig = 'stot'  # for sig in sig_list:
@@ -168,13 +186,13 @@ if __name__ == "__main__":
                              y_lab='Backscatter ' + sim_c1.backscatter_keys[x] + ' polarisation (db)',
                              line_type='o')[0]
         # Must also think about canopy height and extinction coefficient!!!
-        fig.savefig('../docs/source/simulator/test/' + sim_c1.backscatter_keys[x] + '.png')
+        fig.savefig(output_dir + sim_c1.backscatter_keys[x] + '.png')
         plt.close()
 
     for x in range(13):
         fig = plt_s.plot_class_var(sim_c2.date_lst, sim_c2.all_BRF_arr[:,x], y_lab=sim_c2.band_labels[x] + ' reflectance',
                              line_type='o')[0]
-        fig.savefig('../docs/source/simulator/test/' + sim_c2.band_labels[x] + '.png')
+        fig.savefig(output_dir + sim_c2.band_labels[x] + '.png')
         plt.close()
         coeffs_file = 'SMAC/COEFS/Coef_S2A_CONT_'+sim_c2.band_labels[x]+'.dat'
         coeffs = smac.coeff(coeffs_file)
@@ -183,5 +201,5 @@ if __name__ == "__main__":
                               1013, 0.1, 0.3, 0.3, coeffs)
         fig = plt_s.plot_class_var(sim_c2.date_lst, r_toa, y_lab=sim_c2.band_labels[x]+' TOA reflectance',
                              line_type='o')[0]
-        fig.savefig('../docs/source/simulator/test/' + sim_c2.band_labels[x] + '_TOA.png')
+        fig.savefig(output_dir + sim_c2.band_labels[x] + '_TOA.png')
         plt.close()
